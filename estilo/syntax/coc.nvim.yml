@@ -1,0 +1,7 @@
+CocErrorSign: 'red1 .'
+CocWarningSign: 'yellow1 .'
+CocHintSign: 'blue2 .'
+CocInfoSign: 'yellow2 .'
+CocLine: '. . c orange'
+CocUnderline: '. . c orange'
+CocErrorline: '. . c crimson'

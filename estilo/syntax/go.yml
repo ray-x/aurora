@@ -1,0 +1,28 @@
+goBuiltins: 'blued - bi' #  crimson
+goConditional: 'violet' # violet
+goDeclType: 'purple2 - b' # green
+goDirective: 'cranberry' # cranberry
+goFloats: 'purple' # purple
+goFunction: 'bluec . b' # blue
+goFunctionCall: 'darkaqua . b' # sky
+goFunctionReturn: 'purple1 . ' # sky
+goImport: 'cyan' # cranberry
+goLabel: 'orange' # yellow
+goMethod: 'bluea . b' # sky
+goMethodCall: 'aqua . b'
+goPackage: 'violet' # violet
+goRepeat: 'orange2' # orange
+goSignedInts: 'emerald' # emerald
+goStruct: 'coral . b' # coral
+goStructDef: 'sky . b' # coral
+goUnsignedInts: 'purple' # purple
+goParamName: 'yellow2 .' # purple
+goParamType: 'br_yellow .' # purple
+goParen: 'yellow3'
+goDeclaration: 'pink7 . b'
+goSameId: '- neardark4 bci'
+goPredefinedIdentifiers: 'cranberry . i'
+goVar: 'redg . b'
+goType: 'orange2 . b'
+goTypeDecl: 'yellow6 . b'
+goTypeName: 'red9 . b'

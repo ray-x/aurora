@@ -1,0 +1,93 @@
+# run this in vim
+# :help group-name
+#
+# BASE UI
+Normal: "bright neardark2"
+LineNr: "gray4 neardark2"
+
+# the screen line that the cursor is in when 'cursorline' is set
+CursorLine: "- neardark4 b"
+CursorLineNr: "green0 neardark b"
+ColorColumn: "- gray2"
+Cursor: ". bright"
+CursorIM: "bright hoki"
+CursorColumn: ". neardark4"
+Directory: "blue ."
+
+DiffAdd: "- pink4 b"
+DiffChange: "- neardark3 b"
+DiffDelete: "- neardark7 b"
+DiffText: "- darkred biu"
+
+ErrorMsg: "crimson - b"
+VertSplit: "gray7 ."
+Folded: "gray7 dark"
+FoldColumn: "gray3 dark"
+SignColumn: "- dark"
+IncSearch: "- darkpurple bci yellow"
+MatchParen: "violet - bc br_yellow"
+ModeMsg: "greena"
+MoreMsg: "graya"
+NonText: "gray4 ."
+
+PMenu: "fg2 neardark "
+PMenuSel: "white neardark5 bi"
+PmenuSbar: "- gray4"
+PmenuThumb: "- graya"
+
+Question: "blue3"
+Search: "- neardark7 bci pink6"
+SpecialKey: "yellow ."
+SpellBad: "red5 - c red5"
+SpellLocal: ""
+SpellCap: "blue2"
+SpellRare: "green4 - c green"
+StatusLine: "bright neardark5"
+StatusLineNC: "gray7 neardark4"
+TabLine: "blue8 neardark2"
+TabLineFill: "gray3"
+TabLineSel: "bluea - u"
+Title: "blue . b"
+Visual: ". neardark6"
+VisualNOS: "gray"
+WarningMsg: "red2 . c darkred"
+WildMenu: "gray7 neardark2"
+EndOfBuffer: "gray4 neardark"
+# BASE SYNTAX
+Comment: "fg1 . i"
+Constant: "green0 ."
+String: "green6 ."
+Character: "purple" # Constant
+Boolean: "violet . i" # Constant
+Number: "coral" # Constant
+Float: "red2 . b" # Constant
+Identifier: "green3 ."
+Function: "bluea . b" # Identifier
+Statement: "pink . b"
+Conditional: "green4" # Statement
+Repeat: "red8" # Statement
+Label: "darkgreen" # Statement
+Operator: "cyan" # Statement
+Keyword: "cranberry . b" # Statement
+Exception: "pink9 ." # Statement
+PreProc: "violet ."
+Include: "purple1" # PreProc
+Define: "bluec . i" # PreProc
+Macro: "red7" # PreProc
+PreCondit: "lightgreen" # PreProc
+Type: "green9 . b"
+StorageClass: "blued ." # Type
+Structure: "darkaqua . bi" # Type
+Typedef: "aqua" # Type
+Special: "tomato"
+SpecialChar: "pink" # Special
+Tag: "red9" # Special
+htmlTag: "gray"
+htmlEndTag: "@htmlTag"
+Delimiter: "blueb" # Special
+SpecialComment: "gray" # Special
+Debug: "blue7" # Special
+Underlined: "green9"
+Ignore: "gray4" # Comment
+Error: "crimson - bc yellow5"
+Todo: "red4 pink4 bu"

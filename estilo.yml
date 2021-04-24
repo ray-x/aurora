@@ -1,0 +1,10 @@
+name: 'aurora'
+version: '1.0.0'
+license: 'MIT'
+author: ''
+url: ''
+description: ''
+colorschemes:
+  - name: aurora
+    background: 'dark'
+    palette: aurora
