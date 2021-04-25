@@ -21,7 +21,7 @@ LspDiagnosticsFloatingHint: 'green6'
 LspDiagnosticsSignInformation: 'br_blue neardark' # Label
 LspDiagnosticsInformationFloating:  'br_blue' # Label
 LspDiagnosticsHint: 'green6' # Label
-LspDiagnosticsHintSign: 'green4 neardark' # Label
+LspDiagnosticsSignHint: 'orange2 neardark' # Label
 LspDiagnosticsHintFloating:  'green5' # Label
 LspReferenceText: '. neardark6 bc orange' # Label
 LspReferenceRead: 'green0 . bc orange' # Label

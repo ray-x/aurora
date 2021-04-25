@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/04/19 07:53
+" Last Change: 2021/04/25 21:43
 " ===============================================================
 
 set background=dark
@@ -291,7 +291,7 @@ hi LspDiagnosticsFloatingHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE g
 hi LspDiagnosticsSignInformation guifg=#7AA6DA ctermfg=110 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi LspDiagnosticsInformationFloating guifg=#7AA6DA ctermfg=110 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi LspDiagnosticsHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi LspDiagnosticsHintSign guifg=#99c794 ctermfg=114 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+hi LspDiagnosticsSignHint guifg=#ffce51 ctermfg=221 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi LspDiagnosticsHintFloating guifg=#1ABC9C ctermfg=37 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi LspReferenceText guibg=#4f4764 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
 hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
