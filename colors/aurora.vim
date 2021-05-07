@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/04/25 21:43
+" Last Change: 2021/04/27 15:31
 " ===============================================================
 
 set background=dark
@@ -39,7 +39,7 @@ hi Cursor guibg=#ddd0f4 ctermbg=189 gui=NONE cterm=NONE
 hi CursorIM guifg=#ddd0f4 ctermfg=189 guibg=#5f7e97 ctermbg=66 gui=NONE cterm=NONE
 hi CursorColumn guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
 hi Directory guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
-hi DiffAdd guifg=NONE ctermfg=NONE guibg=#6D3B66 ctermbg=242 gui=Bold cterm=Bold
+hi DiffAdd guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=Bold cterm=Bold
 hi DiffChange guifg=NONE ctermfg=NONE guibg=#282437 ctermbg=235 gui=Bold cterm=Bold
 hi DiffDelete guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold cterm=Bold
 hi DiffText guifg=NONE ctermfg=NONE guibg=#821040 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline

@@ -14,7 +14,7 @@ CursorIM: "bright hoki"
 CursorColumn: ". neardark4"
 Directory: "blue ."
 
-DiffAdd: "- pink4 b"
+DiffAdd: "- gray4 b"
 DiffChange: "- neardark3 b"
 DiffDelete: "- neardark7 b"
 DiffText: "- darkred biu"
