@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/04/27 15:31
+" Last Change: 2021/05/31 22:43
 " ===============================================================
 
 set background=dark
@@ -31,6 +31,8 @@ hi ALEErrorSign guifg=#ff5874 ctermfg=204 guibg=#1a1926 ctermbg=234 gui=NONE cte
 hi ALEWarningSign guifg=#FD9720 ctermfg=208 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi ALEInfoSign guifg=#addb67 ctermfg=149 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi Normal guifg=#ddd0f4 ctermfg=189 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+hi NormalFloat guifg=#ddd0f4 ctermfg=189 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
+hi NormalNC guifg=#ddd0f4 ctermfg=189 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
 hi LineNr guifg=#4f425e ctermfg=239 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
 hi CursorLine guifg=NONE ctermfg=NONE guibg=#343047 ctermbg=236 gui=Bold cterm=Bold
 hi CursorLineNr guifg=#1aad16 ctermfg=34 guibg=#1a1926 ctermbg=234 gui=Bold cterm=Bold
@@ -392,7 +394,7 @@ hi TSUnderline guifg=#ecc48d ctermfg=222 gui=undercurl cterm=undercurl
 hi TSTitle guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
 hi TSLiteral guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
 hi TSURI guifg=#A6E22D ctermfg=148 gui=Italic cterm=Italic
-hi TSCurrentScope guibg=#141425 ctermbg=233 gui=NONE cterm=NONE
+hi TSCurrentScope guibg=#282437 ctermbg=235 gui=Bold cterm=Bold
 hi TSIdentifier guifg=#dacfb4 ctermfg=187 gui=Bold cterm=Bold
 hi TSNameSpace guifg=#10aef8 ctermfg=39 gui=Bold cterm=Bold
 hi typescriptParens guifg=#10aef8 ctermfg=39 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
