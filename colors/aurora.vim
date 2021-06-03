@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/05/31 22:43
+" Last Change: 2021/06/03 12:07
 " ===============================================================
 
 set background=dark
@@ -494,9 +494,41 @@ hi yamlKeyValueDelimiter guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=N
 if exists('*term_setansicolors')
   let g:terminal_ansi_colors = repeat([0], 16)
 
+  let g:terminal_ansi_colors[0] = '#070510'
+  let g:terminal_ansi_colors[1] = '#ff5874'
+  let g:terminal_ansi_colors[2] = '#addb67'
+  let g:terminal_ansi_colors[3] = '#ecc48d'
+  let g:terminal_ansi_colors[4] = '#be9af7'
+  let g:terminal_ansi_colors[5] = '#FD9720'
+  let g:terminal_ansi_colors[6] = '#A1EFE4'
+  let g:terminal_ansi_colors[7] = '#645775'
+  let g:terminal_ansi_colors[8] = '#211c2f'
+  let g:terminal_ansi_colors[9] = '#ff5874'
+  let g:terminal_ansi_colors[10] = '#d7ffaf'
+  let g:terminal_ansi_colors[11] = '#fbec9f'
+  let g:terminal_ansi_colors[12] = '#6690c4'
+  let g:terminal_ansi_colors[13] = '#ffbe00'
+  let g:terminal_ansi_colors[14] = '#54CED6'
+  let g:terminal_ansi_colors[15] = '#e7d3fb'
 endif
 
 if has('nvim')
+  let g:terminal_color_0 = '#070510'
+  let g:terminal_color_1 = '#ff5874'
+  let g:terminal_color_2 = '#addb67'
+  let g:terminal_color_3 = '#ecc48d'
+  let g:terminal_color_4 = '#be9af7'
+  let g:terminal_color_5 = '#FD9720'
+  let g:terminal_color_6 = '#A1EFE4'
+  let g:terminal_color_7 = '#645775'
+  let g:terminal_color_8 = '#211c2f'
+  let g:terminal_color_9 = '#ff5874'
+  let g:terminal_color_10 = '#d7ffaf'
+  let g:terminal_color_11 = '#fbec9f'
+  let g:terminal_color_12 = '#6690c4'
+  let g:terminal_color_13 = '#ffbe00'
+  let g:terminal_color_14 = '#54CED6'
+  let g:terminal_color_15 = '#e7d3fb'
 endif
 
 " ===================================

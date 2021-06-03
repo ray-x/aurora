@@ -1,28 +1,16 @@
-# helpful tools:
-# https://github.com/lysyi3m/macos-terminal-themes/blob/master/tools/preview.sh
-# https://terminal.sexy
-
-#color_foreground: 'white'
-#color_background: 'dark'
-#color_0: 'dark'
-#color_8: 'gray'
-#color_1: 'red'
-#color_9: ''
-#
-#color_2: 'green'
-#color_10: 'green'
-#
-#color_3: 'yellow2'
-#color_11: 'yellow2'
-#
-#color_4: 'blue'
-#color_12: 'blue'
-#
-#color_5: 'purple'
-#color_13: 'purple'
-#
-#color_6: 'green2'
-#color_14: 'green2'
-#
-#color_7: 'graya'
-#color_15: 'bright'
+0: 'black'
+1: 'red'
+2: 'green'
+3: 'yellow'
+4: 'purple'
+5: 'orange'
+6: 'cyan'
+7: 'darkgray'
+8: 'neardark2'
+9: 'red'
+10: 'lightgreen'
+11: 'yellow2'
+12: 'blue3'
+13: 'orange1'
+14: 'br_cyan'
+15: 'white'
