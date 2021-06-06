@@ -3,8 +3,9 @@
 #
 # BASE UI
 Normal: "bright neardark2"
-NormalFloat: "bright neardark3"
-NormalNC: "bright neardark3"
+NormalFloat: "fg neardark3"
+NormalNC: "fg neardark3"
+FloatBorder: "fg3 neardark3"
 LineNr: "gray4 neardark2"
 
 # the screen line that the cursor is in when 'cursorline' is set
