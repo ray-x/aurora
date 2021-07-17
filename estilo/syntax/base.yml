@@ -3,7 +3,7 @@
 #
 # BASE UI
 Normal: "bright neardark2"
-NormalFloat: "fg neardark3"
+NormalFloat: "text neardark3"
 NormalNC: "fg neardark3"
 FloatBorder: "fg3 neardark3"
 LineNr: "gray4 neardark2"

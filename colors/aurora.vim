@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/06/06 17:16
+" Last Change: 2021/07/17 11:49
 " ===============================================================
 
 set background=dark
@@ -31,7 +31,7 @@ hi ALEErrorSign guifg=#ff5874 ctermfg=204 guibg=#1a1926 ctermbg=234 gui=NONE cte
 hi ALEWarningSign guifg=#FD9720 ctermfg=208 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi ALEInfoSign guifg=#addb67 ctermfg=149 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi Normal guifg=#ddd0f4 ctermfg=189 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-hi NormalFloat guifg=#a9b1d6 ctermfg=146 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
+hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
 hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
 hi FloatBorder guifg=#787c99 ctermfg=8 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
 hi LineNr guifg=#4f425e ctermfg=239 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
@@ -299,6 +299,7 @@ hi LspDiagnosticsHintFloating guifg=#1ABC9C ctermfg=37 guibg=NONE ctermbg=NONE g
 hi LspReferenceText guibg=#4f4764 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
 hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
 hi LspReferenceWrite guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
+hi LspFloatWinNormal guifg=#dacfb4 ctermfg=187 guibg=#30234f ctermbg=236 gui=NONE cterm=NONE
 hi markdownH1 guifg=#4cc7e4 ctermfg=80 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
 hi markdownHeadingRule guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
 hi markdownHeadingDelimiter guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold

@@ -26,3 +26,4 @@ LspDiagnosticsHintFloating:  'green5' # Label
 LspReferenceText: '. neardark6 bc orange' # Label
 LspReferenceRead: 'green0 . bc orange' # Label
 LspReferenceWrite: 'green0 . bc orange' # Label
+LspFloatWinNormal: 'text neardarkb'
