@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/09/17 17:38
+" Last Change: 2021/09/18 01:54
 " ===============================================================
 
 set background=dark
@@ -275,12 +275,8 @@ hi DiagnosticError guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE ct
 hi DiagnosticSignError guifg=#D93234 ctermfg=167 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi DiagnosticErrorFloating guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi DiagnosticWarning guifg=#bBa03A ctermfg=143 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi DiagnosticDefaultWarning guifg=#bBa03A ctermfg=143 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi DiagnosticSignWarn guifg=#e7dc8c ctermfg=186 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi DiagnosticWarningFloating guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi DiagnosticDefaultError guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi DiagnosticDefaultInfo guifg=#7AA6DA ctermfg=110 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi DiagnosticDefaultHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi DiagnosticVirtualTextError guifg=#D93234 ctermfg=167 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi DiagnosticVirtualTextWarning guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi DiagnosticVirtualTextInfo guifg=#99c794 ctermfg=114 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
