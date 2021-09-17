@@ -3,7 +3,7 @@ DiagnosticSignError: 'red6 neardark' # ErrorMsg
 DiagnosticErrorFloating: 'red5' # SepllBad
 DiagnosticWarning: 'yellow8' # WarningMsg
 DiagnosticDefaultWarning: 'yellow8'
-DiagnosticSignWarning: 'yellow5 neardark' # WarningMsg
+DiagnosticSignWarn: 'yellow5 neardark' # WarningMsg
 DiagnosticWarningFloating: 'yellow7' # WarningMsg
 DiagnosticDefaultError: 'red5'
 DiagnosticDefaultInfo: 'br_blue'
@@ -27,7 +27,7 @@ LspDiagnosticsSignError: 'red6 neardark' # ErrorMsg
 LspDiagnosticsErrorFloating: 'red5' # SepllBad
 LspDiagnosticsWarning: 'yellow8' # WarningMsg
 LspDiagnosticsDefaultWarning: 'yellow8'
-LspDiagnosticsSignWarning: 'yellow5 neardark' # WarningMsg
+LspDiagnosticsSignWarn: 'yellow5 neardark' # WarningMsg
 LspDiagnosticsWarningFloating: 'yellow7' # WarningMsg
 LspDiagnosticsInformation: 'br_blue' # Label
 LspDiagnosticsDefaultError: 'red5'
@@ -42,7 +42,7 @@ LspDiagnosticsFloatingError: 'red5'
 LspDiagnosticsFloatingWarning: 'yellow8'
 LspDiagnosticsFloatingInformation: 'br_blue'
 LspDiagnosticsFloatingHint: 'green6'
-LspDiagnosticsSignInformation: 'br_blue neardark' # Label
+LspDiagnosticsSignInfo: 'br_blue neardark' # Label
 LspDiagnosticsInformationFloating:  'br_blue' # Label
 LspDiagnosticsHint: 'green6' # Label
 LspDiagnosticsSignHint: 'orange2 neardark' # Label
