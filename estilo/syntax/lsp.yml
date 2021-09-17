@@ -2,12 +2,12 @@ DiagnosticError: 'red5' # ErrorMsg
 DiagnosticSignError: 'red6 neardark' # ErrorMsg
 DiagnosticErrorFloating: 'red5' # SepllBad
 DiagnosticWarning: 'yellow8' # WarningMsg
-DiagnosticDefaultWarning: 'yellow8'
+DiagnosticWarning: 'yellow8'
 DiagnosticSignWarn: 'yellow5 neardark' # WarningMsg
 DiagnosticWarningFloating: 'yellow7' # WarningMsg
-DiagnosticDefaultError: 'red5'
-DiagnosticDefaultInfo: 'br_blue'
-DiagnosticDefaultHint: 'green6'
+DiagnosticError: 'red5'
+DiagnosticInfo: 'br_blue'
+DiagnosticHint: 'green6'
 DiagnosticVirtualTextError: 'red6'
 DiagnosticVirtualTextWarning: 'yellow7'
 DiagnosticVirtualTextInfo: 'green4'
