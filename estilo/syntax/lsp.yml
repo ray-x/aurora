@@ -1,28 +1,27 @@
-DiagnosticsError: 'red5' # ErrorMsg
-DiagnosticsSignError: 'red6 neardark' # ErrorMsg
-DiagnosticsErrorFloating: 'red5' # SepllBad
-DiagnosticsWarning: 'yellow8' # WarningMsg
-DiagnosticsDefaultWarning: 'yellow8'
-DiagnosticsSignWarning: 'yellow5 neardark' # WarningMsg
-DiagnosticsWarningFloating: 'yellow7' # WarningMsg
-DiagnosticsInformation: 'br_blue' # Label
-DiagnosticsDefaultError: 'red5'
-DiagnosticsDefaultInformation: 'br_blue'
-DiagnosticsDefaultHint: 'green6'
-DiagnosticsVirtualTextError: 'red6'
-DiagnosticsVirtualTextWarning: 'yellow7'
-DiagnosticsVirtualTextInformation: 'green4'
-DiagnosticsVirtualTextHint: 'green0'
-DiagnosticsUnderlineError: 'red5'
-DiagnosticsFloatingError: 'red5'
-DiagnosticsFloatingWarning: 'yellow8'
-DiagnosticsFloatingInformation: 'br_blue'
-DiagnosticsFloatingHint: 'green6'
-DiagnosticsSignInformation: 'br_blue neardark' # Label
-DiagnosticsInformationFloating:  'br_blue' # Label
-DiagnosticsHint: 'green6' # Label
-DiagnosticsSignHint: 'orange2 neardark' # Label
-DiagnosticsHintFloating:  'green5' # Label
+DiagnosticError: 'red5' # ErrorMsg
+DiagnosticSignError: 'red6 neardark' # ErrorMsg
+DiagnosticErrorFloating: 'red5' # SepllBad
+DiagnosticWarning: 'yellow8' # WarningMsg
+DiagnosticDefaultWarning: 'yellow8'
+DiagnosticSignWarning: 'yellow5 neardark' # WarningMsg
+DiagnosticWarningFloating: 'yellow7' # WarningMsg
+DiagnosticDefaultError: 'red5'
+DiagnosticDefaultInfo: 'br_blue'
+DiagnosticDefaultHint: 'green6'
+DiagnosticVirtualTextError: 'red6'
+DiagnosticVirtualTextWarning: 'yellow7'
+DiagnosticVirtualTextInfo: 'green4'
+DiagnosticVirtualTextHint: 'green0'
+DiagnosticUnderlineError: 'red5'
+DiagnosticFloatingError: 'red5'
+DiagnosticFloatingWarning: 'yellow8'
+DiagnosticFloatingInfo: 'br_blue'
+DiagnosticFloatingHint: 'green6'
+DiagnosticSignInfo: 'br_blue neardark' # Label
+DiagnosticInfo:  'br_blue' # Label
+DiagnosticHint: 'green6' # Label
+DiagnosticSignHint: 'orange2 neardark' # Label
+DiagnosticHintFloating:  'green5' # Label
 LspDiagnosticsError: 'red5' # ErrorMsg
 LspDiagnosticsSignError: 'red6 neardark' # ErrorMsg
 LspDiagnosticsErrorFloating: 'red5' # SepllBad
