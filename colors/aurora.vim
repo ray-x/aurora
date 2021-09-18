@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/09/18 01:54
+" Last Change: 2021/09/19 09:18
 " ===============================================================
 
 set background=dark
@@ -320,6 +320,7 @@ hi LspReferenceText guibg=#4f4764 ctermbg=239 gui=Bold,undercurl cterm=Bold,unde
 hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
 hi LspReferenceWrite guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
 hi LspFloatWinNormal guifg=#dacfb4 ctermfg=187 guibg=#30234f ctermbg=236 gui=NONE cterm=NONE
+hi LspSignatureActiveParameter guifg=NONE ctermfg=NONE guibg=#4d0c5d ctermbg=53 gui=Bold,underline,Italic cterm=Bold,underline,Italic guisp=#fbec9f
 hi markdownH1 guifg=#4cc7e4 ctermfg=80 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
 hi markdownHeadingRule guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
 hi markdownHeadingDelimiter guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold

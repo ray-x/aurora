@@ -1,49 +1,50 @@
-DiagnosticError: 'red5' # ErrorMsg
-DiagnosticSignError: 'red6 neardark' # ErrorMsg
-DiagnosticErrorFloating: 'red5' # SepllBad
-DiagnosticWarning: 'yellow8'
-DiagnosticSignWarn: 'yellow5 neardark' # WarningMsg
-DiagnosticWarningFloating: 'yellow7' # WarningMsg
-DiagnosticVirtualTextError: 'red6'
-DiagnosticVirtualTextWarning: 'yellow7'
-DiagnosticVirtualTextInfo: 'green4'
-DiagnosticVirtualTextHint: 'green0'
-DiagnosticUnderlineError: 'red5'
-DiagnosticFloatingError: 'red5'
-DiagnosticFloatingWarning: 'yellow8'
-DiagnosticFloatingInfo: 'br_blue'
-DiagnosticFloatingHint: 'green6'
-DiagnosticSignInfo: 'br_blue neardark' # Label
-DiagnosticInfo:  'br_blue' # Label
-DiagnosticHint: 'green6' # Label
-DiagnosticSignHint: 'orange2 neardark' # Label
-DiagnosticHintFloating:  'green5' # Label
-LspDiagnosticsError: 'red5' # ErrorMsg
-LspDiagnosticsSignError: 'red6 neardark' # ErrorMsg
-LspDiagnosticsErrorFloating: 'red5' # SepllBad
-LspDiagnosticsWarning: 'yellow8' # WarningMsg
-LspDiagnosticsDefaultWarning: 'yellow8'
-LspDiagnosticsSignWarn: 'yellow5 neardark' # WarningMsg
-LspDiagnosticsWarningFloating: 'yellow7' # WarningMsg
-LspDiagnosticsInformation: 'br_blue' # Label
-LspDiagnosticsDefaultError: 'red5'
-LspDiagnosticsDefaultInformation: 'br_blue'
-LspDiagnosticsDefaultHint: 'green6'
-LspDiagnosticsVirtualTextError: 'red6'
-LspDiagnosticsVirtualTextWarning: 'yellow7'
-LspDiagnosticsVirtualTextInformation: 'green4'
-LspDiagnosticsVirtualTextHint: 'green0'
-LspDiagnosticsUnderlineError: 'red5'
-LspDiagnosticsFloatingError: 'red5'
-LspDiagnosticsFloatingWarning: 'yellow8'
-LspDiagnosticsFloatingInformation: 'br_blue'
-LspDiagnosticsFloatingHint: 'green6'
-LspDiagnosticsSignInfo: 'br_blue neardark' # Label
-LspDiagnosticsInformationFloating:  'br_blue' # Label
-LspDiagnosticsHint: 'green6' # Label
-LspDiagnosticsSignHint: 'orange2 neardark' # Label
-LspDiagnosticsHintFloating:  'green5' # Label
-LspReferenceText: '. neardark6 bc orange' # Label
-LspReferenceRead: 'green0 . bc orange' # Label
-LspReferenceWrite: 'green0 . bc orange' # Label
-LspFloatWinNormal: 'text neardarkb'
+DiagnosticError: "red5" # ErrorMsg
+DiagnosticSignError: "red6 neardark" # ErrorMsg
+DiagnosticErrorFloating: "red5" # SepllBad
+DiagnosticWarning: "yellow8"
+DiagnosticSignWarn: "yellow5 neardark" # WarningMsg
+DiagnosticWarningFloating: "yellow7" # WarningMsg
+DiagnosticVirtualTextError: "red6"
+DiagnosticVirtualTextWarning: "yellow7"
+DiagnosticVirtualTextInfo: "green4"
+DiagnosticVirtualTextHint: "green0"
+DiagnosticUnderlineError: "red5"
+DiagnosticFloatingError: "red5"
+DiagnosticFloatingWarning: "yellow8"
+DiagnosticFloatingInfo: "br_blue"
+DiagnosticFloatingHint: "green6"
+DiagnosticSignInfo: "br_blue neardark" # Label
+DiagnosticInfo: "br_blue" # Label
+DiagnosticHint: "green6" # Label
+DiagnosticSignHint: "orange2 neardark" # Label
+DiagnosticHintFloating: "green5" # Label
+LspDiagnosticsError: "red5" # ErrorMsg
+LspDiagnosticsSignError: "red6 neardark" # ErrorMsg
+LspDiagnosticsErrorFloating: "red5" # SepllBad
+LspDiagnosticsWarning: "yellow8" # WarningMsg
+LspDiagnosticsDefaultWarning: "yellow8"
+LspDiagnosticsSignWarn: "yellow5 neardark" # WarningMsg
+LspDiagnosticsWarningFloating: "yellow7" # WarningMsg
+LspDiagnosticsInformation: "br_blue" # Label
+LspDiagnosticsDefaultError: "red5"
+LspDiagnosticsDefaultInformation: "br_blue"
+LspDiagnosticsDefaultHint: "green6"
+LspDiagnosticsVirtualTextError: "red6"
+LspDiagnosticsVirtualTextWarning: "yellow7"
+LspDiagnosticsVirtualTextInformation: "green4"
+LspDiagnosticsVirtualTextHint: "green0"
+LspDiagnosticsUnderlineError: "red5"
+LspDiagnosticsFloatingError: "red5"
+LspDiagnosticsFloatingWarning: "yellow8"
+LspDiagnosticsFloatingInformation: "br_blue"
+LspDiagnosticsFloatingHint: "green6"
+LspDiagnosticsSignInfo: "br_blue neardark" # Label
+LspDiagnosticsInformationFloating: "br_blue" # Label
+LspDiagnosticsHint: "green6" # Label
+LspDiagnosticsSignHint: "orange2 neardark" # Label
+LspDiagnosticsHintFloating: "green5" # Label
+LspReferenceText: ". neardark6 bc orange" # Label
+LspReferenceRead: "green0 . bc orange" # Label
+LspReferenceWrite: "green0 . bc orange" # Label
+LspFloatWinNormal: "text neardarkb"
+LspSignatureActiveParameter: "- darkpurple2 bui yellow2"
