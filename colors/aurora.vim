@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/09/19 09:18
+" Last Change: 2021/09/30 12:42
 " ===============================================================
 
 set background=dark
@@ -225,6 +225,8 @@ hi helpHyperTextEntry guifg=#9dd067 ctermfg=149 guibg=NONE ctermbg=NONE gui=NONE
 hi helpHeadline guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi helpSectionDelim guifg=#222222 ctermfg=235 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi helpNote guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi IndentBlanklineChar guifg=#777087 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi IndentBlanklineContextChar guifg=#c4a2ff ctermfg=183 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsStorageClass guifg=#4cc7e4 ctermfg=80 gui=NONE cterm=NONE
 hi jsOperator guifg=#be9af7 ctermfg=141 gui=NONE cterm=NONE
 hi jsArrowFunction guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
