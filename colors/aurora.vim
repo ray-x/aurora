@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/09/30 12:42
+" Last Change: 2021/10/13 19:16
 " ===============================================================
 
 set background=dark
@@ -31,9 +31,9 @@ hi ALEErrorSign guifg=#ff5874 ctermfg=204 guibg=#1a1926 ctermbg=234 gui=NONE cte
 hi ALEWarningSign guifg=#FD9720 ctermfg=208 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi ALEInfoSign guifg=#addb67 ctermfg=149 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi Normal guifg=#ddd0f4 ctermfg=189 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
-hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
-hi FloatBorder guifg=#787c99 ctermfg=8 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
+hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
+hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
+hi FloatBorder guifg=#787c99 ctermfg=8 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
 hi LineNr guifg=#4f425e ctermfg=239 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
 hi CursorLine guifg=NONE ctermfg=NONE guibg=#343047 ctermbg=236 gui=Bold cterm=Bold
 hi CursorLineNr guifg=#1aad16 ctermfg=34 guibg=#1a1926 ctermbg=234 gui=Bold cterm=Bold
@@ -43,7 +43,7 @@ hi CursorIM guifg=#ddd0f4 ctermfg=189 guibg=#5f7e97 ctermbg=66 gui=NONE cterm=NO
 hi CursorColumn guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
 hi Directory guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
 hi DiffAdd guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=Bold cterm=Bold
-hi DiffChange guifg=NONE ctermfg=NONE guibg=#282437 ctermbg=235 gui=Bold cterm=Bold
+hi DiffChange guifg=NONE ctermfg=NONE guibg=#282E39 ctermbg=236 gui=Bold cterm=Bold
 hi DiffDelete guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold cterm=Bold
 hi DiffText guifg=NONE ctermfg=NONE guibg=#821040 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline
 hi ErrorMsg guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
@@ -115,14 +115,14 @@ hi Ignore guifg=#4f425e ctermfg=239 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Error guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#e7dc8c
 hi Todo guifg=#e73c50 ctermfg=167 guibg=#6D3B66 ctermbg=242 gui=Bold,underline cterm=Bold,underline
 hi BuffetCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-hi BuffetActiveBuffer guifg=#282437 ctermfg=235 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
+hi BuffetActiveBuffer guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
 hi BuffetBuffer guibg=#b4b0e0 ctermbg=146 gui=NONE cterm=NONE
 hi BuffetModCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
 hi BuffetModActiveBuffer guifg=#343047 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
 hi BuffetModBuffer guifg=#343047 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
 hi BuffetTrunc guibg=#82aaf0 ctermbg=111 gui=NONE cterm=NONE
 hi BuffetTab guibg=#addb67 ctermbg=149 gui=NONE cterm=NONE
-hi ClapPreview guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
+hi ClapPreview guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
 hi ClapMatches guifg=#C33C4A ctermfg=131 guibg=#443a54 ctermbg=238 gui=Bold,undercurl,reverse cterm=Bold,undercurl,reverse guisp=#f05874
 hi ClapDisplay guifg=#aab7cf ctermfg=146 guibg=#211c2f ctermbg=234 gui=Bold,undercurl cterm=Bold,undercurl guisp=#f05874
 hi CocErrorSign guifg=#f05874 ctermfg=204 gui=NONE cterm=NONE
@@ -183,9 +183,9 @@ hi FugitiveblameHash guifg=#4cc7e4 ctermfg=80 guibg=NONE ctermbg=NONE gui=NONE c
 hi FugitiveblameUncommitted guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi FugitiveblameTime guifg=#9dd067 ctermfg=149 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi FugitiveblameNotCommittedYet guifg=#fbec9f ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi fzf1 guifg=#ecc48d ctermfg=222 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
-hi fzf2 guifg=#FD9720 ctermfg=208 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
-hi fzf3 guifg=#DC143C ctermfg=161 guibg=#282437 ctermbg=235 gui=NONE cterm=NONE
+hi fzf1 guifg=#ecc48d ctermfg=222 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
+hi fzf2 guifg=#FD9720 ctermfg=208 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
+hi fzf3 guifg=#DC143C ctermfg=161 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
 hi gitcommitBranch guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi gitcommitDiscardedType guifg=#ec5f67 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi gitcommitSelectedType guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -226,7 +226,7 @@ hi helpHeadline guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=
 hi helpSectionDelim guifg=#222222 ctermfg=235 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi helpNote guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi IndentBlanklineChar guifg=#777087 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi IndentBlanklineContextChar guifg=#c4a2ff ctermfg=183 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi IndentBlanklineContextChar guifg=#c4a2ff ctermfg=183 gui=Bold cterm=Bold
 hi jsStorageClass guifg=#4cc7e4 ctermfg=80 gui=NONE cterm=NONE
 hi jsOperator guifg=#be9af7 ctermfg=141 gui=NONE cterm=NONE
 hi jsArrowFunction guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -419,7 +419,7 @@ hi TSUnderline guifg=#ecc48d ctermfg=222 gui=undercurl cterm=undercurl
 hi TSTitle guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
 hi TSLiteral guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
 hi TSURI guifg=#A6E22D ctermfg=148 gui=Italic cterm=Italic
-hi TSCurrentScope guibg=#282437 ctermbg=235 gui=Bold cterm=Bold
+hi TSCurrentScope guibg=#282E39 ctermbg=236 gui=Bold cterm=Bold
 hi TSIdentifier guifg=#dacfb4 ctermfg=187 gui=Bold cterm=Bold
 hi TSNameSpace guifg=#10aef8 ctermfg=39 gui=Bold cterm=Bold
 hi typescriptParens guifg=#10aef8 ctermfg=39 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
