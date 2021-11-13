@@ -1,0 +1,30 @@
+schemes:
+  aurora: &aurora
+    primary:
+      background: "#211c2f"
+      foreground: "#daeeeb"
+
+    selection:
+      text: "#141425"
+
+    normal:
+      black: "#5f5f87"
+      red: "#d93234"
+      green: "#9ec410"
+      yellow: "#ffbe00"
+      blue: "#2782d4"
+      magenta: "#b77ee0"
+      cyan: "#54ced6"
+      white: "#ececec"
+
+    bright:
+      black: "#5f5f87"
+      red: "#d93234"
+      green: "#9ec410"
+      yellow: "#ffbe00"
+      blue: "#2782d4"
+      magenta: "#b77ee0"
+      cyan: "#54ced6"
+      white: "#ececec"
+
+colors: *aurora
