@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/11/06 23:52
+" Last Change: 2021/11/17 11:57
 " ===============================================================
 
 set background=dark
@@ -177,6 +177,23 @@ hi diffAdded guifg=#9dd067 ctermfg=149 guibg=NONE ctermbg=NONE gui=Bold cterm=Bo
 hi diffLine guifg=#fbed7d ctermfg=228 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
 hi diffSubname guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
 hi diffComment guifg=#5f7e97 ctermfg=66 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi LightspeedLabel guifg=#e7d3fb ctermfg=189 guibg=#57109a ctermbg=54 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
+hi LightspeedOverlapped guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
+hi LightspeedLabelDistant guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
+hi LightspeedLabelDistantOverlapped guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
+hi LightspeedShortcut guifg=#EE82EE ctermfg=213 gui=Bold,undercurl cterm=Bold,undercurl
+hi LightspeedShortcutOverlapped guifg=#EE82EE ctermfg=213 gui=Bold,undercurl cterm=Bold,undercurl
+hi LightspeedMaskedChar guifg=#ff5874 ctermfg=204 gui=Bold,undercurl cterm=Bold,undercurl
+hi LightspeedGreyWash guifg=#989cbf ctermfg=247 gui=Italic cterm=Italic
+hi LightspeedUnlabeledMatch guifg=#F92772 ctermfg=197 gui=Bold,Italic cterm=Bold,Italic
+hi LightspeedOneCharMatch guifg=#f19bb6 ctermfg=211 gui=Bold,Italic cterm=Bold,Italic
+hi LightspeedUniqueChar guifg=#d7ffaf ctermfg=193 gui=Bold cterm=Bold
+hi LightspeedPendingOpArea guifg=#66d9ef ctermfg=81 gui=Bold,undercurl cterm=Bold,undercurl
+hi LightspeedPendingChangeOpArea guifg=#d7ffaf ctermfg=193 gui=Bold cterm=Bold
+hi LightspeedCursor guifg=#ffbbd6 ctermfg=218 guibg=#22202a ctermbg=235 gui=NONE cterm=NONE
+hi HopNextKey guifg=#EE82EE ctermfg=213 gui=Bold,underline cterm=Bold,underline
+hi HopNextKey1 guifg=#ecc48d ctermfg=222 gui=Bold,underline cterm=Bold,underline
+hi HopNextKey2 guifg=#82aaf0 ctermfg=111 gui=Bold,underline cterm=Bold,underline
 hi elmDelimiter guifg=#dacfb4 ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi elmOperator guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi FugitiveblameHash guifg=#4cc7e4 ctermfg=80 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -273,20 +290,6 @@ hi jsonBoolean guifg=#fbec9f ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=
 hi jsonKeywordMatch guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsonQuote guifg=#dacfb4 ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsonNoise guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi LightspeedLabel guifg=#e7d3fb ctermfg=189 guibg=#57109a ctermbg=54 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
-hi LightspeedOverlapped guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
-hi LightspeedLabelDistant guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
-hi LightspeedLabelDistantOverlapped guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
-hi LightspeedShortcut guifg=#EE82EE ctermfg=213 gui=Bold,undercurl cterm=Bold,undercurl
-hi LightspeedShortcutOverlapped guifg=#EE82EE ctermfg=213 gui=Bold,undercurl cterm=Bold,undercurl
-hi LightspeedMaskedChar guifg=#ff5874 ctermfg=204 gui=Bold,undercurl cterm=Bold,undercurl
-hi LightspeedGreyWash guifg=#989cbf ctermfg=247 gui=Italic cterm=Italic
-hi LightspeedUnlabeledMatch guifg=#F92772 ctermfg=197 gui=Bold,Italic cterm=Bold,Italic
-hi LightspeedOneCharMatch guifg=#f19bb6 ctermfg=211 gui=Bold,Italic cterm=Bold,Italic
-hi LightspeedUniqueChar guifg=#d7ffaf ctermfg=193 gui=Bold cterm=Bold
-hi LightspeedPendingOpArea guifg=#66d9ef ctermfg=81 gui=Bold,undercurl cterm=Bold,undercurl
-hi LightspeedPendingChangeOpArea guifg=#d7ffaf ctermfg=193 gui=Bold cterm=Bold
-hi LightspeedCursor guifg=#ffbbd6 ctermfg=218 guibg=#22202a ctermbg=235 gui=NONE cterm=NONE
 hi DiagnosticError guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi DiagnosticSignError guifg=#D93234 ctermfg=167 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
 hi DiagnosticErrorFloating guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

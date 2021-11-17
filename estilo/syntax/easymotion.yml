@@ -12,3 +12,7 @@ LightspeedUniqueChar: "lightgreen . b"
 LightspeedPendingOpArea: "aqua . bc"
 LightspeedPendingChangeOpArea: "lightgreen . b"
 LightspeedCursor: "pink0 gray2"
+
+HopNextKey: "violet . bu"
+HopNextKey1: "yellow . bu"
+HopNextKey2: "blue . bu"
