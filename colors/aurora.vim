@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/11/17 11:57
+" Last Change: 2021/11/28 00:25
 " ===============================================================
 
 set background=dark
@@ -114,6 +114,9 @@ hi Underlined guifg=#67d5b5 ctermfg=79 guibg=NONE ctermbg=NONE gui=NONE cterm=NO
 hi Ignore guifg=#4f425e ctermfg=239 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Error guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#e7dc8c
 hi Todo guifg=#e73c50 ctermfg=167 guibg=#6D3B66 ctermbg=242 gui=Bold,underline cterm=Bold,underline
+hi BufferLineIndicatorSelected guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
+hi BufferLineBufferSelected guifg=#addb67 ctermfg=149 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
+hi BufferLineFill guifg=#282E39 ctermfg=236 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
 hi BuffetCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
 hi BuffetActiveBuffer guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
 hi BuffetBuffer guibg=#b4b0e0 ctermbg=146 gui=NONE cterm=NONE
