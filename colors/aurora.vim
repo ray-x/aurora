@@ -4,7 +4,7 @@
 " URL: 
 " Author: 
 " License: MIT
-" Last Change: 2021/11/28 00:26
+" Last Change: 2021/11/29 16:00
 " ===============================================================
 
 set background=dark
@@ -128,6 +128,15 @@ hi BuffetTab guibg=#addb67 ctermbg=149 gui=NONE cterm=NONE
 hi ClapPreview guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
 hi ClapMatches guifg=#C33C4A ctermfg=131 guibg=#443a54 ctermbg=238 gui=Bold,undercurl,reverse cterm=Bold,undercurl,reverse guisp=#f05874
 hi ClapDisplay guifg=#aab7cf ctermfg=146 guibg=#211c2f ctermbg=234 gui=Bold,undercurl cterm=Bold,undercurl guisp=#f05874
+hi CmpItemAbbrDeprecated guifg=#888ca9 ctermfg=103 gui=NONE cterm=NONE
+hi CmpItemAbbrMatch guifg=#5ca7e4 ctermfg=74 gui=NONE cterm=NONE
+hi CmpItemAbbrMatchFuzzy guifg=#50B4DC ctermfg=74 gui=NONE cterm=NONE
+hi CmpItemKindVariable guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
+hi CmpItemKindInterface guifg=#9e71cf ctermfg=134 gui=NONE cterm=NONE
+hi CmpItemKindText guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
+hi CmpItemKindFunction guifg=#0fb9e0 ctermfg=38 gui=NONE cterm=NONE
+hi CmpItemKindMethod guifg=#10aef8 ctermfg=39 gui=NONE cterm=NONE
+hi CmpItemKindKeyword guifg=#0fb9e0 ctermfg=38 gui=NONE cterm=NONE
 hi CocErrorSign guifg=#f05874 ctermfg=204 gui=NONE cterm=NONE
 hi CocWarningSign guifg=#fbfcbf ctermfg=229 gui=NONE cterm=NONE
 hi CocHintSign guifg=#5ca7e4 ctermfg=74 gui=NONE cterm=NONE

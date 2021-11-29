@@ -1,0 +1,17 @@
+CmpItemAbbrDeprecated: "fg2 . "
+
+CmpItemAbbrMatch: "blue2 ."
+
+CmpItemAbbrMatchFuzzy: "blue6 ."
+
+CmpItemKindVariable: "cyan ."
+
+CmpItemKindInterface: "purple2 ."
+
+CmpItemKindText: "text ."
+
+CmpItemKindFunction: "darkaqua ."
+
+CmpItemKindMethod: "bluea ."
+
+CmpItemKindKeyword: "darkaqua ."
