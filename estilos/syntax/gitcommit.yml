@@ -24,3 +24,6 @@ gitcommitUnmergedArrow: '' # gitcommitArrow
 gitcommitArrow: '' # gitcommitComment
 gitcommitOverflow: '' # none
 gitcommitBlank: '' # Error
+GitSignsAddInline: '- - bu green'
+GitSignsDeleteInline: '- - bc br_yellow'
+GitSignsChangeInline: '- - bc pink6'
