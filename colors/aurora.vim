@@ -187,7 +187,7 @@ let g:aurora_bold = get(g:, '_bold', 0)
   hi TSTitle guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
   hi TSLiteral guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
   hi TSURI guifg=#A6E22D ctermfg=148 gui=Italic cterm=Italic
-  hi TSCurrentScope guibg=#282E39 ctermbg=236 gui=Bold cterm=Bold
+  hi TSCurrentScope guibg=#211c2f ctermbg=234 gui=Bold cterm=Bold
   hi TSIdentifier guifg=#dacfb4 ctermfg=187 gui=Bold cterm=Bold
   hi TSNameSpace guifg=#10aef8 ctermfg=39 gui=Bold cterm=Bold
   hi pythonStatement guifg=#ecc48d ctermfg=222 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
