@@ -84,6 +84,13 @@ let g:aurora_bold = get(g:, '_bold', 0)
   hi plugEdge guifg=#9dd067 ctermfg=149 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi plugSha guifg=#fbfcbf ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi plugNotLoaded guifg=#F92772 ctermfg=197 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+  hi TelescopeNormal guifg=#989cbf ctermfg=247 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopePromptBorder guifg=#4cc7e4 ctermfg=80 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopeResultsBorder guifg=#5ca7e4 ctermfg=74 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopePreviewBorder guifg=#9e71cf ctermfg=134 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopeSelectionCaret guifg=#66d9ef ctermfg=81 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopeSelection guifg=#A1EFE4 ctermfg=158 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
+  hi TelescopeMatching guifg=#EE82EE ctermfg=213 gui=NONE cterm=NONE
   hi sqlStatement guifg=#54CED6 ctermfg=80 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi sqlKeyword guifg=#ffbe00 ctermfg=214 gui=Bold cterm=Bold
   hi sqlSpecial guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

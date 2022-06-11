@@ -1,0 +1,7 @@
+TelescopeNormal: 'fg1 neardark2'
+TelescopePromptBorder: 'blue1 neardark2'
+TelescopeResultsBorder: 'blue2 neardark2'
+TelescopePreviewBorder: 'purple2 neardark2'
+TelescopeSelectionCaret: 'aqua neardark2'
+TelescopeSelection: 'cyan grey3'
+TelescopeMatching: 'violet .'
