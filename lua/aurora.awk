@@ -40,41 +40,53 @@ BEGIN { print("return {\n\tcolorscheme = function() \n") }
           }else{
             gui_args = gui_args ", " tolower(guiarg[i]) "= true "
           }
-          # print $2 " " gui_args "\n"
         }
       }
-      cfg2 = options["ctermfg"]
-      if (cfg[2] == "NONE") {
-        cfg2 = "\"NONE\""
+      fgsetups = ""
+      if ("guifg" in options) {
+        fgsetups = "fg=" "\"" options["guifg"] "\","
+      }
+
+      bgsetups = ""
+      if ("guibg" in options) {
+        bgsetups = "bg=" "\"" options["guibg"] "\","
+      }
+
+      spsetups = ""
+      if ("guisp" in options) {
+        bgsetups = "sp=" "\"" options["guisp"] "\","
       }
 
 
-      ctermbg = "\"NONE\""
-      if ("ctermbg" in options) {
-        ctermbg = options["ctermbg"]
-        if (ctermbg == "NONE") {
-          ctermbg = "\"NONE\""
-        }
-      }
-      ctermfg = "\"NONE\""
+      cfgsetup = ""
       if ("ctermfg" in options) {
         ctermfg = options["ctermfg"]
         if (ctermfg == "NONE") {
           ctermfg = "\"NONE\""
         }
+        cfgsetup = "ctermfg=" ctermfg ","
       }
 
-      if (!("guibg" in options)) {
-        options["guibg"] = "NONE"
+      cbgsetup = ""
+      if ("ctermbg" in options) {
+        ctermbg = options["ctermbg"]
+        if (ctermbg == "NONE") {
+          ctermbg = "\"NONE\""
+        }
+        cbgsetup = "ctermbg=" ctermbg ","
       }
-      if (!("guifg" in options)) {
-        options["guifg"] = "NONE"
-      }
-      if ("guisp" in options) {
-        printf ("\t\tvim.api.nvim_set_hl(0, \"%s\", {fg= \"%s\", bg = \"%s\", ctermfg = %s, ctermbg = %s, sp = \"%s\", %s})\n", $2, options["guifg"], options["guibg"], ctermfg, ctermbg, options["guisp"], gui_args);
-      }else{
-        printf ("\t\tvim.api.nvim_set_hl(0, \"%s\", {fg= \"%s\", bg = \"%s\", ctermfg = %s, ctermbg = %s,  %s})\n", $2,  options["guifg"], options["guibg"], ctermfg, ctermbg, gui_args);
-      }
+
+
+      printf ("\t\tvim.api.nvim_set_hl(0, \"%s\", {%s %s %s %s %s %s})\n", $2, fgsetups, bgsetups, cfgsetup, cbgsetup, spsetups, gui_args);
+
+      delete options
+      delete fg
+      delete cfg
+      delete bg
+      delete cbg
+      delete gui
+      delete term
+      delete guisp
     }
   }
 }
