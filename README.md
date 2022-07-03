@@ -50,7 +50,7 @@ colorscheme aurora
 ### lua setup
 
 A lua version is provided, if the neovim version is higher than 0.6.x, lua script will be loaded automatically. The lua
-version should be faster as it using `vim.api.nvim_set_hl()`
+version will be faster as it using native API `vim.api.nvim_set_hl()`
 
 ```lua
 
