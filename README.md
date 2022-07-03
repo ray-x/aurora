@@ -50,7 +50,7 @@ colorscheme aurora
 ### lua setup
 
 A lua version is provided, if the neovim version is higher than 0.6.x, lua script will be loaded automatically. The lua
-version will be faster as it using native API `vim.api.nvim_set_hl()`
+version will be much faster as it using native API `vim.api.nvim_set_hl()` My tests shows loading the theme 5000 times took 3s, which means 0.6ms loading time. The vim version normally 15ms startup time.
 
 ```lua
 

@@ -21,7 +21,7 @@ if exists('g:aurora_bold')
   let Bold = "bold"
 endif
 
-let g:aurora_bold = get(g:, '_bold', 0)
+let g:aurora_bold = get(g:, 'aurora_bold', 0)
 if has('nvim-0.6')
   lua package.loaded['aurora'] = nil
   packadd aurora
