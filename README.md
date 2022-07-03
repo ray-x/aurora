@@ -41,8 +41,18 @@ call dein#add('ray-x/aurora')  " for dein user
 Plug 'ray-x/aurora'      " for Plug user
 
 set termguicolors            " 24 bit color
+let g:aurora_italic = 1     " italic
+let g:aurora_bold = 1     " bold
+
 colorscheme aurora
 ```
+
+### lua setup
+
+A lua version is provided, if the neovim version is higher than 0.6.x, lua script will be loaded automatically. The lua
+version should be faster as it using `vim.api.nvim_set_hl()`
+
+```lua
 
 #### Howto updateh the theme:
 
@@ -57,6 +67,14 @@ yarn render
 copy colors/aurora.vim ~/.vim/plugged/aurora/colors/aurora.vim
 
 ```
+
+Generate lua script:
+
+```bash
+cat ../colors/aurora.vim  | awk -f aurora.awk > aurora.lua
+```
+
+And manually update the aurora.vim to call aurora.lua (estilo will not do it for you).
 
 color palettes file is in
 `aurora/estilo/palettes/` folder
