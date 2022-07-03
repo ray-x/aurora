@@ -88,6 +88,9 @@ and syntax file in `aurora/estilo/syntax/` folder.
 - syntax color highlight:
   ![vim highlight for aurora](https://github.com/ray-x/files/blob/master/img/aurora/syntaxhighlight.jpg?raw=true)
 
+- sidebar
+<img width="902" alt="image" src="https://user-images.githubusercontent.com/1681295/175231905-82df4e4b-a508-4bb8-b878-9f0029643005.png">
+
 - color curl underline, better search highlight(only highlight bg and keep current fg color of the search text) on the right side:
 
 ![vim undercurl and search hl for aurora](https://github.com/ray-x/files/blob/master/img/aurora/undercurl_searchhl.jpg?raw=true)
