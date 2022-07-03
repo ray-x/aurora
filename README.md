@@ -41,8 +41,18 @@ call dein#add('ray-x/aurora')  " for dein user
 Plug 'ray-x/aurora'      " for Plug user
 
 set termguicolors            " 24 bit color
+let g:aurora_italic = 1     " italic
+let g:aurora_bold = 1     " bold
+
 colorscheme aurora
 ```
+
+### lua setup
+
+A lua version is provided, if the neovim version is higher than 0.6.x, lua script will be loaded automatically. The lua
+version will be much faster as it using native API `vim.api.nvim_set_hl()` My tests shows loading the theme 5000 times took 3s, which means 0.6ms loading time. The vim version normally 15ms startup time.
+
+```lua
 
 #### Howto updateh the theme:
 
@@ -58,6 +68,14 @@ copy colors/aurora.vim ~/.vim/plugged/aurora/colors/aurora.vim
 
 ```
 
+Generate lua script:
+
+```bash
+cat ../colors/aurora.vim  | awk -f aurora.awk > aurora.lua
+```
+
+And manually update the aurora.vim to call aurora.lua (estilo will not do it for you).
+
 color palettes file is in
 `aurora/estilo/palettes/` folder
 and syntax file in `aurora/estilo/syntax/` folder.
@@ -69,6 +87,9 @@ and syntax file in `aurora/estilo/syntax/` folder.
 
 - syntax color highlight:
   ![vim highlight for aurora](https://github.com/ray-x/files/blob/master/img/aurora/syntaxhighlight.jpg?raw=true)
+
+- sidebar
+<img width="902" alt="image" src="https://user-images.githubusercontent.com/1681295/175231905-82df4e4b-a508-4bb8-b878-9f0029643005.png">
 
 - color curl underline, better search highlight(only highlight bg and keep current fg color of the search text) on the right side:
 

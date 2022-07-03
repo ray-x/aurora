@@ -21,8 +21,12 @@ if exists('g:aurora_bold')
   let Bold = "bold"
 endif
 
-let g:aurora_bold = get(g:, '_bold', 0)
-
+let g:aurora_bold = get(g:, 'aurora_bold', 0)
+if has('nvim-0.6')
+  lua package.loaded['aurora'] = nil
+  packadd aurora
+  lua require('aurora').colorscheme()
+else
   hi link SignifySignAdd GitGutterAdd
   hi link SignifySignDelete GitGutterDelete
   hi link SignifySignDeleteFirstLine SignifySignDelete
@@ -557,7 +561,7 @@ let g:aurora_bold = get(g:, '_bold', 0)
   hi xmlNamespace guifg=#fbec9f ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi xmlAttribPunct guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi xmlProcessingDelim guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-
+endif
 if has('terminal')
   let g:terminal_ansi_colors = [
   \ "#070510",
