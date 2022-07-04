@@ -295,6 +295,11 @@ else
   hi DiagnosticHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticSignHint guifg=#ffce51 ctermfg=221 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
   hi DiagnosticHintFloating guifg=#1ABC9C ctermfg=37 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+  hi LspReferenceText guibg=#4f4764 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
+  hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
+  hi LspReferenceWrite guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
+  hi LspFloatWinNormal guifg=#dacfb4 ctermfg=187 guibg=#30234f ctermbg=236 gui=NONE cterm=NONE
+  hi LspSignatureActiveParameter guifg=NONE ctermfg=NONE guibg=#4d0c5d ctermbg=53 gui=Bold,underline,Italic cterm=Bold,underline,Italic guisp=#fbec9f
   hi link cssVendor cssTagName
   hi cssTagName guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link cssAttrComma cssAttr
