@@ -1,13 +1,13 @@
 stylusComment: '' # Comment
-stylusVariable: 'text' # Identifier
+stylusVariable: '@cssAttr' # Identifier
 stylusControl: '' # PreProc
 stylusFunction: '' # Function
 stylusInterpolation: '' # Delimiter
 stylusAmpersand: '' # Character
-stylusClass: 'green1' # Type
-stylusClassChar: 'blue1' # Special
+stylusClass: '@cssClassName' # Type
+stylusClassChar: '@cssProp' # Special
 stylusEscape: '' # Special
-stylusId: 'green1' # Identifier
-stylusIdChar: 'blue1' # Special
-cssVisualVal: 'text'
-stylusImport: 'yellow2'
+stylusId: '@cssClassName' # Identifier
+stylusIdChar: '@cssProp' # Special
+cssVisualVal: '@cssAttr'
+stylusImport: '@jsonNumber'

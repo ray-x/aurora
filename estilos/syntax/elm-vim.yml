@@ -9,12 +9,12 @@ elmChar: '' # String
 elmStringEscape: '' # Special
 elmInt: '' # Number
 elmFloat: '' # Float
-elmDelimiter: 'text' # Comment
+elmDelimiter: '@cssAttr' # Comment
 elmTypedef: '' # Keyword
 elmImport: '' # Keyword
 elmConditional: '' # Keyword
 elmAlias: '' # Keyword
-elmOperator: 'red1' # Operator
+elmOperator: '@cssImportant' # Operator
 elmType: '' # Type
 elmNumberType: '' # Type
 elmBraces: '' # Delimiter

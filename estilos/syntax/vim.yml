@@ -14,7 +14,7 @@ vimCmplxRepeat: '' #  SpecialChar
 vimCommand: '' #  Statement
 vimComment: '' #  Comment
 vimCommentString: 'yellow3' #  vimString
-vimCommentTitle: 'blue3' # PreProc
+vimCommentTitle: '@Question' # PreProc
 vimCondHL: '' # vimCommand
 vimContinue: '' # Special
 vimCtrlChar: '' # SpecialChar

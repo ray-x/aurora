@@ -1,6 +1,6 @@
 CmpItemAbbrDeprecated: "fg2 . "
 
-CmpItemAbbrMatch: "blue2 ."
+CmpItemAbbrMatch: "@CocHintSign"
 
 CmpItemAbbrMatchFuzzy: "blue6 ."
 

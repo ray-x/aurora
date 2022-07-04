@@ -1,12 +1,12 @@
 jsComment: '' # Comment
 jsEnvComment: '' # PreProc
-jsParensIfElse: 'blue1' # jsParens
+jsParensIfElse: '@cssProp' # jsParens
 jsParensRepeat: '' # jsParens
 jsParensSwitch: '' # jsParens
 jsParensCatch: '' # jsParens
 jsCommentTodo: '' # Todo
 jsString: '' # String
-jsObjectKey: 'blue1'
+jsObjectKey: '@cssProp'
 jsObjectKeyString: '' # String
 jsTemplateString: '' # String
 jsObjectStringKey: '' # String
@@ -27,7 +27,7 @@ jsConditional: '' # Conditional
 jsBranch: '' # Conditional
 jsLabel: '' # Label
 jsReturn: '' # Statement
-jsRepeat: 'green1' # Repeat
+jsRepeat: '@cssClassName' # Repeat
 jsDo: '' # Repeat
 jsStatement: '' # Statement
 jsException: '' # Exception
@@ -36,14 +36,14 @@ jsFinally: '' # Exception
 jsCatch: '' # Exception
 jsAsyncKeyword: '' # Keyword
 jsForAwait: '' # Keyword
-jsArrowFunction: 'green2' # Type
+jsArrowFunction: '@cssTagName' # Type
 jsFunction: '' # Type
-jsFunctionKey: 'green1'
+jsFunctionKey: '@cssClassName'
 jsGenerator: '' # jsFunction
 jsArrowFuncArgs: '' # jsFuncArgs
 jsFuncName: '' # Function
 jsClassFuncName: '' # jsFuncName
-jsObjectFuncName: 'green1' # Function
+jsObjectFuncName: '@cssClassName' # Function
 jsArguments: '' # Special
 jsError: '' # Error
 jsParensError: '' # Error
@@ -55,20 +55,20 @@ jsExtendsKeyword: '' # Keyword
 jsThis: '' # Special
 jsSuper: '' # Constant
 jsNan: '' # Number
-jsNull: 'yellow2' # Type
+jsNull: '@jsonNumber' # Type
 jsUndefined: '' # Type
 jsNumber: '' # Number
 jsFloat: '' # Float
 jsBooleanTrue: '' # Boolean
 jsBooleanFalse: '' # Boolean
-jsObjectColon: 'red1' # jsNoise
+jsObjectColon: '@cssImportant' # jsNoise
 jsNoise: '' # Noise
 jsBrackets: '' # Noise
-jsParens: 'blue1' # Noise
+jsParens: '@cssProp' # Noise
 jsBraces: '' # Noise
 jsFuncBraces: '' # Noise
-jsFuncParens: 'blue1' # Noise
-jsFuncArgs: 'yellow2'
+jsFuncParens: '@cssProp' # Noise
+jsFuncArgs: '@jsonNumber'
 jsClassBraces: '' # Noise
 jsClassNoise: '' # Noise
 jsIfElseBraces: '' # jsBraces
@@ -79,21 +79,21 @@ jsObjectSeparator: '' # Noise
 jsFinallyBraces: '' # jsBraces
 jsRepeatBraces: '' # jsBraces
 jsSwitchBraces: '' # jsBraces
-jsSpecial: 'yellow2' # Special
+jsSpecial: '@jsonNumber' # Special
 jsTemplateVar: '' # Special
-jsTemplateBraces: 'red1' # jsBraces
-jsGlobalObjects: 'blue2' # Constant
-jsGlobalNodeObjects: 'blue1' # Constant
+jsTemplateBraces: '@cssImportant' # jsBraces
+jsGlobalObjects: '@SpellCap' # Constant
+jsGlobalNodeObjects: '@cssProp' # Constant
 jsExceptions: '' # Constant
 jsBuiltins: '' # Constant
-jsImport: 'blue2' # Include
-jsExport: 'blue2' # Include
-jsExportDefault: 'green1' # StorageClass
-jsExportDefaultGroup: 'blue2' # jsExportDefault
+jsImport: '@SpellCap' # Include
+jsExport: '@SpellCap' # Include
+jsExportDefault: '@cssClassName' # StorageClass
+jsExportDefaultGroup: '@SpellCap' # jsExportDefault
 jsModuleAs: '' # Include
 jsModuleComma: '' # jsNoise
 jsModuleAsterisk: '' # Noise
-jsFrom: 'blue2' # Include
+jsFrom: '@SpellCap' # Include
 jsDecorator: '' # Special
 jsDecoratorFunction: '' # Function
 jsParensDecorator: '' # jsParens

@@ -1,11 +1,10 @@
 FugitiveblameBoundary: '' # Keyword
-FugitiveblameHash: 'blue1' # Identifier
-FugitiveblameUncommitted: 'red1' # Ignore
-FugitiveblameTime: 'green1' # PreProc
+FugitiveblameHash: '@cssProp' # Identifier
+FugitiveblameUncommitted: '@cssImportant' # Ignore
+FugitiveblameTime: '@cssClassName' # PreProc
 FugitiveblameLineNumber: '' # Number
 FugitiveblameOriginalFile: '' # String
 FugitiveblameOriginalLineNumber: '' #
 FugitiveblameShort: '' # FugitiveblameDelimiter
 FugitiveblameDelimiter: '' # Delimiter
-FugitiveblameNotCommittedYet: 'yellow2' # Comment
-
+FugitiveblameNotCommittedYet: '@jsonNumber' # Comment

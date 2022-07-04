@@ -1,5 +1,5 @@
 pugPlainChar: '' # Special
-pugJavascriptOutputChar: 'yellow2'
+pugJavascriptOutputChar: '@jsonNumber'
 pugScriptConditional: '' # PreProc
 pugScriptLoopKeywords: '' # PreProc
 pugScriptStatement: '' # PreProc

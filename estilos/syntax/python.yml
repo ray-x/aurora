@@ -1,6 +1,6 @@
-pythonStatement: 'yellow' # Statement
+pythonStatement: '@Repeat' # Statement
 pythonConditional: '' # Conditional
-pythonRepeat: 'yellow' # Repeat
+pythonRepeat: '@Repeat' # Repeat
 pythonOperator: '' # Operator
 pythonException: '' # Exception
 pythonInclude: '' # Include
@@ -20,6 +20,6 @@ pythonSpaceError: '' # Error
 pythonDoctest: '' # Special
 pythonDoctestValue: '' # Define
 pythonExClass: 'tan'
-pythonBuiltinObj: 'yellow'
+pythonBuiltinObj: '@Repeat'
 pythonDot: 'orange'
 pythonBuiltinFunc: 'tan'

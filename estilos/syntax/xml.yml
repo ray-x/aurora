@@ -2,10 +2,10 @@ xmlTodo: '' # Todo
 xmlTag: '' # Function
 xmlTagName: '' # Function
 xmlEndTag: '' # Identifier
-xmlNamespace: 'yellow2' # Tag
+xmlNamespace: '@jsonNumber' # Tag
 xmlEntity: '' # Statement
 xmlEntityPunct: '' # Type
-xmlAttribPunct: 'red1' # Comment
+xmlAttribPunct: '@cssImportant' # Comment
 xmlAttrib: '' # Type
 xmlString: '' # String
 xmlComment: '' # Comment
@@ -13,7 +13,7 @@ xmlCommentStart: '' # xmlComment
 xmlCommentPart: '' # Comment
 xmlCommentError: '' # Error
 xmlError: '' # Error
-xmlProcessingDelim: 'red1' # Comment
+xmlProcessingDelim: '@cssImportant' # Comment
 xmlProcessing: '' # Type
 xmlCdata: '' # String
 xmlCdataCdata: '' # Statement

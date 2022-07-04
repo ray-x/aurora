@@ -2,7 +2,7 @@ javascriptReserved: '' # Error
 javascriptReservedCase: '' # Error
 javascriptInvalidOp: '' # Error
 javascriptEndColons: '' # Statement
-javascriptOpSymbol: 'red1' # Normal
+javascriptOpSymbol: '@cssImportant' # Normal
 javascriptBraces: '' # Function
 javascriptBrackets: '' # Function
 javascriptParens: '' # Normal
@@ -16,15 +16,15 @@ javascriptDocNGParam: '' # javascriptDocParam
 javascriptDocParam: '' # Function
 javascriptDocNumParam: '' # Function
 javascriptDocEventRef: '' # Function
-javascriptDocNamedParamType: 'blue3' # Type
+javascriptDocNamedParamType: '@Question' # Type
 javascriptDocParamName: 'yellow3' # Type
-javascriptDocParamType: 'blue3' # Type
+javascriptDocParamType: '@Question' # Type
 javascriptString: '' # String
 javascriptTemplate: '' # String
 javascriptEventString: '' # String
 javascriptASCII: '' # Label
 javascriptTemplateSubstitution: '' # Label
-javascriptTemplateSB: 'red1' # javascriptTemplateSubstitution
+javascriptTemplateSB: '@cssImportant' # javascriptTemplateSubstitution
 javascriptRegexpString: '' # String
 javascriptGlobal: '' # Constant
 javascriptCharacter: '' # Character
@@ -39,7 +39,7 @@ javascriptBranch: '' # Conditional
 javascriptIdentifier: '' # Structure
 javascriptIdentifierName: ''
 javascriptVariable: '' # Identifier
-javascriptRepeat: 'green1' # Repeat
+javascriptRepeat: '@cssClassName' # Repeat
 javascriptForComprehension: '' # Repeat
 javascriptIfComprehension: '' # Repeat
 javascriptOfComprehension: '' # Repeat
@@ -55,7 +55,7 @@ javascriptNull: '' # Boolean
 javascriptNumber: '' # Number
 javascriptBoolean: '' # Boolean
 javascriptObjectLabel: '' # javascriptLabel
-javascriptObjectLabelColon: 'red1' # javascriptLabel
+javascriptObjectLabelColon: '@cssImportant' # javascriptLabel
 javascriptLabel: '' # Label
 javascriptPropertyName: '' # Label
 javascriptImport: '' # Special
@@ -64,11 +64,11 @@ javascriptTry: '' # Statement
 javascriptExceptions: '' # Statement
 javascriptMethodName: '' # Function
 javascriptMethodAccessor: '' # Operator
-javascriptObjectMethodName: 'green1' # Function
+javascriptObjectMethodName: '@cssClassName' # Function
 javascriptFuncKeyword: '' # Keyword
 javascriptAsyncFunc: '' # Keyword
 javascriptArrowFunc: '' # Type
-javascriptFuncName: 'green1' # Function
+javascriptFuncName: '@cssClassName' # Function
 javascriptFuncArg: '' # Special
 javascriptArrowFuncArg: '' # javascriptFuncArg
 javascriptComma: '' # Normal
