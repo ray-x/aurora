@@ -1,7 +1,5 @@
 return {
-	colorscheme = function() 
-
-		vim.cmd("hi clear")
+	colorscheme = function()
 		vim.api.nvim_set_hl(0, "SignifySignAdd", {link= "GitGutterAdd"})
 		vim.api.nvim_set_hl(0, "SignifySignDelete", {link= "GitGutterDelete"})
 		vim.api.nvim_set_hl(0, "SignifySignDeleteFirstLine", {link= "SignifySignDelete"})

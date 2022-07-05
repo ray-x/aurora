@@ -7,7 +7,6 @@ if exists('g:colors_name')
         syntax reset
     endif
 endif
-
 let g:colors_name="aurora"
 
 let Italic = ""
@@ -19,6 +18,10 @@ let g:aurora_italic = get(g:, 'aurora_italic', 0)
 let Bold = ""
 if exists('g:aurora_bold')
   let Bold = "bold"
+endif
+
+if &background != 'dark'
+  set background=dark
 endif
 
 let g:aurora_bold = get(g:, 'aurora_bold', 0)
@@ -578,5 +581,3 @@ if has('nvim')
   let g:terminal_color_14 = "#54CED6"
   let g:terminal_color_15 = "#e7d3fb"
 endif
-
-set background=dark
