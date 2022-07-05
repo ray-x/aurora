@@ -1,14 +1,14 @@
 ""
 " Colorscheme: " License: MIT""
 
-set background=dark
-hi clear
-
-if exists("syntax_on")
-  syntax reset
+if exists('g:colors_name')
+    highlight clear
+    if exists('syntax_on')
+        syntax reset
+    endif
 endif
-let g:colors_name="aurora"
 
+let g:colors_name="aurora"
 
 let Italic = ""
 if exists('g:aurora_italic')
@@ -578,3 +578,5 @@ if has('nvim')
   let g:terminal_color_14 = "#54CED6"
   let g:terminal_color_15 = "#e7d3fb"
 endif
+
+set background=dark
