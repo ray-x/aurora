@@ -540,7 +540,7 @@ else
   hi link xmlNamespace jsonNumber
   hi link xmlAttribPunct cssImportant
   hi link xmlProcessingDelim cssImportant
-
+endif
 if has('terminal')
   let g:terminal_ansi_colors = [
   \ "#070510",
