@@ -1,5 +1,6 @@
 return {
-	colorscheme = function()
+	colorscheme = function() 
+
 		vim.api.nvim_set_hl(0, "SignifySignAdd", {link= "GitGutterAdd"})
 		vim.api.nvim_set_hl(0, "SignifySignDelete", {link= "GitGutterDelete"})
 		vim.api.nvim_set_hl(0, "SignifySignDeleteFirstLine", {link= "SignifySignDelete"})
@@ -344,7 +345,7 @@ return {
 		vim.api.nvim_set_hl(0, "Normal", {fg="#ddd0f4", bg="#211c2f", ctermfg=189, ctermbg=234,  })
 		vim.api.nvim_set_hl(0, "NormalFloat", {fg="#dacfb4", bg="#282E39", ctermfg=187, ctermbg=236,  })
 		vim.api.nvim_set_hl(0, "NormalNC", {fg="#a9b1d6", bg="#282E39", ctermfg=146, ctermbg=236,  })
-		vim.api.nvim_set_hl(0, "FloatBorder", {fg="#787c99", bg="#282E39", ctermfg=8, ctermbg=236,  })
+		vim.api.nvim_set_hl(0, "FloatBorder", {fg="#4cc7e4", bg="#282E39", ctermfg=80, ctermbg=236,  })
 		vim.api.nvim_set_hl(0, "LineNr", {fg="#4f425e", bg="#211c2f", ctermfg=239, ctermbg=234,  })
 		vim.api.nvim_set_hl(0, "CursorLine", {fg="NONE", bg="#343047", ctermfg="NONE", ctermbg=236,  bold = vim.fn.exists("vim.g.aurora_bold") == 1 })
 		vim.api.nvim_set_hl(0, "CursorLineNr", {fg="#1aad16", bg="#1a1926", ctermfg=34, ctermbg=234,  bold = vim.fn.exists("vim.g.aurora_bold") == 1 })

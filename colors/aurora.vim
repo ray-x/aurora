@@ -9,6 +9,7 @@ if exists('g:colors_name')
 endif
 let g:colors_name="aurora"
 
+
 let Italic = ""
 if exists('g:aurora_italic')
   let Italic = "italic"
@@ -374,7 +375,7 @@ else
   hi Normal guifg=#ddd0f4 ctermfg=189 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
   hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
   hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
-  hi FloatBorder guifg=#787c99 ctermfg=8 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
+  hi FloatBorder guifg=#4cc7e4 ctermfg=80 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
   hi LineNr guifg=#4f425e ctermfg=239 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
   hi CursorLine guifg=NONE ctermfg=NONE guibg=#343047 ctermbg=236 gui=Bold cterm=Bold
   hi CursorLineNr guifg=#1aad16 ctermfg=34 guibg=#1a1926 ctermbg=234 gui=Bold cterm=Bold
@@ -539,7 +540,7 @@ else
   hi link xmlNamespace jsonNumber
   hi link xmlAttribPunct cssImportant
   hi link xmlProcessingDelim cssImportant
-endif
+
 if has('terminal')
   let g:terminal_ansi_colors = [
   \ "#070510",
