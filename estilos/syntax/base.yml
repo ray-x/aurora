@@ -63,17 +63,17 @@ Comment: "fg1 . i"
 Constant: "green0 ."
 String: "green6 ."
 Character: "purple" # Constant
-Boolean: "violet . i" # Constant
-Number: "coral" # Constant
-Float: "red2 . b" # Constant
+Boolean: "red8 . i" # Constant
+Number: "orange ." # Constant
+Float: "red3 . " # Constant
 Identifier: "green3 ."
 Function: "bluea . b" # Identifier
 Statement: "pink . b"
 Conditional: "green4" # Statement
-Repeat: "red8" # Statement
-Label: "darkgreen" # Statement
-Operator: "cyan" # Statement
-Keyword: "cranberry . b" # Statement
+Repeat: "redg . i" # Statement
+Label: "green0 . i" # Statement
+Operator: "cyan . b" # Statement
+Keyword: "purple0 . bi" # Statement
 Exception: "pink9 ." # Statement
 PreProc: "violet ."
 Include: "purple1" # PreProc
@@ -82,7 +82,7 @@ Macro: "red7" # PreProc
 PreCondit: "lightgreen" # PreProc
 Type: "green9 . b"
 StorageClass: "blued ." # Type
-Structure: "darkaqua . bi" # Type
+Structure: "cyan . b" # Type
 Typedef: "aqua" # Type
 Special: "tomato"
 SpecialChar: "pink" # Special

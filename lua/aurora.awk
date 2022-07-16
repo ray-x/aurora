@@ -31,9 +31,9 @@ BEGIN { print("return {\n\tcolorscheme = function() \n") }
           # print(i guiarg[i] "\n")
           if (gui_args == ""){
             if (tolower(guiarg[i]) == "bold"){
-              gui_args = tolower(guiarg[i]) " = vim.fn.exists(\"vim.g.aurora_bold\") == 1 "
+              gui_args = tolower(guiarg[i]) " = (vim.g.aurora_bold==1)"
             }else if (tolower(guiarg[i]) == "italic"){
-              gui_args = tolower(guiarg[i]) " = vim.fn.exists(\"vim.g.aurora_italic\") == 1"
+              gui_args = tolower(guiarg[i]) " = (vim.g.aurora_italic==1)"
             }else{
               gui_args = tolower(guiarg[i]) " = true"
             }

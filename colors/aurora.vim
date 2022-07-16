@@ -155,7 +155,7 @@ else
   hi TSAnnotation guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
   hi TSAttribute guifg=#7fdbca ctermfg=116 gui=NONE cterm=NONE
   hi TSCharacter guifg=#ffce51 ctermfg=221 gui=NONE cterm=NONE
-  hi TSComment guifg=#aab7cf ctermfg=146 gui=NONE cterm=NONE
+  hi link TSComment Comment
   hi TSError guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl
   hi TSPunctDelimiter guifg=#e7d3fb ctermfg=189 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi TSPunctBracket guifg=#7AA6DA ctermfg=110 gui=Bold cterm=Bold
@@ -166,9 +166,9 @@ else
   hi TSString guifg=#1ABC9C ctermfg=37 gui=NONE cterm=NONE
   hi TSStringRegex guifg=#7fdbca ctermfg=116 gui=NONE cterm=NONE
   hi TSStringEscape guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
-  hi TSNumber guifg=#FD9720 ctermfg=208 gui=NONE cterm=NONE
-  hi TSBoolean guifg=#FF435B ctermfg=203 gui=Italic cterm=Italic
-  hi TSFloat guifg=#F92772 ctermfg=197 gui=NONE cterm=NONE
+  hi link TSNumber Number
+  hi link TSBoolean Boolean
+  hi link TSFloat Folat
   hi TSField guifg=#9e71cf ctermfg=134 gui=Bold cterm=Bold
   hi TSType guifg=#67d5b5 ctermfg=79 gui=Bold cterm=Bold
   hi TSTypeBuiltin guifg=#ffce51 ctermfg=221 gui=Bold cterm=Bold
@@ -183,12 +183,12 @@ else
   hi TSParameterReference guifg=#A1EFE4 ctermfg=158 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link TSMethod Function
   hi TSConditional guifg=#EE82EE ctermfg=213 gui=Bold cterm=Bold
-  hi TSRepeat guifg=#ff7273 ctermfg=203 gui=Italic cterm=Italic
+  hi link TSRepeat Repeat
   hi TSException guifg=#ff5874 ctermfg=204 gui=Italic cterm=Italic
-  hi TSLabel guifg=#1aad16 ctermfg=34 gui=Italic cterm=Italic
-  hi TSOperator guifg=#A1EFE4 ctermfg=158 gui=Bold cterm=Bold
-  hi TSKeyword guifg=#c4a2ff ctermfg=183 gui=Bold,Italic cterm=Bold,Italic
-  hi TSStructure guifg=#A1EFE4 ctermfg=158 gui=Bold cterm=Bold
+  hi link TSLabel Label
+  hi link TSOperator Operator
+  hi link TSKeyword Keyword
+  hi link TSStructure Structure
   hi TSInclude guifg=#D57CD5 ctermfg=176 gui=NONE cterm=NONE
   hi TSTag guifg=#addb67 ctermfg=149 gui=NONE cterm=NONE
   hi TSTagDelimiter guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
@@ -424,17 +424,17 @@ else
   hi Constant guifg=#1aad16 ctermfg=34 gui=NONE cterm=NONE
   hi String guifg=#2ba245 ctermfg=35 gui=NONE cterm=NONE
   hi Character guifg=#be9af7 ctermfg=141 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Boolean guifg=#EE82EE ctermfg=213 gui=Italic cterm=Italic
-  hi Number guifg=#ff7f50 ctermfg=209 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Float guifg=#ec5f67 ctermfg=203 gui=Bold cterm=Bold
+  hi Boolean guifg=#FF435B ctermfg=203 gui=Italic cterm=Italic
+  hi Number guifg=#FD9720 ctermfg=208 gui=NONE cterm=NONE
+  hi Float guifg=#F92772 ctermfg=197 gui=NONE cterm=NONE
   hi Identifier guifg=#A6E22D ctermfg=148 gui=NONE cterm=NONE
   hi Function guifg=#10aef8 ctermfg=39 gui=Bold cterm=Bold
   hi Statement guifg=#F92772 ctermfg=197 gui=Bold cterm=Bold
   hi Conditional guifg=#99c794 ctermfg=114 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Repeat guifg=#FF435B ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Label guifg=#5f875f ctermfg=65 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Operator guifg=#A1EFE4 ctermfg=158 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Keyword guifg=#CD5C5C ctermfg=167 gui=Bold cterm=Bold
+  hi Repeat guifg=#ff7273 ctermfg=203 gui=Italic cterm=Italic
+  hi Label guifg=#1aad16 ctermfg=34 gui=Italic cterm=Italic
+  hi Operator guifg=#A1EFE4 ctermfg=158 gui=Bold cterm=Bold
+  hi Keyword guifg=#c4a2ff ctermfg=183 gui=Bold,Italic cterm=Bold,Italic
   hi Exception guifg=#e55285 ctermfg=168 gui=NONE cterm=NONE
   hi PreProc guifg=#EE82EE ctermfg=213 gui=NONE cterm=NONE
   hi Include guifg=#ae81ef ctermfg=141 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -443,7 +443,7 @@ else
   hi PreCondit guifg=#d7ffaf ctermfg=193 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Type guifg=#67d5b5 ctermfg=79 gui=Bold cterm=Bold
   hi StorageClass guifg=#01d5f1 ctermfg=45 gui=NONE cterm=NONE
-  hi Structure guifg=#0fb9e0 ctermfg=38 gui=Bold,Italic cterm=Bold,Italic
+  hi Structure guifg=#A1EFE4 ctermfg=158 gui=Bold cterm=Bold
   hi Typedef guifg=#66d9ef ctermfg=81 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Special guifg=#FF6347 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi SpecialChar guifg=#F92772 ctermfg=197 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
