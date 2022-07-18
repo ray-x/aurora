@@ -404,7 +404,7 @@ else
   hi PmenuThumb guifg=NONE ctermfg=NONE guibg=#aab7cf ctermbg=146 gui=NONE cterm=NONE
   hi MsgArea guifg=#ffbbd6 ctermfg=218 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
   hi Question guifg=#6690c4 ctermfg=68 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Search guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#B376B3
+  hi Search guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#F92772
   hi SpecialKey guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
   hi SpellBad guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#ac3f27
   hi SpellCap guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

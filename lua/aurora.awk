@@ -23,6 +23,7 @@ BEGIN { print("return {\n\tcolorscheme = function() \n") }
       options[gui[1]] = gui[2];
       options[term[1]] = term[2];
       options[guisp[1]] = guisp[2];
+      # print(options["guibg"])
       guiv = options["gui"]
       gui_args = ""
       if (guiv != "NONE") {
@@ -54,7 +55,7 @@ BEGIN { print("return {\n\tcolorscheme = function() \n") }
 
       spsetups = ""
       if ("guisp" in options) {
-        bgsetups = "sp=" "\"" options["guisp"] "\","
+        spsetups = "sp=" "\"" options["guisp"] "\","
       }
 
 
