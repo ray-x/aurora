@@ -138,7 +138,7 @@ return {
 		vim.api.nvim_set_hl(0, "TSStringEscape", {fg="#A1EFE4",  ctermfg=158,   })
 		vim.api.nvim_set_hl(0, "TSNumber", {link= "Number"})
 		vim.api.nvim_set_hl(0, "TSBoolean", {link= "Boolean"})
-		vim.api.nvim_set_hl(0, "TSFloat", {link= "Folat"})
+		vim.api.nvim_set_hl(0, "TSFloat", {link= "Float"})
 		vim.api.nvim_set_hl(0, "TSField", {fg="#9e71cf",  ctermfg=134,   bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "TSType", {fg="#67d5b5",  ctermfg=79,   bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "TSTypeBuiltin", {fg="#ffce51",  ctermfg=221,   bold = (vim.g.aurora_bold==1)})

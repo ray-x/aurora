@@ -168,7 +168,7 @@ else
   hi TSStringEscape guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
   hi link TSNumber Number
   hi link TSBoolean Boolean
-  hi link TSFloat Folat
+  hi link TSFloat Float
   hi TSField guifg=#9e71cf ctermfg=134 gui=Bold cterm=Bold
   hi TSType guifg=#67d5b5 ctermfg=79 gui=Bold cterm=Bold
   hi TSTypeBuiltin guifg=#ffce51 ctermfg=221 gui=Bold cterm=Bold
