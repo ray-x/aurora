@@ -1,6 +1,13 @@
 return {
 	colorscheme = function() 
-
+        local bg = "#211c2f"
+        local bg2 = "#282e39"
+        local bg3 = "#1a1926"
+        if vim.g.aurora_transparent then
+          bg = "NONE"
+          bg2 = "NONE"
+          bg3 = "NONE"
+        end
 		vim.api.nvim_set_hl(0, "SignifySignAdd", {link= "GitGutterAdd"})
 		vim.api.nvim_set_hl(0, "SignifySignDelete", {link= "GitGutterDelete"})
 		vim.api.nvim_set_hl(0, "SignifySignDeleteFirstLine", {link= "SignifySignDelete"})

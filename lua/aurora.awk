@@ -50,7 +50,11 @@ BEGIN { print("return {\n\tcolorscheme = function() \n") }
 
       bgsetups = ""
       if ("guibg" in options) {
-        bgsetups = "bg=" "\"" options["guibg"] "\","
+        if (substr(options["guibg"], 1, 2) != "bg") {
+          bgsetups = "bg=" "\"" options["guibg"] "\","
+        }else{
+          bgsetups = "bg=" options["guibg"] ","
+        }
       }
 
       spsetups = ""

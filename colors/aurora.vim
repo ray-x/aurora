@@ -14,6 +14,16 @@ let Italic = ""
 if exists('g:aurora_italic')
   let Italic = "italic"
 endif
+
+if exists('g:aurora_transparent')
+  let bg = "NONE"
+  let bg2 = "NONE"
+  let bg3 = "NONE"
+else
+  let bg = "#211c2f"
+  let bg2 = "#282e39"
+  let bg3 = "#1a1926"
+end
 let g:aurora_italic = get(g:, 'aurora_italic', 0)
 
 let Bold = ""
@@ -53,10 +63,10 @@ else
   hi GitSignsAddInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,underline cterm=Bold,underline guisp=#addb67
   hi GitSignsDeleteInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#E7C547
   hi GitSignsChangeInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#B376B3
-  hi GitGutterAdd guifg=#9dd067 ctermfg=149 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
-  hi GitGutterChange guifg=#4cc7e4 ctermfg=80 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
-  hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
-  hi GitGutterChangeDelete guifg=#7d2c9d ctermfg=91 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi GitGutterAdd guifg=#9dd067 ctermfg=149 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  hi GitGutterChange guifg=#4cc7e4 ctermfg=80 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  hi GitGutterChangeDelete guifg=#7d2c9d ctermfg=91 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi link jsParensIfElse cssProp
   hi link jsObjectKey cssProp
   hi link jsRepeat cssClassName
@@ -77,9 +87,9 @@ else
   hi jsExportDefault guifg=#9eeb61 ctermfg=149 gui=NONE cterm=NONE
   hi link jsExportDefaultGroup SpellCap
   hi link jsFrom jsReturn
-  hi ALEErrorSign guifg=#ff5874 ctermfg=204 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
-  hi ALEWarningSign guifg=#FD9720 ctermfg=208 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
-  hi ALEInfoSign guifg=#addb67 ctermfg=149 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi ALEErrorSign guifg=#ff5874 ctermfg=204 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  hi ALEWarningSign guifg=#FD9720 ctermfg=208 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  hi ALEInfoSign guifg=#addb67 ctermfg=149 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi link plug2 cssClassName
   hi plugH2 guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi link plugBracket cssProp
@@ -92,11 +102,11 @@ else
   hi link plugEdge cssClassName
   hi plugSha guifg=#fbfcbf ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi plugNotLoaded guifg=#F92772 ctermfg=197 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi TelescopeNormal guifg=#989cbf ctermfg=247 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopePromptBorder guifg=#4cc7e4 ctermfg=80 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopeResultsBorder guifg=#5ca7e4 ctermfg=74 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopePreviewBorder guifg=#9e71cf ctermfg=134 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopeSelectionCaret guifg=#66d9ef ctermfg=81 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopeNormal guifg=#989cbf ctermfg=247 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopePromptBorder guifg=#4cc7e4 ctermfg=80 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopeResultsBorder guifg=#5ca7e4 ctermfg=74 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopePreviewBorder guifg=#9e71cf ctermfg=134 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  hi TelescopeSelectionCaret guifg=#66d9ef ctermfg=81 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi TelescopeSelection guifg=#A1EFE4 ctermfg=158 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
   hi TelescopeMatching guifg=#EE82EE ctermfg=213 gui=NONE cterm=NONE
   hi sqlStatement guifg=#54CED6 ctermfg=80 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -149,9 +159,9 @@ else
   hi markdownCode guifg=#fbfcbf ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link markdownEscape SpellCap
   hi link markdownError cssImportant
-  hi ClapPreview guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
+  hi ClapPreview guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
   hi ClapMatches guifg=#C33C4A ctermfg=131 guibg=#443a54 ctermbg=238 gui=Bold,undercurl,reverse cterm=Bold,undercurl,reverse guisp=#f05874
-  hi ClapDisplay guifg=#aab7cf ctermfg=146 guibg=#211c2f ctermbg=234 gui=Bold,undercurl cterm=Bold,undercurl guisp=#f05874
+  hi ClapDisplay guifg=#aab7cf ctermfg=146 guibg=bg ctermbg=234 gui=Bold,undercurl cterm=Bold,undercurl guisp=#f05874
   hi TSAnnotation guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
   hi TSAttribute guifg=#7fdbca ctermfg=116 gui=NONE cterm=NONE
   hi TSCharacter guifg=#ffce51 ctermfg=221 gui=NONE cterm=NONE
@@ -202,7 +212,7 @@ else
   hi link TSTitle SpecialKey
   hi TSLiteral guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
   hi TSURI guifg=#A6E22D ctermfg=148 gui=Italic cterm=Italic
-  hi TSCurrentScope guibg=#211c2f ctermbg=234 gui=Bold cterm=Bold
+  hi TSCurrentScope guibg=bg ctermbg=234 gui=Bold cterm=Bold
   hi TSIdentifier guifg=#dacfb4 ctermfg=187 gui=Bold cterm=Bold
   hi link TSNameSpace Function
   hi link pythonStatement Repeat
@@ -280,10 +290,10 @@ else
   hi link jsonQuote cssAttr
   hi link jsonNoise cssImportant
   hi DiagnosticError guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticSignError guifg=#D93234 ctermfg=167 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi DiagnosticSignError guifg=#D93234 ctermfg=167 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi link DiagnosticErrorFloating DiagnosticError
   hi DiagnosticWarning guifg=#bBa03A ctermfg=143 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticSignWarn guifg=#e7dc8c ctermfg=186 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi DiagnosticSignWarn guifg=#e7dc8c ctermfg=186 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi DiagnosticWarningFloating guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticVirtualTextError guifg=#D93234 ctermfg=167 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticVirtualTextWarning guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -294,10 +304,10 @@ else
   hi link DiagnosticFloatingWarning DiagnosticWarning
   hi link DiagnosticFloatingInfo DiagnosticInfo
   hi link DiagnosticFloatingHint DiagnosticHint
-  hi DiagnosticSignInfo guifg=#7AA6DA ctermfg=110 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi DiagnosticSignInfo guifg=#7AA6DA ctermfg=110 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi DiagnosticInfo guifg=#7AA6DA ctermfg=110 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticSignHint guifg=#ffce51 ctermfg=221 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi DiagnosticSignHint guifg=#ffce51 ctermfg=221 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi DiagnosticHintFloating guifg=#1ABC9C ctermfg=37 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi LspReferenceText guibg=#4f4764 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
   hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
@@ -372,20 +382,20 @@ else
   hi link FugitiveblameUncommitted cssImportant
   hi link FugitiveblameTime cssClassName
   hi link FugitiveblameNotCommittedYet jsonNumber
-  hi Normal guifg=#ddd0f4 ctermfg=189 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-  hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
-  hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
-  hi FloatBorder guifg=#4cc7e4 ctermfg=80 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
-  hi LineNr guifg=#4f425e ctermfg=239 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi Normal guifg=#ddd0f4 ctermfg=189 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
+  hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
+  hi FloatBorder guifg=#4cc7e4 ctermfg=80 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
+  hi LineNr guifg=#4f425e ctermfg=239 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi CursorLine guifg=NONE ctermfg=NONE guibg=#343047 ctermbg=236 gui=Bold cterm=Bold
-  hi CursorLineNr guifg=#1aad16 ctermfg=34 guibg=#1a1926 ctermbg=234 gui=Bold cterm=Bold
+  hi CursorLineNr guifg=#1aad16 ctermfg=34 guibg=bg3 ctermbg=234 gui=Bold cterm=Bold
   hi ColorColumn guifg=NONE ctermfg=NONE guibg=#22202a ctermbg=235 gui=NONE cterm=NONE
   hi Cursor guibg=#ddd0f4 ctermbg=189 gui=NONE cterm=NONE
   hi CursorIM guifg=#ddd0f4 ctermfg=189 guibg=#5f7e97 ctermbg=66 gui=NONE cterm=NONE
   hi CursorColumn guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
   hi Directory guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
   hi DiffAdd guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=Bold cterm=Bold
-  hi DiffChange guifg=NONE ctermfg=NONE guibg=#282E39 ctermbg=236 gui=Bold cterm=Bold
+  hi DiffChange guifg=NONE ctermfg=NONE guibg=bg2 ctermbg=236 gui=Bold cterm=Bold
   hi DiffDelete guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold cterm=Bold
   hi DiffText guifg=NONE ctermfg=NONE guibg=#821040 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline
   hi ErrorMsg guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
@@ -398,11 +408,11 @@ else
   hi ModeMsg guifg=#77d507 ctermfg=112 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi MoreMsg guifg=#aab7cf ctermfg=146 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi NonText guifg=#4f425e ctermfg=239 gui=NONE cterm=NONE
-  hi PMenu guifg=#888ca9 ctermfg=103 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi PMenu guifg=#888ca9 ctermfg=103 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi PMenuSel guifg=#e7d3fb ctermfg=189 guibg=#443a54 ctermbg=238 gui=Bold,Italic cterm=Bold,Italic
   hi PmenuSbar guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=NONE cterm=NONE
   hi PmenuThumb guifg=NONE ctermfg=NONE guibg=#aab7cf ctermbg=146 gui=NONE cterm=NONE
-  hi MsgArea guifg=#ffbbd6 ctermfg=218 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi MsgArea guifg=#ffbbd6 ctermfg=218 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi Question guifg=#6690c4 ctermfg=68 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Search guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#F92772
   hi SpecialKey guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
@@ -411,15 +421,15 @@ else
   hi SpellRare guifg=#99c794 ctermfg=114 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#addb67
   hi StatusLine guifg=#ddd0f4 ctermfg=189 guibg=#443a54 ctermbg=238 gui=NONE cterm=NONE
   hi StatusLineNC guifg=#777087 ctermfg=243 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
-  hi TabLine guifg=#7BA1D0 ctermfg=110 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
+  hi TabLine guifg=#7BA1D0 ctermfg=110 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi TabLineFill guifg=#333042 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi TabLineSel guifg=#10aef8 ctermfg=39 guibg=NONE ctermbg=NONE gui=underline cterm=underline
   hi Title guifg=#82aaf0 ctermfg=111 gui=Bold cterm=Bold
   hi Visual guibg=#4f4764 ctermbg=239 gui=NONE cterm=NONE
   hi VisualNOS guifg=#637077 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi WarningMsg guifg=#ec5f67 ctermfg=203 gui=undercurl cterm=undercurl guisp=#821040
-  hi WildMenu guifg=#777087 ctermfg=243 guibg=#211c2f ctermbg=234 gui=NONE cterm=NONE
-  hi EndOfBuffer guifg=#4f425e ctermfg=239 guibg=#1a1926 ctermbg=234 gui=NONE cterm=NONE
+  hi WildMenu guifg=#777087 ctermfg=243 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  hi EndOfBuffer guifg=#4f425e ctermfg=239 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi Comment guifg=#989cbf ctermfg=247 gui=Italic cterm=Italic
   hi Constant guifg=#1aad16 ctermfg=34 gui=NONE cterm=NONE
   hi String guifg=#2ba245 ctermfg=35 gui=NONE cterm=NONE
@@ -484,9 +494,9 @@ else
   hi link typescriptUnaryOp cssImportant
   hi link typescriptBranch Statement
   hi link pugJavascriptOutputChar jsonNumber
-  hi fzf1 guifg=#ecc48d ctermfg=222 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
-  hi fzf2 guifg=#FD9720 ctermfg=208 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
-  hi fzf3 guifg=#DC143C ctermfg=161 guibg=#282E39 ctermbg=236 gui=NONE cterm=NONE
+  hi fzf1 guifg=#ecc48d ctermfg=222 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
+  hi fzf2 guifg=#FD9720 ctermfg=208 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
+  hi fzf3 guifg=#DC143C ctermfg=161 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
   hi link NERDTreeHelp cssAttr
   hi link NERDTreeHelpKey cssClassName
   hi link NERDTreeHelpCommand jsonNumber
@@ -511,11 +521,11 @@ else
   hi diffLine guifg=#fbed7d ctermfg=228 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi diffSubname guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi diffComment guifg=#5f7e97 ctermfg=66 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi BufferLineIndicatorSelected guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
+  hi BufferLineIndicatorSelected guifg=bg2 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BufferLineBufferSelected guifg=#addb67 ctermfg=149 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
-  hi BufferLineFill guifg=#282E39 ctermfg=236 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
+  hi BufferLineFill guifg=bg2 ctermfg=236 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
   hi BuffetCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BuffetActiveBuffer guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
+  hi BuffetActiveBuffer guifg=bg2 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BuffetBuffer guibg=#b4b0e0 ctermbg=146 gui=NONE cterm=NONE
   hi BuffetModCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BuffetModActiveBuffer guifg=#343047 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
