@@ -521,11 +521,11 @@ else
   hi diffLine guifg=#fbed7d ctermfg=228 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi diffSubname guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi diffComment guifg=#5f7e97 ctermfg=66 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi BufferLineIndicatorSelected guifg=bg2 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
+  hi BufferLineIndicatorSelected guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BufferLineBufferSelected guifg=#addb67 ctermfg=149 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
-  hi BufferLineFill guifg=bg2 ctermfg=236 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
+  hi BufferLineFill guifg=#282E39 ctermfg=236 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
   hi BuffetCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BuffetActiveBuffer guifg=bg2 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
+  hi BuffetActiveBuffer guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BuffetBuffer guibg=#b4b0e0 ctermbg=146 gui=NONE cterm=NONE
   hi BuffetModCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BuffetModActiveBuffer guifg=#343047 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE

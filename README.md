@@ -42,6 +42,7 @@ Plug 'ray-x/aurora'      " for Plug user
 
 set termguicolors            " 24 bit color
 let g:aurora_italic = 1     " italic
+let g:aurora_transparent = 1     " transparent
 let g:aurora_bold = 1     " bold
 
 colorscheme aurora
