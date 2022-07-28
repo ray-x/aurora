@@ -18,7 +18,7 @@ DiagnosticInfo: "br_blue" # Label
 DiagnosticHint: "green6" # Label
 DiagnosticSignHint: "orange2 neardark" # Label
 DiagnosticHintFloating: "green5" # Label
-LspReferenceText: ". neardark6 bc orange" # Label
+LspReferenceText: ". neardark4 bc orange" # Label
 LspReferenceRead: "green0 . bc orange" # Label
 LspReferenceWrite: "green0 . bc orange" # Label
 LspFloatWinNormal: "text neardarkb"

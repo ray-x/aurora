@@ -309,7 +309,7 @@ else
   hi DiagnosticHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticSignHint guifg=#ffce51 ctermfg=221 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi DiagnosticHintFloating guifg=#1ABC9C ctermfg=37 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi LspReferenceText guibg=#4f4764 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
+  hi LspReferenceText guibg=#343047 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
   hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
   hi LspReferenceWrite guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
   hi LspFloatWinNormal guifg=#dacfb4 ctermfg=187 guibg=#30234f ctermbg=236 gui=NONE cterm=NONE
@@ -396,7 +396,7 @@ else
   hi Directory guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
   hi DiffAdd guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=Bold cterm=Bold
   hi DiffChange guifg=NONE ctermfg=NONE guibg=bg2 ctermbg=236 gui=Bold cterm=Bold
-  hi DiffDelete guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold cterm=Bold
+  hi DiffDelete guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239 gui=Bold cterm=Bold
   hi DiffText guifg=NONE ctermfg=NONE guibg=#821040 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline
   hi ErrorMsg guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi VertSplit guifg=#777087 ctermfg=243 gui=NONE cterm=NONE
@@ -414,7 +414,7 @@ else
   hi PmenuThumb guifg=NONE ctermfg=NONE guibg=#aab7cf ctermbg=146 gui=NONE cterm=NONE
   hi MsgArea guifg=#ffbbd6 ctermfg=218 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi Question guifg=#6690c4 ctermfg=68 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Search guifg=NONE ctermfg=NONE guibg=#4f5070 ctermbg=239 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#F92772
+  hi Search guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#F92772
   hi SpecialKey guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
   hi SpellBad guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#ac3f27
   hi SpellCap guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -425,7 +425,7 @@ else
   hi TabLineFill guifg=#333042 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi TabLineSel guifg=#10aef8 ctermfg=39 guibg=NONE ctermbg=NONE gui=underline cterm=underline
   hi Title guifg=#82aaf0 ctermfg=111 gui=Bold cterm=Bold
-  hi Visual guibg=#4f4764 ctermbg=239 gui=NONE cterm=NONE
+  hi Visual guibg=#3f4060 ctermbg=239 gui=NONE cterm=NONE
   hi VisualNOS guifg=#637077 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi WarningMsg guifg=#ec5f67 ctermfg=203 gui=undercurl cterm=undercurl guisp=#821040
   hi WildMenu guifg=#777087 ctermfg=243 guibg=bg ctermbg=234 gui=NONE cterm=NONE
