@@ -1,5 +1,6 @@
 IndentBlanklineChar: "gray7"
 IndentBlanklineContextChar: "purple0 . b"
+IndentBlanklineContextStart: "purple0 . bu"
 IndentBlanklineIndent1: "purple"
 IndentBlanklineIndent2: "blue"
 IndentBlanklineIndent3: "green"

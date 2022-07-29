@@ -1,4 +1,4 @@
-BEGIN { print("return {\n\tcolorscheme = function() \n") }
+BEGIN { print("-- stylua: ignore\nreturn {\n\tcolorscheme = function() \n") }
 {
   if ($1 == "hi") {
     if ($2 == "clear"){

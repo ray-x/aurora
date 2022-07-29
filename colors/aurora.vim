@@ -275,6 +275,7 @@ else
   hi HopNextKey2 guifg=#82aaf0 ctermfg=111 gui=Bold,underline cterm=Bold,underline
   hi IndentBlanklineChar guifg=#777087 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi IndentBlanklineContextChar guifg=#c4a2ff ctermfg=183 gui=Bold cterm=Bold
+  hi IndentBlanklineContextStart guifg=#c4a2ff ctermfg=183 gui=Bold,underline cterm=Bold,underline guisp=#c4a2ff
   hi IndentBlanklineIndent1 guifg=#be9af7 ctermfg=141 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi IndentBlanklineIndent2 guifg=#82aaf0 ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi IndentBlanklineIndent3 guifg=#addb67 ctermfg=149 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

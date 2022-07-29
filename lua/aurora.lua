@@ -1,3 +1,4 @@
+-- stylua: ignore
 return {
 	colorscheme = function()
 
@@ -243,6 +244,7 @@ return {
 		vim.api.nvim_set_hl(0, "HopNextKey2", {fg="#82aaf0",  ctermfg=111,   bold = (vim.g.aurora_bold==1), underline= true })
 		vim.api.nvim_set_hl(0, "IndentBlanklineChar", {fg="#777087", bg="NONE", ctermfg=243, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "IndentBlanklineContextChar", {fg="#c4a2ff",  ctermfg=183,   bold = (vim.g.aurora_bold==1)})
+		vim.api.nvim_set_hl(0, "IndentBlanklineContextStart", {fg="#c4a2ff",  ctermfg=183,   bold = (vim.g.aurora_bold==1), underline = true, sp = "#c4a2ff"})
 		vim.api.nvim_set_hl(0, "IndentBlanklineIndent1", {fg="#be9af7", bg="NONE", ctermfg=141, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "IndentBlanklineIndent2", {fg="#82aaf0", bg="NONE", ctermfg=111, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "IndentBlanklineIndent3", {fg="#addb67", bg="NONE", ctermfg=149, ctermbg="NONE",  })
