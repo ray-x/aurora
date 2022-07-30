@@ -366,7 +366,7 @@ return {
 		vim.api.nvim_set_hl(0, "Directory", {fg="#82aaf0",  ctermfg=111,   })
 		vim.api.nvim_set_hl(0, "DiffAdd", {fg="NONE", bg="#4f425e", ctermfg="NONE", ctermbg=239,  bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "DiffChange", {fg="NONE", bg=bg2, ctermfg="NONE", ctermbg=236,  bold = (vim.g.aurora_bold==1)})
-		vim.api.nvim_set_hl(0, "DiffDelete", {fg="NONE", bg="#3f4060", ctermfg="NONE", ctermbg=239,  bold = (vim.g.aurora_bold==1)})
+		vim.api.nvim_set_hl(0, "DiffDelete", {fg="NONE", bg="#3f4060", ctermfg="NONE", ctermbg=239,  bold = (vim.g.aurora_bold==1), strikethrough = true})
 		vim.api.nvim_set_hl(0, "DiffText", {fg="NONE", bg="#821040", ctermfg="NONE", ctermbg=89,  bold = (vim.g.aurora_bold==1), italic= true , underline= true })
 		vim.api.nvim_set_hl(0, "ErrorMsg", {fg="#DC143C", bg="NONE", ctermfg=161, ctermbg="NONE",  bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "VertSplit", {fg="#777087",  ctermfg=243,   })
