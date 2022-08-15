@@ -81,6 +81,9 @@ color palettes file is in
 `aurora/estilo/palettes/` folder
 and syntax file in `aurora/estilo/syntax/` folder.
 
+#### fast startup time
+On my intel 11 i7 xps, loading time is 2ms on average.
+
 #### Show case
 
 - color palettes, more than 100 pre-defined color:
