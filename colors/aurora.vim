@@ -19,10 +19,12 @@ if exists('g:aurora_transparent')
   let bg = "NONE"
   let bg2 = "NONE"
   let bg3 = "NONE"
+  let bg4 = "NONE"
 else
   let bg = "#211c2f"
   let bg2 = "#282e39"
   let bg3 = "#1a1926"
+  let bg4 = "#141425"
 end
 let g:aurora_italic = get(g:, 'aurora_italic', 0)
 
@@ -524,6 +526,8 @@ else
   hi diffComment guifg=#5f7e97 ctermfg=66 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi BufferLineIndicatorSelected guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BufferLineBufferSelected guifg=#addb67 ctermfg=149 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
+  hi link BufferLineBuffer Comment
+  hi link BufferLineBufferVisible Comment
   hi BufferLineFill guifg=#282E39 ctermfg=236 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
   hi BuffetCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
   hi BuffetActiveBuffer guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE

@@ -5,10 +5,12 @@ return {
 		local bg = "#211c2f"
 		local bg2 = "#282e39"
 		local bg3 = "#1a1926"
+		local bg4 = '#141425'
 		if vim.g.aurora_transparent then
 			bg = "NONE"
 			bg2 = "NONE"
 			bg3 = "NONE"
+      bg4 = "NONE"
 		end
 		vim.api.nvim_set_hl(0, "SignifySignAdd", {link= "GitGutterAdd"})
 		vim.api.nvim_set_hl(0, "SignifySignDelete", {link= "GitGutterDelete"})
@@ -269,7 +271,9 @@ return {
 		vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarning", {fg="#DBC08A", bg="NONE", ctermfg=180, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", {fg="#99c794", bg="NONE", ctermfg=114, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", {fg="#1aad16", bg="NONE", ctermfg=34, ctermbg="NONE",  })
-		vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", {link= "DiagnosticError"})
+		vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", {link= "DiagnosticError", undercurl = true, sp =
+      '#D83234'})
+		vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", {link= "DiagnosticWarn", undercurl = true, sp = '#BBA03A'})
 		vim.api.nvim_set_hl(0, "DiagnosticFloatingError", {link= "DiagnosticError"})
 		vim.api.nvim_set_hl(0, "DiagnosticFloatingWarning", {link= "DiagnosticWarning"})
 		vim.api.nvim_set_hl(0, "DiagnosticFloatingInfo", {link= "DiagnosticInfo"})
@@ -358,7 +362,7 @@ return {
 		vim.api.nvim_set_hl(0, "FloatBorder", {fg="#4cc7e4", bg=bg2, ctermfg=80, ctermbg=236,  })
 		vim.api.nvim_set_hl(0, "LineNr", {fg="#4f425e", bg=bg, ctermfg=239, ctermbg=234,  })
 		vim.api.nvim_set_hl(0, "CursorLine", {fg="NONE", bg="#343047", ctermfg="NONE", ctermbg=236,  bold = (vim.g.aurora_bold==1)})
-		vim.api.nvim_set_hl(0, "CursorLineNr", {fg="#1aad16", bg=bg3, ctermfg=34, ctermbg=234,  bold = (vim.g.aurora_bold==1)})
+		vim.api.nvim_set_hl(0, "CursorLineNr", {fg="#1aad16", bg=bg3, ctermfg=34, ctermbg=234, underline = true, bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "ColorColumn", {fg="NONE", bg="#22202a", ctermfg="NONE", ctermbg=235,  })
 		vim.api.nvim_set_hl(0, "Cursor", { bg="#ddd0f4",  ctermbg=189,  })
 		vim.api.nvim_set_hl(0, "CursorIM", {fg="#ddd0f4", bg="#5f7e97", ctermfg=189, ctermbg=66,  })
@@ -370,9 +374,9 @@ return {
 		vim.api.nvim_set_hl(0, "DiffText", {fg="NONE", bg="#821040", ctermfg="NONE", ctermbg=89,  bold = (vim.g.aurora_bold==1), italic= true , underline= true })
 		vim.api.nvim_set_hl(0, "ErrorMsg", {fg="#DC143C", bg="NONE", ctermfg=161, ctermbg="NONE",  bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "VertSplit", {fg="#777087",  ctermfg=243,   })
-		vim.api.nvim_set_hl(0, "Folded", {fg="#777087", bg="#141425", ctermfg=243, ctermbg=233,  })
-		vim.api.nvim_set_hl(0, "FoldColumn", {fg="#333042", bg="#141425", ctermfg=236, ctermbg=233,  })
-		vim.api.nvim_set_hl(0, "SignColumn", {fg="NONE", bg="#141425", ctermfg="NONE", ctermbg=233,  })
+		vim.api.nvim_set_hl(0, "Folded", {fg="#777087", bg=bg4, ctermfg=243, ctermbg=233,  })
+		vim.api.nvim_set_hl(0, "FoldColumn", {fg="#333042", bg=bg4, ctermfg=236, ctermbg=233,  })
+		vim.api.nvim_set_hl(0, "SignColumn", {fg="NONE", bg=bg4, ctermfg="NONE", ctermbg=233,  })
 		vim.api.nvim_set_hl(0, "IncSearch", {fg="NONE", bg="#57109a", ctermfg="NONE", ctermbg=54, sp="#ecc48d", bold = (vim.g.aurora_bold==1), undercurl= true , italic= true })
 		vim.api.nvim_set_hl(0, "MatchParen", {fg="#EE82EE", bg="NONE", ctermfg=213, ctermbg="NONE", sp="#E7C547", bold = (vim.g.aurora_bold==1), undercurl= true })
 		vim.api.nvim_set_hl(0, "ModeMsg", {fg="#77d507", bg="NONE", ctermfg=112, ctermbg="NONE",  })
@@ -493,6 +497,8 @@ return {
 		vim.api.nvim_set_hl(0, "diffComment", {fg="#5f7e97", bg="NONE", ctermfg=66, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", {fg="#282E39", bg="#3649dc", ctermfg=236, ctermbg=62,  })
 		vim.api.nvim_set_hl(0, "BufferLineBufferSelected", {fg="#addb67", bg="#343047", ctermfg=149, ctermbg=236,  })
+		vim.api.nvim_set_hl(0, "BufferLineBuffer", {link = 'Comment'})
+		vim.api.nvim_set_hl(0, "BufferLineBufferVisible", {link = 'Comment'})
 		vim.api.nvim_set_hl(0, "BufferLineFill", {fg="#282E39", bg="#343047", ctermfg=236, ctermbg=236,  })
 		vim.api.nvim_set_hl(0, "BuffetCurrentBuffer", {fg="#443a54", bg="#3649dc", ctermfg=238, ctermbg=62,  })
 		vim.api.nvim_set_hl(0, "BuffetActiveBuffer", {fg="#282E39", bg="#3649dc", ctermfg=236, ctermbg=62,  })
