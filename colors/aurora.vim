@@ -62,9 +62,9 @@ else
   hi link gitcommitUntrackedFile jsonNumber
   hi gitcommitDiscardedFile guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link gitcommitSelectedFile cssClassName
-  hi GitSignsAddInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,underline cterm=Bold,underline guisp=#addb67
-  hi GitSignsDeleteInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#E7C547
-  hi GitSignsChangeInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#B376B3
+  hi GitSignsAddInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,underline cterm=Bold,underdouble guisp=#addb67
+  hi GitSignsDeleteInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,strikethrough guisp=#E7C547
+  hi GitSignsChangeInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,underline guisp=#B376B3
   hi GitGutterAdd guifg=#9dd067 ctermfg=149 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi GitGutterChange guifg=#4cc7e4 ctermfg=80 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
@@ -406,8 +406,8 @@ else
   hi Folded guifg=#777087 ctermfg=243 guibg=#141425 ctermbg=233 gui=NONE cterm=NONE
   hi FoldColumn guifg=#333042 ctermfg=236 guibg=#141425 ctermbg=233 gui=NONE cterm=NONE
   hi SignColumn guifg=NONE ctermfg=NONE guibg=#141425 ctermbg=233 gui=NONE cterm=NONE
-  hi IncSearch guifg=NONE ctermfg=NONE guibg=#57109a ctermbg=54 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
-  hi MatchParen guifg=#EE82EE ctermfg=213 guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#E7C547
+  hi IncSearch guifg=NONE ctermfg=NONE guibg=#57109a ctermbg=54 gui=Bold,underdouble,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
+  hi MatchParen guifg=#EE82EE ctermfg=213 guibg=NONE ctermbg=NONE gui=Bold,underdouble cterm=Bold,undercurl guisp=#E7C547
   hi ModeMsg guifg=#77d507 ctermfg=112 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi MoreMsg guifg=#aab7cf ctermfg=146 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi NonText guifg=#4f425e ctermfg=239 gui=NONE cterm=NONE
@@ -417,7 +417,7 @@ else
   hi PmenuThumb guifg=NONE ctermfg=NONE guibg=#aab7cf ctermbg=146 gui=NONE cterm=NONE
   hi MsgArea guifg=#ffbbd6 ctermfg=218 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi Question guifg=#6690c4 ctermfg=68 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Search guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#F92772
+  hi Search guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239 gui=Bold,underline,Italic cterm=Bold,underline,Italic guisp=#EE82EE
   hi SpecialKey guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
   hi SpellBad guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#ac3f27
   hi SpellCap guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
