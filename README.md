@@ -1,9 +1,9 @@
 ## aurora
 
-![aurora theme](https://github.com/ray-x/files/blob/master/img/aurora/aurora.jpg?raw=true)
+<img width="1318" alt="aurora" src="https://user-images.githubusercontent.com/1681295/185092393-4ebcee95-e60f-438b-9847-1af6743746b3.png">
 
-A 24-bit dark theme for vim/neovim. Highly configurable and cook your own color highlight.
-Good supports for pupular languages and vim plugins, handcrafted support for LSP, Treesitter.
+A vivid 24-bit dark theme for vim/neovim. Highly configurable and cook your own color highlight.
+Good supports for popular languages and vim plugins, handcrafted support for LSP, Treesitter.
 
 ### Languages explicitly styled
 
@@ -19,7 +19,7 @@ Good supports for pupular languages and vim plugins, handcrafted support for LSP
 - golang
 - html
 
-### Plugins explicity styled
+### Plugins explicitly styled
 
 - coc
 - ale
@@ -55,7 +55,7 @@ version will be much faster as it using native API `vim.api.nvim_set_hl()` My te
 
 ```lua
 
-#### Howto updateh the theme:
+#### Howto update the theme:
 
 This project is based on [Estilo](http://estilo.jacoborus.codes/).
 Estilo allow you to define color palettes and syntax highlight and then generate .vim file for you.
@@ -90,7 +90,7 @@ On my intel 11 i7 xps, loading time is 2ms on average.
   ![vim color palettes](https://github.com/ray-x/files/blob/master/img/aurora/colorpalettes.jpg?raw=true)
 
 - syntax color highlight:
-  ![vim highlight for aurora](https://github.com/ray-x/files/blob/master/img/aurora/syntaxhighlight.jpg?raw=true)
+  <img width="1318" alt="aurora3" src="https://user-images.githubusercontent.com/1681295/185093748-ccf096b3-4362-4ce7-9b89-03fac86c6e29.png">
 
 - sidebar
 <img width="902" alt="image" src="https://user-images.githubusercontent.com/1681295/175231905-82df4e4b-a508-4bb8-b878-9f0029643005.png">
