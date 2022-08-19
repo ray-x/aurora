@@ -30,6 +30,10 @@ Good supports for popular languages and vim plugins, handcrafted support for LSP
 - nvim lsp diagnostics.
 - git-fugitive
 - fzf
+- telescope
+- blankline
+- gitsigns
+- treesitter
 
 You can change/add syntax highlight. Feel free to fork or make a PR.
 
