@@ -33,7 +33,11 @@ return {
 		vim.api.nvim_set_hl(0, "gitcommitSelectedFile", {link= "cssClassName"})
 		vim.api.nvim_set_hl(0, "GitSignsAddInline", {fg="NONE", bg="NONE", ctermfg="NONE", ctermbg="NONE", sp="#addb67", bold = (vim.g.aurora_bold==1), underline= true })
 		vim.api.nvim_set_hl(0, "GitSignsDeleteInline", {fg="NONE", bg="NONE", ctermfg="NONE", ctermbg="NONE", sp="#E7C547", bold = (vim.g.aurora_bold==1), strikethrough = true })
-		vim.api.nvim_set_hl(0, "GitSignsChangeInline", {fg="NONE", bg="NONE", ctermfg="NONE", ctermbg="NONE", sp="#B376B3", bold = (vim.g.aurora_bold==1), underdouble= true })
+		if vim.fn.has('nvim-0.8') == 1 then
+      vim.api.nvim_set_hl(0, "GitSignsChangeInline", {fg="NONE", bg="NONE", ctermfg="NONE", ctermbg="NONE", sp="#B376B3", bold = (vim.g.aurora_bold==1), underdouble= true })
+    else
+		  vim.api.nvim_set_hl(0, "GitSignsChangeInline", {fg="NONE", bg="NONE", ctermfg="NONE", ctermbg="NONE", sp="#B376B3", bold = (vim.g.aurora_bold==1), underlineline= true })
+    end
 		vim.api.nvim_set_hl(0, "GitGutterAdd", {fg="#9dd067", bg=bg3, ctermfg=149, ctermbg=234,  })
 		vim.api.nvim_set_hl(0, "GitGutterChange", {fg="#4cc7e4", bg=bg3, ctermfg=80, ctermbg=234,  })
 		vim.api.nvim_set_hl(0, "GitGutterDelete", {fg="#f05874", bg=bg3, ctermfg=204, ctermbg=234,  })
@@ -376,8 +380,15 @@ return {
 		vim.api.nvim_set_hl(0, "Folded", {fg="#777087", bg=bg4, ctermfg=243, ctermbg=233,  })
 		vim.api.nvim_set_hl(0, "FoldColumn", {fg="#333042", bg=bg4, ctermfg=236, ctermbg=233,  })
 		vim.api.nvim_set_hl(0, "SignColumn", {fg="NONE", bg=bg4, ctermfg="NONE", ctermbg=233,  })
+    if vim.fn.has('nvim-0.8') == 1 then
 		vim.api.nvim_set_hl(0, "IncSearch", {fg="NONE", bg="#57109a", ctermfg="NONE", ctermbg=54, sp="#ecc48d", bold = (vim.g.aurora_bold==1), underdouble = true , italic= true })
 		vim.api.nvim_set_hl(0, "MatchParen", {fg="#EE82EE", bg="NONE", ctermfg=213, ctermbg="NONE", sp="#E7C547", bold = (vim.g.aurora_bold==1), underdouble= true })
+		vim.api.nvim_set_hl(0, "Search", {fg="NONE", bg="#3f4060", ctermfg="NONE", ctermbg=239, sp="#EE82EE", bold = (vim.g.aurora_bold==1), underdouble = true , italic= true })
+    else
+		vim.api.nvim_set_hl(0, "IncSearch", {fg="NONE", bg="#57109a", ctermfg="NONE", ctermbg=54, sp="#ecc48d", bold = (vim.g.aurora_bold==1), underlineline = true , italic= true })
+		vim.api.nvim_set_hl(0, "MatchParen", {fg="#EE82EE", bg="NONE", ctermfg=213, ctermbg="NONE", sp="#E7C547", bold = (vim.g.aurora_bold==1), underlineline= true })
+		vim.api.nvim_set_hl(0, "Search", {fg="NONE", bg="#3f4060", ctermfg="NONE", ctermbg=239, sp="#EE82EE", bold = (vim.g.aurora_bold==1), underlineline = true , italic= true })
+    end
 		vim.api.nvim_set_hl(0, "ModeMsg", {fg="#77d507", bg="NONE", ctermfg=112, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "MoreMsg", {fg="#aab7cf", bg="NONE", ctermfg=146, ctermbg="NONE",  })
 		vim.api.nvim_set_hl(0, "NonText", {fg="#4f425e",  ctermfg=239,   })
@@ -387,7 +398,6 @@ return {
 		vim.api.nvim_set_hl(0, "PmenuThumb", {fg="NONE", bg="#aab7cf", ctermfg="NONE", ctermbg=146,  })
 		vim.api.nvim_set_hl(0, "MsgArea", {fg="#ffbbd6", bg=bg, ctermfg=218, ctermbg=234,  })
 		vim.api.nvim_set_hl(0, "Question", {fg="#6690c4", bg="NONE", ctermfg=68, ctermbg="NONE",  })
-		vim.api.nvim_set_hl(0, "Search", {fg="NONE", bg="#3f4060", ctermfg="NONE", ctermbg=239, sp="#EE82EE", bold = (vim.g.aurora_bold==1), underdouble = true , italic= true })
 		vim.api.nvim_set_hl(0, "SpecialKey", {fg="#ecc48d",  ctermfg=222,   })
 		vim.api.nvim_set_hl(0, "SpellBad", {fg="#ac3f27", bg="NONE", ctermfg=130, ctermbg="NONE", sp="#ac3f27", undercurl = true})
 		vim.api.nvim_set_hl(0, "SpellCap", {fg="#5ca7e4", bg="NONE", ctermfg=74, ctermbg="NONE",  })
