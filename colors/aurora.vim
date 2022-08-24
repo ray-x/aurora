@@ -9,7 +9,6 @@ if exists('g:colors_name')
 endif
 let g:colors_name="aurora"
 
-
 let Italic = ""
 if exists('g:aurora_italic')
   let Italic = "italic"
@@ -21,10 +20,17 @@ if exists('g:aurora_transparent')
   let bg3 = "NONE"
   let bg4 = "NONE"
 else
-  let bg = "#211c2f"
-  let bg2 = "#282e39"
-  let bg3 = "#1a1926"
-  let bg4 = "#141425"
+  if exists('g:aurora_darker')
+    let bg =  "#141422"
+    let bg2 = "#1a1926"
+    let bg3 = "#101020"
+    let bg4 = "#040410"
+  else
+    let bg =  "#211c2f"
+    let bg2 = "#282e39"
+    let bg3 = "#1a1926"
+    let bg4 = "#141425"
+  end
 end
 let g:aurora_italic = get(g:, 'aurora_italic', 0)
 
@@ -403,9 +409,9 @@ else
   hi DiffText guifg=NONE ctermfg=NONE guibg=#821040 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline
   hi ErrorMsg guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi VertSplit guifg=#777087 ctermfg=243 gui=NONE cterm=NONE
-  hi Folded guifg=#777087 ctermfg=243 guibg=#141425 ctermbg=233 gui=NONE cterm=NONE
-  hi FoldColumn guifg=#333042 ctermfg=236 guibg=#141425 ctermbg=233 gui=NONE cterm=NONE
-  hi SignColumn guifg=NONE ctermfg=NONE guibg=#141425 ctermbg=233 gui=NONE cterm=NONE
+  hi Folded guifg=#777087 ctermfg=243 guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
+  hi FoldColumn guifg=#333042 ctermfg=236 guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
+  hi SignColumn guifg=NONE ctermfg=NONE guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
   hi IncSearch guifg=NONE ctermfg=NONE guibg=#57109a ctermbg=54 gui=Bold,underdouble,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
   hi MatchParen guifg=#EE82EE ctermfg=213 guibg=NONE ctermbg=NONE gui=Bold,underdouble cterm=Bold,undercurl guisp=#E7C547
   hi ModeMsg guifg=#77d507 ctermfg=112 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

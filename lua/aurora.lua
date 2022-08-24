@@ -12,6 +12,13 @@ return {
 			bg3 = "NONE"
       bg4 = "NONE"
 		end
+    if vim.g.aurora_darker then
+      bg = "#141422"
+      bg2 = "#1a1926"
+      bg3 = "#101020"
+      bg4 = "#040410"
+    end
+
 		vim.api.nvim_set_hl(0, "SignifySignAdd", {link= "GitGutterAdd"})
 		vim.api.nvim_set_hl(0, "SignifySignDelete", {link= "GitGutterDelete"})
 		vim.api.nvim_set_hl(0, "SignifySignDeleteFirstLine", {link= "SignifySignDelete"})
@@ -381,7 +388,7 @@ return {
 		vim.api.nvim_set_hl(0, "VertSplit", {fg="#777087",  ctermfg=243,   })
 		vim.api.nvim_set_hl(0, "Folded", {fg="#777087", bg=bg4, ctermfg=243, ctermbg=233,  })
 		vim.api.nvim_set_hl(0, "FoldColumn", {fg="#333042", bg=bg4, ctermfg=236, ctermbg=233,  })
-		vim.api.nvim_set_hl(0, "SignColumn", {fg="NONE", bg=bg4, ctermfg="NONE", ctermbg=233,  })
+		vim.api.nvim_set_hl(0, "SignColumn", {fg="NONE", bg=bg3, ctermfg="NONE", ctermbg=233,  })
     if vim.fn.has('nvim-0.8') == 1 then
 		vim.api.nvim_set_hl(0, "IncSearch", {fg="NONE", bg="#57109a", ctermfg="NONE", ctermbg=54, sp="#ecc48d", bold = (vim.g.aurora_bold==1), underdouble = true , italic= true })
 		vim.api.nvim_set_hl(0, "MatchParen", {fg="#EE82EE", bg="NONE", ctermfg=213, ctermbg="NONE", sp="#E7C547", bold = (vim.g.aurora_bold==1), underdouble= true })
