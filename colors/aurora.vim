@@ -21,7 +21,7 @@ if exists('g:aurora_transparent')
   let bg4 = "NONE"
 else
   if exists('g:aurora_darker')
-    let bg =  "#141422"
+    let bg =  "#141020"
     let bg2 = "#1a1926"
     let bg3 = "#101020"
     let bg4 = "#040410"

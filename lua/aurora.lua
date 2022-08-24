@@ -13,7 +13,7 @@ return {
       bg4 = "NONE"
 		end
     if vim.g.aurora_darker then
-      bg = "#141422"
+      bg = "#141020"
       bg2 = "#1a1926"
       bg3 = "#101020"
       bg4 = "#040410"
