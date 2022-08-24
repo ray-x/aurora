@@ -165,7 +165,9 @@ return {
 		vim.api.nvim_set_hl(0, "TSFunctionBuiltin", {fg="#A6E22D",  ctermfg=148,   bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "TSFuncBuiltin", {fg="#0fb9e0",  ctermfg=38,   bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "TSFuncMacro", {fg="#be9af7",  ctermfg=141,   bold = (vim.g.aurora_bold==1)})
-		vim.api.nvim_set_hl(0, "TSParameterReference", {fg="#A1EFE4", bg="NONE", ctermfg=158, ctermbg="NONE",  })
+		vim.api.nvim_set_hl(0, "TSParameterReference", {fg="#A1EFE4", bg="NONE", ctermfg=158, ctermbg="NONE", bold
+    = true})
+		vim.api.nvim_set_hl(0, "Hlargs", {link="TSParameter"})
 		vim.api.nvim_set_hl(0, "TSMethod", {link= "Function"})
 		vim.api.nvim_set_hl(0, "TSConditional", {fg="#EE82EE",  ctermfg=213,   bold = (vim.g.aurora_bold==1)})
 		vim.api.nvim_set_hl(0, "TSRepeat", {link= "Repeat"})
