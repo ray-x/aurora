@@ -24,12 +24,12 @@ function! s:aurora_color_map(mode)
 	return airline#themes#generate_color_map(a:mode, s:airline_info, s:airline_statusline)
 endfunction
 
-let g:airline#themes#aurora#palette.normal = s:tokyonight_color_map(s:airline_mode_normal)
-let g:airline#themes#aurora#palette.insert = s:tokyonight_color_map(s:airline_mode_insert)
-let g:airline#themes#aurora#palette.replace = s:tokyonight_color_map(s:airline_mode_replace)
-let g:airline#themes#aurora#palette.inactive = s:tokyonight_color_map(s:airline_mode_inactive)
-let g:airline#themes#aurora#palette.visual = s:tokyonight_color_map(s:airline_mode_visual)
-let g:airline#themes#aurora#palette.terminal = s:tokyonight_color_map(s:airline_mode_insert)
+let g:airline#themes#aurora#palette.normal = s:aurora_color_map(s:airline_mode_normal)
+let g:airline#themes#aurora#palette.insert = s:aurora_color_map(s:airline_mode_insert)
+let g:airline#themes#aurora#palette.replace = s:aurora_color_map(s:airline_mode_replace)
+let g:airline#themes#aurora#palette.inactive = s:aurora_color_map(s:airline_mode_inactive)
+let g:airline#themes#aurora#palette.visual = s:aurora_color_map(s:airline_mode_visual)
+let g:airline#themes#aurora#palette.terminal = s:aurora_color_map(s:airline_mode_insert)
 let g:airline#themes#aurora#palette.normal.airline_term = s:airline_statusline
 let g:airline#themes#aurora#palette.terminal.airline_term = s:airline_statusline
 let g:airline#themes#aurora#palette.visual.airline_term = s:airline_statusline
