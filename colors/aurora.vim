@@ -178,17 +178,17 @@ else
   hi TSPunctDelimiter guifg=#e7d3fb ctermfg=189 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi TSPunctBracket guifg=#7AA6DA ctermfg=110 gui=Bold cterm=Bold
   hi TSPunctSpectial guifg=#E7C547 ctermfg=185 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi TSConstant guifg=#fbfcbf ctermfg=229 gui=Bold cterm=Bold
+  hi link TSConstant Constant
   hi TSConstBuiltin guifg=#e73c50 ctermfg=167 gui=Italic cterm=Italic
   hi TSConstMacro guifg=#F92772 ctermfg=197 gui=NONE cterm=NONE
-  hi TSString guifg=#1ABC9C ctermfg=37 gui=NONE cterm=NONE
+  hi link TSString String
   hi TSStringRegex guifg=#7fdbca ctermfg=116 gui=NONE cterm=NONE
   hi TSStringEscape guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
   hi link TSNumber Number
   hi link TSBoolean Boolean
   hi link TSFloat Float
   hi TSField guifg=#9e71cf ctermfg=134 gui=Bold cterm=Bold
-  hi TSType guifg=#67d5b5 ctermfg=79 gui=Bold cterm=Bold
+  hi link TSType Type
   hi TSTypeBuiltin guifg=#ffce51 ctermfg=221 gui=Bold cterm=Bold
   hi TSProperty guifg=#01d5f1 ctermfg=45 gui=NONE cterm=NONE
   hi TSParameter guifg=#fbec9f ctermfg=229 gui=NONE cterm=NONE
@@ -207,13 +207,13 @@ else
   hi link TSOperator Operator
   hi link TSKeyword Keyword
   hi link TSStructure Structure
-  hi TSInclude guifg=#D57CD5 ctermfg=176 gui=NONE cterm=NONE
-  hi TSTag guifg=#addb67 ctermfg=149 gui=NONE cterm=NONE
-  hi TSTagDelimiter guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
-  hi TSVariable guifg=#e7d3fb ctermfg=189 gui=NONE cterm=NONE
+  hi link TSInclude  Include
+  hi link TSTag Tag
+  hi link TSTagDelimiter Delimiter
+  hi link TSVariable Identifier
   hi TSVariableBuiltin guifg=#FD9720 ctermfg=208 gui=NONE cterm=NONE
   hi TSDefinitionUsage guifg=#E6DB74 ctermfg=186 gui=NONE cterm=NONE
-  hi TSDefinition guifg=#ff5874 ctermfg=204 gui=Bold cterm=Bold
+  hi link TSDefinition Definition
   hi TSStrong guifg=#DBC08A ctermfg=180 gui=Bold cterm=Bold
   hi TSEmphasis guifg=#fbed7d ctermfg=228 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic
   hi TSUnderline guifg=#ecc48d ctermfg=222 gui=undercurl cterm=undercurl
@@ -440,13 +440,13 @@ else
   hi WildMenu guifg=#777087 ctermfg=243 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi EndOfBuffer guifg=#4f425e ctermfg=239 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi Comment guifg=#989cbf ctermfg=247 gui=Italic cterm=Italic
-  hi Constant guifg=#1aad16 ctermfg=34 gui=NONE cterm=NONE
-  hi String guifg=#2ba245 ctermfg=35 gui=NONE cterm=NONE
+  hi Constant guifg=#fbfcbf ctermfg=229 gui=NONE cterm=NONE
+  hi String guifg=#1ABC9C ctermfg=35 gui=NONE cterm=NONE
   hi Character guifg=#be9af7 ctermfg=141 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Boolean guifg=#FF435B ctermfg=203 gui=Italic cterm=Italic
   hi Number guifg=#FD9720 ctermfg=208 gui=NONE cterm=NONE
   hi Float guifg=#F92772 ctermfg=197 gui=NONE cterm=NONE
-  hi Identifier guifg=#A6E22D ctermfg=148 gui=NONE cterm=NONE
+  hi Identifier guifg=#e7d3fb ctermfg=189 gui=NONE cterm=NONE
   hi Function guifg=#10aef8 ctermfg=39 gui=Bold cterm=Bold
   hi Statement guifg=#F92772 ctermfg=197 gui=Bold cterm=Bold
   hi Conditional guifg=#99c794 ctermfg=114 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -456,8 +456,9 @@ else
   hi Keyword guifg=#c4a2ff ctermfg=183 gui=Bold,Italic cterm=Bold,Italic
   hi Exception guifg=#e55285 ctermfg=168 gui=NONE cterm=NONE
   hi PreProc guifg=#EE82EE ctermfg=213 gui=NONE cterm=NONE
-  hi Include guifg=#ae81ef ctermfg=141 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Define guifg=#88dfe9 ctermfg=116 gui=Italic cterm=Italic
+
+  hi Include guifg=#D57CD5 ctermfg=176 gui=NONE cterm=NONE
+  hi Define guifg=#ff5874 ctermfg=204 gui=Bold cterm=Bold
   hi Macro guifg=#C33C4A ctermfg=131 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi PreCondit guifg=#d7ffaf ctermfg=193 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Type guifg=#67d5b5 ctermfg=79 gui=Bold cterm=Bold
@@ -466,10 +467,12 @@ else
   hi Typedef guifg=#66d9ef ctermfg=81 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Special guifg=#FF6347 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi SpecialChar guifg=#F92772 ctermfg=197 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi Tag guifg=#FF5D71 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+  hi Tag guifg=#addb67 ctermfg=149 gui=NONE cterm=NONE
   hi htmlTag guifg=#637077 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link htmlEndTag htmlTag
-  hi Delimiter guifg=#a8dff9 ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+  hi Delimiter guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
   hi SpecialComment guifg=#637077 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Debug guifg=#6189bb ctermfg=67 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Underlined guifg=#67d5b5 ctermfg=79 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
