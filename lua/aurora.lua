@@ -186,6 +186,7 @@ return {
 		vim.api.nvim_set_hl(0, "TSInclude", { link = "Include" } )
 		vim.api.nvim_set_hl(0, "TSTag", { link = "Tag" } )
 		vim.api.nvim_set_hl(0, "TSTagDelimiter", { link = "Delimiter"})
+		vim.api.nvim_set_hl(0, "TSTagAttribute", { link = "Structure"})
 		vim.api.nvim_set_hl(0, "TSVariable", { link = "Identifier"})
 		vim.api.nvim_set_hl(0, "TSVariableBuiltin", {fg="#FD9720",  ctermfg=208,   })
 		vim.api.nvim_set_hl(0, "TSDefinitionUsage", {fg="#E6DB74",  ctermfg=186,   })
