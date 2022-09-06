@@ -91,6 +91,9 @@ On my intel 11 i7 xps, loading time is 2ms on average.
 
 #### Show case
 
+- Go with treesitter
+  ![go treesitter](https://user-images.githubusercontent.com/1681295/185092393-4ebcee95-e60f-438b-9847-1af6743746b3.png)
+
 - color palettes, more than 100 pre-defined color:
   ![vim color palettes](https://github.com/ray-x/files/blob/master/img/aurora/colorpalettes.jpg?raw=true)
 
