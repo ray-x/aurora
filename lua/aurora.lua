@@ -640,7 +640,7 @@ return {
     vim.api.nvim_set_hl(0, "cssValueInteger", { link = "cssAttr" })
     vim.api.nvim_set_hl(0, "cssValueNumber", { link = "cssAttr" })
     vim.api.nvim_set_hl(0, "cssIdentifier", { link = "cssTagName" })
-    vim.api.nvim_set_hl(0, "cssIncludeKeyword", { link = "jsonNumber" })
+    vim.api.nvim_set_hl(0, "cssIncludeKeyword", { link = "Keyword" })
     vim.api.nvim_set_hl(0, "cssImportant", { fg = "#f05874", bg = "NONE", ctermfg = 204, ctermbg = "NONE" })
     vim.api.nvim_set_hl(0, "cssClassName", { fg = "#9dd067", bg = "NONE", ctermfg = 149, ctermbg = "NONE" })
     vim.api.nvim_set_hl(0, "cssClassNameDot", { link = "cssAttr" })
@@ -923,6 +923,7 @@ return {
       bold = (vim.g.aurora_bold == 1),
       underline = true,
     })
+    vim.api.nvim_set_hl(0, "Conceal", { link = "Keyword" })
     vim.api.nvim_set_hl(0, "typescriptParens", { fg = "#10aef8", bg = "NONE", ctermfg = 39, ctermbg = "NONE" })
     vim.api.nvim_set_hl(0, "typescriptLogicSymbols", { link = "cssImportant" })
     vim.api.nvim_set_hl(0, "typescriptReserved", { fg = "#3649dc", bg = "NONE", ctermfg = 62, ctermbg = "NONE" })
@@ -941,8 +942,8 @@ return {
     vim.api.nvim_set_hl(0, "typescriptArrowFuncArg", { fg = "#FD9720", bg = "NONE", ctermfg = 208, ctermbg = "NONE" })
     vim.api.nvim_set_hl(0, "typescriptParamImpl", { link = "jsonNumber" })
     vim.api.nvim_set_hl(0, "typescriptRepeat", { link = "cssClassName" })
-    vim.api.nvim_set_hl(0, "typescriptStatementKeyword", { link = "SpellCap" })
-    vim.api.nvim_set_hl(0, "typescriptAliasKeyword", { link = "cssClassName" })
+    vim.api.nvim_set_hl(0, "typescriptStatementKeyword", { link = "Keyword" })
+    vim.api.nvim_set_hl(0, "typescriptAliasKeyword", { link = "Keyword" })
     vim.api.nvim_set_hl(
       0,
       "typescriptInterfaceKeyword",
@@ -1006,7 +1007,6 @@ return {
       "BufferLineIndicatorSelected",
       { fg = "#282E39", bg = "#3649dc", ctermfg = 236, ctermbg = 62 }
     )
-    vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = "#addb67", bg = "#343047", ctermfg = 149, ctermbg = 236 })
     vim.api.nvim_set_hl(0, "BufferLineBuffer", { link = "Comment" })
     vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { link = "Comment" })
     vim.api.nvim_set_hl(0, "BufferLineFill", { fg = "#282E39", bg = "#343047", ctermfg = 236, ctermbg = 236 })
