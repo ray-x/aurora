@@ -395,7 +395,7 @@ else
   hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
   hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
   hi FloatBorder guifg=#4cc7e4 ctermfg=80 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
-  hi LineNr guifg=#4f425e ctermfg=239 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  hi LineNr guifg=#5f496e ctermfg=239 guibg=bg ctermbg=234 gui=NONE cterm=NONE
   hi CursorLine guifg=NONE ctermfg=NONE guibg=#343047 ctermbg=236 gui=Bold cterm=Bold
   hi CursorLineNr guifg=#1aad16 ctermfg=34 guibg=bg3 ctermbg=234 gui=Bold cterm=Bold
   hi ColorColumn guifg=NONE ctermfg=NONE guibg=#22202a ctermbg=235 gui=NONE cterm=NONE

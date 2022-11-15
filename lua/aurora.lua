@@ -718,7 +718,7 @@ return {
     vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#dacfb4", bg = bg2, ctermfg = 187, ctermbg = 236 })
     vim.api.nvim_set_hl(0, "NormalNC", { fg = "#a9b1d6", bg = bg2, ctermfg = 146, ctermbg = 236 })
     vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#4cc7e4", bg = bg2, ctermfg = 80, ctermbg = 236 })
-    vim.api.nvim_set_hl(0, "LineNr", { fg = "#4f425e", bg = bg, ctermfg = 239, ctermbg = 234 })
+    vim.api.nvim_set_hl(0, "LineNr", { fg = "#6f528e", bg = bg, ctermfg = 239, ctermbg = 234 })
     vim.api.nvim_set_hl(
       0,
       "CursorLine",
