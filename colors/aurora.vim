@@ -44,7 +44,7 @@ if &background != 'dark'
 endif
 
 let g:aurora_bold = get(g:, 'aurora_bold', 0)
-if has('nvim-0.6')
+if has('nvim-0.8')
   lua package.loaded['aurora'] = nil
   " packadd aurora
   lua require('aurora').colorscheme()
