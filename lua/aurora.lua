@@ -547,7 +547,7 @@ return {
     vim.api.nvim_set_hl(
       0,
       "IndentBlanklineContextStart",
-      { fg = "#c4a2ff", ctermfg = 183, bold = (vim.g.aurora_bold == 1), underline = true, sp = "#c4a2ff" }
+      { ctermfg = 183, bold = (vim.g.aurora_bold == 1), underline = true, sp = "#c4a2ff" }
     )
     vim.api.nvim_set_hl(0, "IndentBlanklineIndent1", { fg = "#be9af7", bg = "NONE", ctermfg = 141, ctermbg = "NONE" })
     vim.api.nvim_set_hl(0, "IndentBlanklineIndent2", { fg = "#82aaf0", bg = "NONE", ctermfg = 111, ctermbg = "NONE" })
