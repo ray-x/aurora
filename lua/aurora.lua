@@ -122,17 +122,13 @@ local link_ts_v7 = function(bg)
       'TSStrong',
       { fg = '#DBC08A', ctermfg = 180, bold = (vim.g.aurora_bold == 1) }
     )
-    vim.api.nvim_set_hl(
-      0,
-      'TSEmphasis',
-      {
-        fg = '#fbed7d',
-        ctermfg = 228,
-        bold = (vim.g.aurora_bold == 1),
-        undercurl = true,
-        italic = true,
-      }
-    )
+    vim.api.nvim_set_hl(0, 'TSEmphasis', {
+      fg = '#fbed7d',
+      ctermfg = 228,
+      bold = (vim.g.aurora_bold == 1),
+      undercurl = true,
+      italic = true,
+    })
     vim.api.nvim_set_hl(0, 'TSUnderline', { fg = '#ecc48d', ctermfg = 222, undercurl = true })
     vim.api.nvim_set_hl(0, 'TSTitle', { link = 'SpecialKey' })
     vim.api.nvim_set_hl(0, 'TSLiteral', { fg = '#dacfb4', ctermfg = 187 })
@@ -290,17 +286,13 @@ local link_ts_v8 = function(bg)
       '@strong',
       { fg = '#DBC08A', ctermfg = 180, bold = (vim.g.aurora_bold == 1) }
     )
-    vim.api.nvim_set_hl(
-      0,
-      '@emphasis',
-      {
-        fg = '#fbed7d',
-        ctermfg = 228,
-        bold = (vim.g.aurora_bold == 1),
-        undercurl = true,
-        italic = true,
-      }
-    )
+    vim.api.nvim_set_hl(0, '@emphasis', {
+      fg = '#fbed7d',
+      ctermfg = 228,
+      bold = (vim.g.aurora_bold == 1),
+      undercurl = true,
+      italic = true,
+    })
     vim.api.nvim_set_hl(0, '@underline', { fg = '#ecc48d', ctermfg = 222, undercurl = true })
     vim.api.nvim_set_hl(0, '@title', { link = 'SpecialKey' })
     vim.api.nvim_set_hl(0, '@literal', { fg = '#dacfb4', ctermfg = 187 })
@@ -339,7 +331,7 @@ return {
   colorscheme = function()
     local bg = '#211c2f'
     local bg2 = '#282339'
-    local bgfl = '#222e39'
+    local bgfl = '#282339'
     local bg3 = '#1a1926'
     local bg4 = '#141425'
 
@@ -371,17 +363,13 @@ return {
         { fg = '#4cc7e4', bg = bg2, ctermfg = 80, ctermbg = 236 }
       )
       vim.api.nvim_set_hl(0, 'LineNr', { fg = '#6f527e', bg = bg, ctermfg = 239, ctermbg = 234 })
-      vim.api.nvim_set_hl(
-        0,
-        'CursorLine',
-        {
-          fg = 'NONE',
-          bg = '#343047',
-          ctermfg = 'NONE',
-          ctermbg = 236,
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
+      vim.api.nvim_set_hl(0, 'CursorLine', {
+        fg = 'NONE',
+        bg = '#343047',
+        ctermfg = 'NONE',
+        ctermbg = 236,
+        bold = (vim.g.aurora_bold == 1),
+      })
       vim.api.nvim_set_hl(0, 'CursorLineNr', {
         fg = '#1aad16',
         bg = bg3,
@@ -403,17 +391,13 @@ return {
       )
       vim.api.nvim_set_hl(0, 'CursorColumn', { bg = '#343047', ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'Directory', { fg = '#82aaf0', ctermfg = 111 })
-      vim.api.nvim_set_hl(
-        0,
-        'DiffAdd',
-        {
-          fg = 'NONE',
-          bg = '#4f425e',
-          ctermfg = 'NONE',
-          ctermbg = 239,
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
+      vim.api.nvim_set_hl(0, 'DiffAdd', {
+        fg = 'NONE',
+        bg = '#4f425e',
+        ctermfg = 'NONE',
+        ctermbg = 239,
+        bold = (vim.g.aurora_bold == 1),
+      })
       vim.api.nvim_set_hl(
         0,
         'DiffChange',
@@ -436,17 +420,13 @@ return {
         italic = true,
         underline = true,
       })
-      vim.api.nvim_set_hl(
-        0,
-        'ErrorMsg',
-        {
-          fg = '#DC143C',
-          bg = bg,
-          ctermfg = 161,
-          ctermbg = 'NONE',
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
+      vim.api.nvim_set_hl(0, 'ErrorMsg', {
+        fg = '#DC143C',
+        bg = bg,
+        ctermfg = 161,
+        ctermbg = 'NONE',
+        bold = (vim.g.aurora_bold == 1),
+      })
       vim.api.nvim_set_hl(0, 'VertSplit', { fg = '#777087', ctermfg = 243 })
       vim.api.nvim_set_hl(0, 'Folded', { fg = '#777087', bg = bg4, ctermfg = 243, ctermbg = 233 })
       vim.api.nvim_set_hl(
@@ -557,35 +537,27 @@ return {
         { fg = '#6690c4', bg = bg, ctermfg = 68, ctermbg = 'NONE' }
       )
       vim.api.nvim_set_hl(0, 'SpecialKey', { fg = '#ecc48d', ctermfg = 222 })
-      vim.api.nvim_set_hl(
-        0,
-        'SpellBad',
-        {
-          fg = '#ac3f27',
-          bg = bg,
-          ctermfg = 130,
-          ctermbg = 'NONE',
-          sp = '#ac3f27',
-          undercurl = true,
-        }
-      )
+      vim.api.nvim_set_hl(0, 'SpellBad', {
+        fg = '#ac3f27',
+        bg = bg,
+        ctermfg = 130,
+        ctermbg = 'NONE',
+        sp = '#ac3f27',
+        undercurl = true,
+      })
       vim.api.nvim_set_hl(
         0,
         'SpellCap',
         { fg = '#5ca7e4', bg = bg, ctermfg = 74, ctermbg = 'NONE' }
       )
-      vim.api.nvim_set_hl(
-        0,
-        'SpellRare',
-        {
-          fg = '#99c794',
-          bg = bg,
-          ctermfg = 114,
-          ctermbg = 'NONE',
-          sp = '#addb67',
-          undercurl = true,
-        }
-      )
+      vim.api.nvim_set_hl(0, 'SpellRare', {
+        fg = '#99c794',
+        bg = bg,
+        ctermfg = 114,
+        ctermbg = 'NONE',
+        sp = '#addb67',
+        undercurl = true,
+      })
       vim.api.nvim_set_hl(0, 'Rare', { link = 'SpellRare' })
       vim.api.nvim_set_hl(
         0,
@@ -905,28 +877,20 @@ return {
         { fg = '#f05874', bg = bg, ctermfg = 204, ctermbg = 'NONE' }
       )
       vim.api.nvim_set_hl(0, 'markdownH1', { link = 'cssProp' })
-      vim.api.nvim_set_hl(
-        0,
-        'markdownHeadingRule',
-        {
-          fg = '#f05874',
-          bg = bg,
-          ctermfg = 204,
-          ctermbg = 'NONE',
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
-      vim.api.nvim_set_hl(
-        0,
-        'markdownHeadingDelimiter',
-        {
-          fg = '#f05874',
-          bg = bg,
-          ctermfg = 204,
-          ctermbg = 'NONE',
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
+      vim.api.nvim_set_hl(0, 'markdownHeadingRule', {
+        fg = '#f05874',
+        bg = bg,
+        ctermfg = 204,
+        ctermbg = 'NONE',
+        bold = (vim.g.aurora_bold == 1),
+      })
+      vim.api.nvim_set_hl(0, 'markdownHeadingDelimiter', {
+        fg = '#f05874',
+        bg = bg,
+        ctermfg = 204,
+        ctermbg = 'NONE',
+        bold = (vim.g.aurora_bold == 1),
+      })
       vim.api.nvim_set_hl(0, 'markdownListMarker', { link = 'jsonNumber' })
       vim.api.nvim_set_hl(0, 'markdownBlockquote', { link = 'jsonNumber' })
       vim.api.nvim_set_hl(0, 'markdownRule', { link = 'cssClassName' })
@@ -1136,39 +1100,27 @@ return {
         'DiagnosticHintFloating',
         { fg = '#1ABC9C', bg = bg, ctermfg = 37, ctermbg = 'NONE' }
       )
-      vim.api.nvim_set_hl(
-        0,
-        'LspReferenceText',
-        {
-          bg = '#3f3047',
-          ctermbg = 239,
-          sp = '#FD9720',
-          bold = (vim.g.aurora_bold == 1),
-          underline = true,
-        }
-      )
-      vim.api.nvim_set_hl(
-        0,
-        'LspReferenceRead',
-        {
-          fg = '#1aad16',
-          ctermfg = 34,
-          sp = '#FD9720',
-          bold = (vim.g.aurora_bold == 1),
-          underline = true,
-        }
-      )
-      vim.api.nvim_set_hl(
-        0,
-        'LspReferenceWrite',
-        {
-          fg = '#1aad16',
-          ctermfg = 34,
-          sp = '#FD9720',
-          bold = (vim.g.aurora_bold == 1),
-          underline = true,
-        }
-      )
+      vim.api.nvim_set_hl(0, 'LspReferenceText', {
+        bg = '#3f3047',
+        ctermbg = 239,
+        sp = '#FD9720',
+        bold = (vim.g.aurora_bold == 1),
+        underline = true,
+      })
+      vim.api.nvim_set_hl(0, 'LspReferenceRead', {
+        fg = '#1aad16',
+        ctermfg = 34,
+        sp = '#FD9720',
+        bold = (vim.g.aurora_bold == 1),
+        underline = true,
+      })
+      vim.api.nvim_set_hl(0, 'LspReferenceWrite', {
+        fg = '#1aad16',
+        ctermfg = 34,
+        sp = '#FD9720',
+        bold = (vim.g.aurora_bold == 1),
+        underline = true,
+      })
       vim.api.nvim_set_hl(
         0,
         'LspFloatWinNormal',
@@ -1284,55 +1236,39 @@ return {
       vim.api.nvim_set_hl(0, 'fzf1', { fg = '#ecc48d', bg = bg2, ctermfg = 222, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'fzf2', { fg = '#FD9720', bg = bg2, ctermfg = 208, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'fzf3', { fg = '#DC143C', bg = bg2, ctermfg = 161, ctermbg = 236 })
-      vim.api.nvim_set_hl(
-        0,
-        'diffRemoved',
-        {
-          fg = '#f05874',
-          bg = bg,
-          ctermfg = 204,
-          ctermbg = 'NONE',
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
+      vim.api.nvim_set_hl(0, 'diffRemoved', {
+        fg = '#f05874',
+        bg = bg,
+        ctermfg = 204,
+        ctermbg = 'NONE',
+        bold = (vim.g.aurora_bold == 1),
+      })
       vim.api.nvim_set_hl(
         0,
         'diffChanged',
         { fg = '#4cc7e4', bg = bg, ctermfg = 80, ctermbg = 'NONE', bold = (vim.g.aurora_bold == 1) }
       )
-      vim.api.nvim_set_hl(
-        0,
-        'diffAdded',
-        {
-          fg = '#9dd067',
-          bg = bg,
-          ctermfg = 149,
-          ctermbg = 'NONE',
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
-      vim.api.nvim_set_hl(
-        0,
-        'diffLine',
-        {
-          fg = '#fbed7d',
-          bg = bg,
-          ctermfg = 228,
-          ctermbg = 'NONE',
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
-      vim.api.nvim_set_hl(
-        0,
-        'diffSubname',
-        {
-          fg = '#7fdbca',
-          bg = bg,
-          ctermfg = 116,
-          ctermbg = 'NONE',
-          bold = (vim.g.aurora_bold == 1),
-        }
-      )
+      vim.api.nvim_set_hl(0, 'diffAdded', {
+        fg = '#9dd067',
+        bg = bg,
+        ctermfg = 149,
+        ctermbg = 'NONE',
+        bold = (vim.g.aurora_bold == 1),
+      })
+      vim.api.nvim_set_hl(0, 'diffLine', {
+        fg = '#fbed7d',
+        bg = bg,
+        ctermfg = 228,
+        ctermbg = 'NONE',
+        bold = (vim.g.aurora_bold == 1),
+      })
+      vim.api.nvim_set_hl(0, 'diffSubname', {
+        fg = '#7fdbca',
+        bg = bg,
+        ctermfg = 116,
+        ctermbg = 'NONE',
+        bold = (vim.g.aurora_bold == 1),
+      })
       vim.api.nvim_set_hl(
         0,
         'diffComment',

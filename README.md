@@ -1,5 +1,7 @@
-## aurora
-![aurora](https://user-images.githubusercontent.com/1681295/188625844-7ca9127c-f007-4f38-9c1e-0fa2034904c7.jpg)
+## Aurora a vivid night theme for vim/neovim and terminal
+![aurora2](https://user-images.githubusercontent.com/1681295/216751878-ae4c493c-3ce2-4bce-9f99-0b275607d5f0.jpg)
+
+Transparent mode:
 <img width="1318" alt="aurora" src="https://user-images.githubusercontent.com/1681295/185092393-4ebcee95-e60f-438b-9847-1af6743746b3.png">
 
 A vivid 24-bit dark theme for vim/neovim. Highly configurable and cook your own color highlight.
@@ -8,16 +10,17 @@ Good supports for popular languages and vim plugins, handcrafted support for LSP
 ### Languages explicitly styled
 
 - All Neovim Treesitter highlighted-languages
-- C++
-- python
-- js/ts
-- json
-- markdown
-- yaml
-- css
-- sql
-- golang
-- html
+- For VIM, all languages that have a syntax file e.g.
+  - C++
+  - python
+  - js/ts
+  - json
+  - markdown
+  - yaml
+  - css
+  - sql
+  - golang
+  - html
 
 ### Plugins explicitly styled
 
