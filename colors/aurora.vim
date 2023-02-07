@@ -403,10 +403,10 @@ else
   hi CursorIM guifg=#ddd0f4 ctermfg=189 guibg=#5f7e97 ctermbg=66 gui=NONE cterm=NONE
   hi CursorColumn guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
   hi Directory guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
-  hi DiffAdd guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=Bold cterm=Bold
+  hi DiffAdd guifg=NONE ctermfg=NONE guibg=#2f223e ctermbg=239 gui=Bold cterm=Bold
   hi DiffChange guifg=NONE ctermfg=NONE guibg=bg2 ctermbg=236 gui=Bold cterm=Bold
-  hi DiffDelete guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239 gui=Bold,strikethrough cterm=Bold
-  hi DiffText guifg=NONE ctermfg=NONE guibg=#821040 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline
+  hi DiffDelete guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239
+  hi DiffText guifg=NONE ctermfg=NONE guibg=#420010 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline
   hi ErrorMsg guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi VertSplit guifg=#777087 ctermfg=243 gui=NONE cterm=NONE
   hi Folded guifg=#777087 ctermfg=243 guibg=bg4 ctermbg=233 gui=NONE cterm=NONE

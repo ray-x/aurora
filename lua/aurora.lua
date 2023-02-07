@@ -7,8 +7,8 @@ local hl = function(group, opts)
 end
 vim = vim or {}
 local ct = {
-  white = '#e7d3fb',
-  text = '#dacfb4',
+  white = '#e7c3fb',
+  text = '#dacfe4',
   textdark = '#b4b0e0',
   bright = '#ddd0f4',
   fg = '#a9b1d6',
@@ -92,6 +92,7 @@ local ct = {
   blued = '#01d5f1',
   bluee = '#45b5e1',
   bluef = '#65d5e1',
+  blue10 = '#6c67ea',
 
   gray1 = '#111017',
   gray2 = '#22202a',
@@ -364,7 +365,7 @@ local link_ts_v8 = function(bg)
     vim.api.nvim_set_hl(0, '@string', { link = 'String' })
     vim.api.nvim_set_hl(0, '@string.regex', { fg = ct.green2, ctermfg = 116 })
     vim.api.nvim_set_hl(0, '@string.escape', { fg = ct.cyan, ctermfg = 158 })
-    vim.api.nvim_set_hl(0, '@string.special', { fg = ct.cyan, ctermfg = 158 })
+    vim.api.nvim_set_hl(0, '@string.special', { fg = ct.pink2, ctermfg = 158 })
     vim.api.nvim_set_hl(0, '@number', { link = 'Number' })
     vim.api.nvim_set_hl(0, '@boolean', { link = 'Boolean' })
     vim.api.nvim_set_hl(0, '@float', { link = 'Float' })
@@ -413,15 +414,23 @@ local link_ts_v8 = function(bg)
       { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
     )
 
-    vim.api.nvim_set_hl(0, '@keyword.operator', { link = 'Keyword' })
-    vim.api.nvim_set_hl(0, '@keyword.return', { link = 'Keyword' })
+    vim.api.nvim_set_hl(
+      0,
+      '@keyword.operator',
+      { fg = ct.pink1, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      '@keyword.return',
+      { fg = ct.pink6, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+    )
     vim.api.nvim_set_hl(
       0,
       '@parameter.reference',
-      { fg = ct.cyan, bg = bg, ctermfg = 158, ctermbg = 'NONE', bold = true }
+      { fg = ct.cyan, bg = bg, ctermfg = 158, bold = true }
     )
     vim.api.nvim_set_hl(0, '@method', { link = 'Function' })
-    vim.api.nvim_set_hl(0, '@method.call', { link = 'Function' })
+    vim.api.nvim_set_hl(0, '@method.call', { fg = ct.aqua, ctermfg = 81 })
     vim.api.nvim_set_hl(
       0,
       '@conditional',
@@ -472,7 +481,7 @@ local link_ts_v8 = function(bg)
     -- Text {{{
     vim.api.nvim_set_hl(0, '@text', { link = 'Normal' })
     vim.api.nvim_set_hl(0, '@text.strong', { bold = true })
-    vim.api.nvim_set_hl(0, '@text.emphasis', { italic = true })
+    vim.api.nvim_set_hl(0, '@text.emphasis', { italic = true, bold = (vim.g.aurora_bold == true) })
     vim.api.nvim_set_hl(0, '@text.underline', { underline = true })
     vim.api.nvim_set_hl(0, '@text.strike', { strikethrough = true })
     vim.api.nvim_set_hl(0, '@text.title', { link = 'Title' })
@@ -556,7 +565,7 @@ return {
       vim.api.nvim_set_hl(0, 'Directory', { fg = ct.blue, ctermfg = 111 })
       vim.api.nvim_set_hl(0, 'DiffAdd', {
         fg = 'NONE',
-        bg = ct.gray4,
+        bg = ct.neardark2,
         ctermfg = 'NONE',
         ctermbg = 239,
         bold = (vim.g.aurora_bold == 1),
@@ -567,12 +576,10 @@ return {
         { fg = 'NONE', bg = bg2, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) }
       )
       vim.api.nvim_set_hl(0, 'DiffDelete', {
-        fg = 'NONE',
-        bg = ct.neardark6,
+        fg = ct.baack,
+        bg = ct.gray1,
         ctermfg = 'NONE',
         ctermbg = 239,
-        bold = (vim.g.aurora_bold == 1),
-        strikethrough = true,
       })
       vim.api.nvim_set_hl(0, 'DiffText', {
         fg = 'NONE',
@@ -734,7 +741,7 @@ return {
       vim.api.nvim_set_hl(
         0,
         'Title',
-        { fg = ct.blue, ctermfg = 111, bold = (vim.g.aurora_bold == 1) }
+        { fg = ct.blue10, ctermfg = 111, bold = (vim.g.aurora_bold == 1) }
       )
       vim.api.nvim_set_hl(0, 'Visual', { bg = ct.neardark6, ctermbg = 239 })
       vim.api.nvim_set_hl(
@@ -756,7 +763,7 @@ return {
       vim.api.nvim_set_hl(
         0,
         'Comment',
-        { fg = ct.fg1, ctermfg = 247, italic = (vim.g.aurora_italic == 1) }
+        { fg = ct.blue7, ctermfg = 247, italic = (vim.g.aurora_italic == 1) }
       )
       vim.api.nvim_set_hl(0, 'Constant', { fg = ct.yellow1, ctermfg = 229 })
       vim.api.nvim_set_hl(0, 'String', { fg = ct.green5, ctermfg = 35 })
