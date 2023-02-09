@@ -555,6 +555,7 @@ return {
         'ColorColumn',
         { fg = 'NONE', bg = ct.gray2, ctermfg = 'NONE', ctermbg = 235 }
       )
+      vim.api.nvim_set_hl(0, 'ScrollView', { fg = ct.pink4, bg = ct.pink4 })
       vim.api.nvim_set_hl(0, 'Cursor', { bg = ct.bright, ctermbg = 189 })
       vim.api.nvim_set_hl(
         0,
