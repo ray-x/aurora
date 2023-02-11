@@ -18,7 +18,7 @@ local ct = {
   fg4 = '#616686',
 
   black = '#070510',
-  dark = '#141425',
+  dark = '#141020',
   neardark = '#1a1926',
   neardarkb = '#30234f',
   neardark2 = '#211c2f',
@@ -502,13 +502,13 @@ end
 return {
   colorscheme = function()
     local bg = ct.neardark2
-    local bg2 = '#282339'
-    local bgfl = '#282339'
+    local bg2 = ct.neardark3
+    local bgfl = ct.neardark
     local bg3 = ct.neardark
     local bg4 = ct.dark
 
     if not vim.g.aurora_transparent and vim.g.aurora_darker then
-      bg = '#141020'
+      bg = ct.black
       bg2 = ct.neardark
       bgfl = ct.neardark
       bg3 = '#101020'
@@ -526,7 +526,7 @@ return {
       vim.api.nvim_set_hl(
         0,
         'NormalFloat',
-        { fg = ct.text, bg = bgfl, ctermfg = 187, ctermbg = 236 }
+        { fg = ct.text, bg = bgfl, ctermfg = 187, ctermbg = 236, blend = 20 }
       )
       vim.api.nvim_set_hl(0, 'NormalNC', { fg = ct.fg, bg = bg2, ctermfg = 146, ctermbg = 236 })
       vim.api.nvim_set_hl(
