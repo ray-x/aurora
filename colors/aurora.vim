@@ -44,7 +44,7 @@ if &background != 'dark'
 endif
 
 let g:aurora_bold = get(g:, 'aurora_bold', 0)
-if has('nvim-0.8')
+if has('nvim-0.8') == 1
   lua package.loaded['aurora'] = nil
   " packadd aurora
   lua require('aurora').colorscheme()
@@ -68,7 +68,7 @@ else
   hi link gitcommitUntrackedFile jsonNumber
   hi gitcommitDiscardedFile guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link gitcommitSelectedFile cssClassName
-  hi GitSignsAddInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,underline cterm=Bold,underdouble guisp=#addb67
+  hi GitSignsAddInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,underline cterm=Bold,undercurl guisp=#addb67
   hi GitSignsDeleteInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,strikethrough guisp=#E7C547
   hi GitSignsChangeInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,underline guisp=#B376B3
   hi GitGutterAdd guifg=#9dd067 ctermfg=149 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
@@ -412,8 +412,8 @@ else
   hi Folded guifg=#777087 ctermfg=243 guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
   hi FoldColumn guifg=#333042 ctermfg=236 guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
   hi SignColumn guifg=NONE ctermfg=NONE guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
-  hi IncSearch guifg=NONE ctermfg=NONE guibg=#57109a ctermbg=54 gui=Bold,underdouble,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
-  hi MatchParen guifg=#EE82EE ctermfg=213 guibg=NONE ctermbg=NONE gui=Bold,underdouble cterm=Bold,undercurl guisp=#E7C547
+  hi IncSearch guifg=NONE ctermfg=NONE guibg=#57109a ctermbg=54 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
+  hi MatchParen guifg=#EE82EE ctermfg=213 guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#E7C547
   hi ModeMsg guifg=#77d507 ctermfg=112 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi MoreMsg guifg=#aab7cf ctermfg=146 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi NonText guifg=#4f425e ctermfg=239 gui=NONE cterm=NONE

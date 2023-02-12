@@ -168,335 +168,331 @@ local ct = {
   pink9 = '#e55285',
 }
 local link_ts_v7 = function(bg)
-  if vim.fn.has('nvim-0.8') == 0 then
-    vim.api.nvim_set_hl(0, 'TSAnnotation', { fg = ct.blue, ctermfg = 111 })
-    vim.api.nvim_set_hl(0, 'TSAttribute', { fg = ct.green2, ctermfg = 116 })
-    vim.api.nvim_set_hl(0, 'TSCharacter', { fg = ct.orange2, ctermfg = 221 })
-    vim.api.nvim_set_hl(0, 'TSComment', { link = 'Comment' })
-    vim.api.nvim_set_hl(0, 'TSError', {
-      fg = ct.crimson,
-      bg = bg,
-      ctermfg = 161,
-      ctermbg = 'NONE',
-      bold = (vim.g.aurora_bold == 1),
-      undercurl = true,
-    })
-    vim.api.nvim_set_hl(0, 'TSPunctDelimiter', {
-      fg = ct.white,
-      bg = bg,
-      ctermfg = 189,
-      ctermbg = 'NONE',
-      bold = (vim.g.aurora_bold == 1),
-    })
-    vim.api.nvim_set_hl(
-      0,
-      'TSPunctBracket',
-      { fg = ct.br_blue, ctermfg = 110, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSPunctSpectial',
-      { fg = ct.br_yellow, bg = bg, ctermfg = 185, ctermbg = 'NONE' }
-    )
-    vim.api.nvim_set_hl(0, 'TSConstant', { link = 'Constant' })
-    vim.api.nvim_set_hl(
-      0,
-      'TSConstBuiltin',
-      { fg = ct.red4, ctermfg = 167, italic = (vim.g.aurora_italic == 1) }
-    )
-    vim.api.nvim_set_hl(0, 'TSConstMacro', { fg = ct.red3, ctermfg = 197 })
-    vim.api.nvim_set_hl(0, 'TSString', { link = 'String' })
-    vim.api.nvim_set_hl(0, 'TSStringRegex', { fg = ct.green2, ctermfg = 116 })
-    vim.api.nvim_set_hl(0, 'TSStringEscape', { fg = ct.cyan, ctermfg = 158 })
-    vim.api.nvim_set_hl(0, 'TSNumber', { link = 'Number' })
-    vim.api.nvim_set_hl(0, 'TSBoolean', { link = 'Boolean' })
-    vim.api.nvim_set_hl(0, 'TSFloat', { link = 'Float' })
-    vim.api.nvim_set_hl(0, 'TSField', { fg = ct.purple2, ctermfg = 134 })
-    vim.api.nvim_set_hl(0, 'TSType', { link = 'Type' })
-    vim.api.nvim_set_hl(
-      0,
-      'TSTypeBuiltin',
-      { fg = ct.orange2, ctermfg = 221, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, 'TSProperty', { link = 'TSField' })
-    vim.api.nvim_set_hl(0, 'TSParameter', { fg = ct.yellow2, ctermfg = 229 })
-    vim.api.nvim_set_hl(
-      0,
-      'TSConstructor',
-      { fg = ct.blue3, ctermfg = 68, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSFunction',
-      { fg = ct.aqua, ctermfg = 81, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSKeywordFunction',
-      { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSFunctionBuiltin',
-      { fg = ct.green3, ctermfg = 148, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSFuncBuiltin',
-      { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSFuncMacro',
-      { fg = ct.purple, ctermfg = 141, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSParameterReference',
-      { fg = ct.cyan, bg = bg, ctermfg = 158, ctermbg = 'NONE', bold = true }
-    )
-    vim.api.nvim_set_hl(0, 'TSMethod', { link = 'Function' })
-    vim.api.nvim_set_hl(
-      0,
-      'TSConditional',
-      { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, 'TSRepeat', { link = 'Repeat' })
-    vim.api.nvim_set_hl(
-      0,
-      'TSException',
-      { fg = ct.red, ctermfg = 204, italic = (vim.g.aurora_italic == 1) }
-    )
-    vim.api.nvim_set_hl(0, 'TSLabel', { link = 'Label' })
-    vim.api.nvim_set_hl(0, 'TSOperator', { link = 'Operator' })
-    vim.api.nvim_set_hl(0, 'TSKeyword', { link = 'Keyword' })
-    vim.api.nvim_set_hl(0, 'TSStructure', { link = 'Structure' })
-    vim.api.nvim_set_hl(0, 'TSInclude', { link = 'Include' })
-    vim.api.nvim_set_hl(0, 'TSTag', { link = 'Tag' })
-    vim.api.nvim_set_hl(0, 'TSTagDelimiter', { link = 'Delimiter' })
-    vim.api.nvim_set_hl(0, 'TSTagAttribute', { link = 'Structure' })
-    vim.api.nvim_set_hl(0, 'TSVariable', { link = 'Identifier' })
-    vim.api.nvim_set_hl(0, 'TSVariableBuiltin', { fg = ct.orange, ctermfg = 208 })
-    vim.api.nvim_set_hl(0, 'TSDefinitionUsage', { fg = ct.yellow6, ctermfg = 186 })
-    vim.api.nvim_set_hl(0, 'TSDefinition', { link = 'Define' })
-    vim.api.nvim_set_hl(
-      0,
-      'TSStrong',
-      { fg = ct.yellow7, ctermfg = 180, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, 'TSEmphasis', {
-      fg = ct.yellow3,
-      ctermfg = 228,
-      bold = (vim.g.aurora_bold == 1),
-      undercurl = true,
-      italic = true,
-    })
-    vim.api.nvim_set_hl(0, 'TSUnderline', { fg = ct.yellow, ctermfg = 222, undercurl = true })
-    vim.api.nvim_set_hl(0, 'TSTitle', { link = 'SpecialKey' })
-    vim.api.nvim_set_hl(0, 'TSLiteral', { fg = ct.text, ctermfg = 187 })
-    vim.api.nvim_set_hl(
-      0,
-      'TSURI',
-      { fg = ct.green3, ctermfg = 148, italic = (vim.g.aurora_italic == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSCurrentScope',
-      { bg = bg, ctermbg = 234, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      'TSIdentifier',
-      { fg = ct.text, ctermfg = 187, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, 'TSNameSpace', { link = 'Function' })
-  end
+  vim.api.nvim_set_hl(0, 'TSAnnotation', { fg = ct.blue, ctermfg = 111 })
+  vim.api.nvim_set_hl(0, 'TSAttribute', { fg = ct.green2, ctermfg = 116 })
+  vim.api.nvim_set_hl(0, 'TSCharacter', { fg = ct.orange2, ctermfg = 221 })
+  vim.api.nvim_set_hl(0, 'TSComment', { link = 'Comment' })
+  vim.api.nvim_set_hl(0, 'TSError', {
+    fg = ct.crimson,
+    bg = bg,
+    ctermfg = 161,
+    ctermbg = 'NONE',
+    bold = (vim.g.aurora_bold == 1),
+    undercurl = true,
+  })
+  vim.api.nvim_set_hl(0, 'TSPunctDelimiter', {
+    fg = ct.white,
+    bg = bg,
+    ctermfg = 189,
+    ctermbg = 'NONE',
+    bold = (vim.g.aurora_bold == 1),
+  })
+  vim.api.nvim_set_hl(
+    0,
+    'TSPunctBracket',
+    { fg = ct.br_blue, ctermfg = 110, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSPunctSpectial',
+    { fg = ct.br_yellow, bg = bg, ctermfg = 185, ctermbg = 'NONE' }
+  )
+  vim.api.nvim_set_hl(0, 'TSConstant', { link = 'Constant' })
+  vim.api.nvim_set_hl(
+    0,
+    'TSConstBuiltin',
+    { fg = ct.red4, ctermfg = 167, italic = (vim.g.aurora_italic == 1) }
+  )
+  vim.api.nvim_set_hl(0, 'TSConstMacro', { fg = ct.red3, ctermfg = 197 })
+  vim.api.nvim_set_hl(0, 'TSString', { link = 'String' })
+  vim.api.nvim_set_hl(0, 'TSStringRegex', { fg = ct.green2, ctermfg = 116 })
+  vim.api.nvim_set_hl(0, 'TSStringEscape', { fg = ct.cyan, ctermfg = 158 })
+  vim.api.nvim_set_hl(0, 'TSNumber', { link = 'Number' })
+  vim.api.nvim_set_hl(0, 'TSBoolean', { link = 'Boolean' })
+  vim.api.nvim_set_hl(0, 'TSFloat', { link = 'Float' })
+  vim.api.nvim_set_hl(0, 'TSField', { fg = ct.purple2, ctermfg = 134 })
+  vim.api.nvim_set_hl(0, 'TSType', { link = 'Type' })
+  vim.api.nvim_set_hl(
+    0,
+    'TSTypeBuiltin',
+    { fg = ct.orange2, ctermfg = 221, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, 'TSProperty', { link = 'TSField' })
+  vim.api.nvim_set_hl(0, 'TSParameter', { fg = ct.yellow2, ctermfg = 229 })
+  vim.api.nvim_set_hl(
+    0,
+    'TSConstructor',
+    { fg = ct.blue3, ctermfg = 68, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSFunction',
+    { fg = ct.aqua, ctermfg = 81, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSKeywordFunction',
+    { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSFunctionBuiltin',
+    { fg = ct.green3, ctermfg = 148, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSFuncBuiltin',
+    { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSFuncMacro',
+    { fg = ct.purple, ctermfg = 141, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSParameterReference',
+    { fg = ct.cyan, bg = bg, ctermfg = 158, ctermbg = 'NONE', bold = true }
+  )
+  vim.api.nvim_set_hl(0, 'TSMethod', { link = 'Function' })
+  vim.api.nvim_set_hl(
+    0,
+    'TSConditional',
+    { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, 'TSRepeat', { link = 'Repeat' })
+  vim.api.nvim_set_hl(
+    0,
+    'TSException',
+    { fg = ct.red, ctermfg = 204, italic = (vim.g.aurora_italic == 1) }
+  )
+  vim.api.nvim_set_hl(0, 'TSLabel', { link = 'Label' })
+  vim.api.nvim_set_hl(0, 'TSOperator', { link = 'Operator' })
+  vim.api.nvim_set_hl(0, 'TSKeyword', { link = 'Keyword' })
+  vim.api.nvim_set_hl(0, 'TSStructure', { link = 'Structure' })
+  vim.api.nvim_set_hl(0, 'TSInclude', { link = 'Include' })
+  vim.api.nvim_set_hl(0, 'TSTag', { link = 'Tag' })
+  vim.api.nvim_set_hl(0, 'TSTagDelimiter', { link = 'Delimiter' })
+  vim.api.nvim_set_hl(0, 'TSTagAttribute', { link = 'Structure' })
+  vim.api.nvim_set_hl(0, 'TSVariable', { link = 'Identifier' })
+  vim.api.nvim_set_hl(0, 'TSVariableBuiltin', { fg = ct.orange, ctermfg = 208 })
+  vim.api.nvim_set_hl(0, 'TSDefinitionUsage', { fg = ct.yellow6, ctermfg = 186 })
+  vim.api.nvim_set_hl(0, 'TSDefinition', { link = 'Define' })
+  vim.api.nvim_set_hl(
+    0,
+    'TSStrong',
+    { fg = ct.yellow7, ctermfg = 180, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, 'TSEmphasis', {
+    fg = ct.yellow3,
+    ctermfg = 228,
+    bold = (vim.g.aurora_bold == 1),
+    undercurl = true,
+    italic = true,
+  })
+  vim.api.nvim_set_hl(0, 'TSUnderline', { fg = ct.yellow, ctermfg = 222, undercurl = true })
+  vim.api.nvim_set_hl(0, 'TSTitle', { link = 'SpecialKey' })
+  vim.api.nvim_set_hl(0, 'TSLiteral', { fg = ct.text, ctermfg = 187 })
+  vim.api.nvim_set_hl(
+    0,
+    'TSURI',
+    { fg = ct.green3, ctermfg = 148, italic = (vim.g.aurora_italic == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSCurrentScope',
+    { bg = bg, ctermbg = 234, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    'TSIdentifier',
+    { fg = ct.text, ctermfg = 187, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, 'TSNameSpace', { link = 'Function' })
 end
 local link_ts_v8 = function(bg)
-  if vim.fn.has('nvim-0.8') == 1 then
-    vim.api.nvim_set_hl(
-      0,
-      'TSParameterReference',
-      { fg = ct.cyan, bg = bg, ctermfg = 158, ctermbg = 'NONE', bold = true }
-    )
+  vim.api.nvim_set_hl(
+    0,
+    'TSParameterReference',
+    { fg = ct.cyan, bg = bg, ctermfg = 158, ctermbg = 'NONE', bold = true }
+  )
 
-    vim.api.nvim_set_hl(0, 'TSDefinitionUsage', { fg = ct.yellow6, ctermfg = 186 })
-    vim.api.nvim_set_hl(0, 'TSDefinition', { link = 'Define' })
-    vim.api.nvim_set_hl(
-      0,
-      'TSCurrentScope',
-      { bg = bg, ctermbg = 234, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, '@annotation', { fg = ct.blue, ctermfg = 111 })
-    vim.api.nvim_set_hl(0, '@attribute', { fg = ct.green2, ctermfg = 116 })
-    vim.api.nvim_set_hl(0, '@comment', { link = 'Comment' })
-    vim.api.nvim_set_hl(0, '@error', {
-      fg = ct.crimson,
-      bg = bg,
-      ctermfg = 161,
-      ctermbg = 'NONE',
-      bold = (vim.g.aurora_bold == 1),
-      undercurl = true,
-    })
-    vim.api.nvim_set_hl(0, '@punctuation.delimiter', {
-      fg = ct.white,
-      bg = bg,
-      ctermfg = 189,
-      ctermbg = 'NONE',
-      bold = (vim.g.aurora_bold == 1),
-    })
-    vim.api.nvim_set_hl(
-      0,
-      '@punctuation.bracket',
-      { fg = ct.br_blue, ctermfg = 110, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      '@punctuation.spectial',
-      { fg = ct.br_yellow, bg = bg, ctermfg = 185, ctermbg = 'NONE' }
-    )
-    vim.api.nvim_set_hl(0, '@constant', { link = 'Constant' })
-    vim.api.nvim_set_hl(
-      0,
-      '@constant.builtin',
-      { fg = ct.red4, ctermfg = 167, italic = (vim.g.aurora_italic == 1) }
-    )
-    vim.api.nvim_set_hl(0, '@constant.macro', { fg = ct.red3, ctermfg = 197 })
-    vim.api.nvim_set_hl(0, '@string', { link = 'String' })
-    vim.api.nvim_set_hl(0, '@string.regex', { fg = ct.green2, ctermfg = 116 })
-    vim.api.nvim_set_hl(0, '@string.escape', { fg = ct.cyan, ctermfg = 158 })
-    vim.api.nvim_set_hl(0, '@string.special', { fg = ct.pink2, ctermfg = 158 })
-    vim.api.nvim_set_hl(0, '@number', { link = 'Number' })
-    vim.api.nvim_set_hl(0, '@boolean', { link = 'Boolean' })
-    vim.api.nvim_set_hl(0, '@float', { link = 'Float' })
-    vim.api.nvim_set_hl(0, '@field', { fg = ct.purple2, ctermfg = 134 })
-    vim.api.nvim_set_hl(0, '@type', { link = 'Type' })
-    vim.api.nvim_set_hl(
-      0,
-      '@type.builtin',
-      { fg = ct.orange2, ctermfg = 221, bold = (vim.g.aurora_bold == 1) }
-    )
+  vim.api.nvim_set_hl(0, 'TSDefinitionUsage', { fg = ct.yellow6, ctermfg = 186 })
+  vim.api.nvim_set_hl(0, 'TSDefinition', { link = 'Define' })
+  vim.api.nvim_set_hl(
+    0,
+    'TSCurrentScope',
+    { bg = bg, ctermbg = 234, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, '@annotation', { fg = ct.blue, ctermfg = 111 })
+  vim.api.nvim_set_hl(0, '@attribute', { fg = ct.green2, ctermfg = 116 })
+  vim.api.nvim_set_hl(0, '@comment', { link = 'Comment' })
+  vim.api.nvim_set_hl(0, '@error', {
+    fg = ct.crimson,
+    bg = bg,
+    ctermfg = 161,
+    ctermbg = 'NONE',
+    bold = (vim.g.aurora_bold == 1),
+    undercurl = true,
+  })
+  vim.api.nvim_set_hl(0, '@punctuation.delimiter', {
+    fg = ct.white,
+    bg = bg,
+    ctermfg = 189,
+    ctermbg = 'NONE',
+    bold = (vim.g.aurora_bold == 1),
+  })
+  vim.api.nvim_set_hl(
+    0,
+    '@punctuation.bracket',
+    { fg = ct.br_blue, ctermfg = 110, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    '@punctuation.spectial',
+    { fg = ct.br_yellow, bg = bg, ctermfg = 185, ctermbg = 'NONE' }
+  )
+  vim.api.nvim_set_hl(0, '@constant', { link = 'Constant' })
+  vim.api.nvim_set_hl(
+    0,
+    '@constant.builtin',
+    { fg = ct.red4, ctermfg = 167, italic = (vim.g.aurora_italic == 1) }
+  )
+  vim.api.nvim_set_hl(0, '@constant.macro', { fg = ct.red3, ctermfg = 197 })
+  vim.api.nvim_set_hl(0, '@string', { link = 'String' })
+  vim.api.nvim_set_hl(0, '@string.regex', { fg = ct.green2, ctermfg = 116 })
+  vim.api.nvim_set_hl(0, '@string.escape', { fg = ct.cyan, ctermfg = 158 })
+  vim.api.nvim_set_hl(0, '@string.special', { fg = ct.pink2, ctermfg = 158 })
+  vim.api.nvim_set_hl(0, '@number', { link = 'Number' })
+  vim.api.nvim_set_hl(0, '@boolean', { link = 'Boolean' })
+  vim.api.nvim_set_hl(0, '@float', { link = 'Float' })
+  vim.api.nvim_set_hl(0, '@field', { fg = ct.purple2, ctermfg = 134 })
+  vim.api.nvim_set_hl(0, '@type', { link = 'Type' })
+  vim.api.nvim_set_hl(
+    0,
+    '@type.builtin',
+    { fg = ct.orange2, ctermfg = 221, bold = (vim.g.aurora_bold == 1) }
+  )
 
-    vim.api.nvim_set_hl(0, '@type.qualifier', { link = 'Type' })
-    vim.api.nvim_set_hl(0, '@type.definition', { link = 'Typedef' })
-    vim.api.nvim_set_hl(0, '@property', { link = '@field' })
-    vim.api.nvim_set_hl(0, '@parameter', { fg = ct.yellow2, ctermfg = 229 })
-    vim.api.nvim_set_hl(
-      0,
-      '@constructor',
-      { fg = ct.blue3, ctermfg = 68, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      '@function',
-      { fg = ct.aqua, ctermfg = 81, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      '@function.builtin',
-      { fg = ct.green3, ctermfg = 148, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      '@function.builtin',
-      { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      '@function.macro',
-      { fg = ct.purple, ctermfg = 141, bold = (vim.g.aurora_bold == 1) }
-    )
+  vim.api.nvim_set_hl(0, '@type.qualifier', { link = 'Type' })
+  vim.api.nvim_set_hl(0, '@type.definition', { link = 'Typedef' })
+  vim.api.nvim_set_hl(0, '@property', { link = '@field' })
+  vim.api.nvim_set_hl(0, '@parameter', { fg = ct.yellow2, ctermfg = 229 })
+  vim.api.nvim_set_hl(
+    0,
+    '@constructor',
+    { fg = ct.blue3, ctermfg = 68, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    '@function',
+    { fg = ct.aqua, ctermfg = 81, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    '@function.builtin',
+    { fg = ct.green3, ctermfg = 148, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    '@function.builtin',
+    { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    '@function.macro',
+    { fg = ct.purple, ctermfg = 141, bold = (vim.g.aurora_bold == 1) }
+  )
 
-    vim.api.nvim_set_hl(0, '@keyword', { link = 'Keyword' })
-    vim.api.nvim_set_hl(
-      0,
-      '@keyword.function',
-      { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-    )
+  vim.api.nvim_set_hl(0, '@keyword', { link = 'Keyword' })
+  vim.api.nvim_set_hl(
+    0,
+    '@keyword.function',
+    { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+  )
 
-    vim.api.nvim_set_hl(
-      0,
-      '@keyword.operator',
-      { fg = ct.pink1, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      '@keyword.return',
-      { fg = ct.pink6, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      '@parameter.reference',
-      { fg = ct.cyan, bg = bg, ctermfg = 158, bold = true }
-    )
-    vim.api.nvim_set_hl(0, '@method', { link = 'Function' })
-    vim.api.nvim_set_hl(0, '@method.call', { fg = ct.aqua, ctermfg = 81 })
-    vim.api.nvim_set_hl(
-      0,
-      '@conditional',
-      { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, '@repeat', { link = 'Repeat' })
-    vim.api.nvim_set_hl(
-      0,
-      '@exception',
-      { fg = ct.red, ctermfg = 204, italic = (vim.g.aurora_italic == 1) }
-    )
-    vim.api.nvim_set_hl(0, '@label', { link = 'Label' })
-    vim.api.nvim_set_hl(0, '@operator', { link = 'Operator' })
-    vim.api.nvim_set_hl(0, '@structure', { link = 'Structure' })
-    vim.api.nvim_set_hl(0, '@include', { link = 'Include' })
-    vim.api.nvim_set_hl(0, '@tag', { link = 'Tag' })
-    vim.api.nvim_set_hl(0, '@tag.delimiter', { link = 'Delimiter' })
-    vim.api.nvim_set_hl(0, '@tag.attribute', { link = 'Structure' })
-    vim.api.nvim_set_hl(0, '@variable', { link = 'Identifier' })
-    vim.api.nvim_set_hl(0, '@variable.builtin', { fg = ct.orange, ctermfg = 208 })
-    vim.api.nvim_set_hl(0, '@definition.usage', { fg = ct.yellow6, ctermfg = 186 })
-    vim.api.nvim_set_hl(0, '@definition', { link = 'Define' })
-    vim.api.nvim_set_hl(
-      0,
-      '@strong',
-      { fg = ct.yellow7, ctermfg = 180, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, '@emphasis', {
-      fg = ct.yellow3,
-      ctermfg = 228,
-      bold = (vim.g.aurora_bold == 1),
-      undercurl = true,
-      italic = true,
-    })
-    vim.api.nvim_set_hl(0, '@underline', { fg = ct.yellow, ctermfg = 222, undercurl = true })
-    vim.api.nvim_set_hl(0, '@title', { link = 'SpecialKey' })
-    vim.api.nvim_set_hl(0, '@literal', { fg = ct.text, ctermfg = 187 })
-    vim.api.nvim_set_hl(
-      0,
-      '@identifier',
-      { fg = ct.text, ctermfg = 187, bold = (vim.g.aurora_bold == 1) }
-    )
-    vim.api.nvim_set_hl(0, '@namespace', { link = 'Function' })
+  vim.api.nvim_set_hl(
+    0,
+    '@keyword.operator',
+    { fg = ct.pink1, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    '@keyword.return',
+    { fg = ct.pink6, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(
+    0,
+    '@parameter.reference',
+    { fg = ct.cyan, bg = bg, ctermfg = 158, bold = true }
+  )
+  vim.api.nvim_set_hl(0, '@method', { link = 'Function' })
+  vim.api.nvim_set_hl(0, '@method.call', { fg = ct.aqua, ctermfg = 81 })
+  vim.api.nvim_set_hl(
+    0,
+    '@conditional',
+    { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, '@repeat', { link = 'Repeat' })
+  vim.api.nvim_set_hl(
+    0,
+    '@exception',
+    { fg = ct.red, ctermfg = 204, italic = (vim.g.aurora_italic == 1) }
+  )
+  vim.api.nvim_set_hl(0, '@label', { link = 'Label' })
+  vim.api.nvim_set_hl(0, '@operator', { link = 'Operator' })
+  vim.api.nvim_set_hl(0, '@structure', { link = 'Structure' })
+  vim.api.nvim_set_hl(0, '@include', { link = 'Include' })
+  vim.api.nvim_set_hl(0, '@tag', { link = 'Tag' })
+  vim.api.nvim_set_hl(0, '@tag.delimiter', { link = 'Delimiter' })
+  vim.api.nvim_set_hl(0, '@tag.attribute', { link = 'Structure' })
+  vim.api.nvim_set_hl(0, '@variable', { link = 'Identifier' })
+  vim.api.nvim_set_hl(0, '@variable.builtin', { fg = ct.orange, ctermfg = 208 })
+  vim.api.nvim_set_hl(0, '@definition.usage', { fg = ct.yellow6, ctermfg = 186 })
+  vim.api.nvim_set_hl(0, '@definition', { link = 'Define' })
+  vim.api.nvim_set_hl(
+    0,
+    '@strong',
+    { fg = ct.yellow7, ctermfg = 180, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, '@emphasis', {
+    fg = ct.yellow3,
+    ctermfg = 228,
+    bold = (vim.g.aurora_bold == 1),
+    undercurl = true,
+    italic = true,
+  })
+  vim.api.nvim_set_hl(0, '@underline', { fg = ct.yellow, ctermfg = 222, undercurl = true })
+  vim.api.nvim_set_hl(0, '@title', { link = 'SpecialKey' })
+  vim.api.nvim_set_hl(0, '@literal', { fg = ct.text, ctermfg = 187 })
+  vim.api.nvim_set_hl(
+    0,
+    '@identifier',
+    { fg = ct.text, ctermfg = 187, bold = (vim.g.aurora_bold == 1) }
+  )
+  vim.api.nvim_set_hl(0, '@namespace', { link = 'Function' })
 
-    vim.api.nvim_set_hl(0, '@character', { fg = ct.orange2, ctermfg = 221 })
-    vim.api.nvim_set_hl(0, '@character.special', { link = 'SpecialChar' })
+  vim.api.nvim_set_hl(0, '@character', { fg = ct.orange2, ctermfg = 221 })
+  vim.api.nvim_set_hl(0, '@character.special', { link = 'SpecialChar' })
 
-    -- Text {{{
-    vim.api.nvim_set_hl(0, '@text', { link = 'Normal' })
-    vim.api.nvim_set_hl(0, '@text.strong', { bold = true })
-    vim.api.nvim_set_hl(0, '@text.emphasis', { italic = true, bold = (vim.g.aurora_bold == true) })
-    vim.api.nvim_set_hl(0, '@text.underline', { underline = true })
-    vim.api.nvim_set_hl(0, '@text.strike', { strikethrough = true })
-    vim.api.nvim_set_hl(0, '@text.title', { link = 'Title' })
-    vim.api.nvim_set_hl(0, '@text.literal', { link = 'String' })
-    vim.api.nvim_set_hl(0, '@text.uri', { link = 'Underlined' })
-    vim.api.nvim_set_hl(0, '@text.math', { link = 'Special' })
-    vim.api.nvim_set_hl(0, '@text.environment', { link = 'Macro' })
-    vim.api.nvim_set_hl(0, '@text.environment.name', { link = 'Type' })
-    vim.api.nvim_set_hl(0, '@text.reference', { link = 'Constant' })
+  -- Text {{{
+  vim.api.nvim_set_hl(0, '@text', { link = 'Normal' })
+  vim.api.nvim_set_hl(0, '@text.strong', { bold = true })
+  vim.api.nvim_set_hl(0, '@text.emphasis', { italic = true, bold = (vim.g.aurora_bold == true) })
+  vim.api.nvim_set_hl(0, '@text.underline', { underline = true })
+  vim.api.nvim_set_hl(0, '@text.strike', { strikethrough = true })
+  vim.api.nvim_set_hl(0, '@text.title', { link = 'Title' })
+  vim.api.nvim_set_hl(0, '@text.literal', { link = 'String' })
+  vim.api.nvim_set_hl(0, '@text.uri', { link = 'Underlined' })
+  vim.api.nvim_set_hl(0, '@text.math', { link = 'Special' })
+  vim.api.nvim_set_hl(0, '@text.environment', { link = 'Macro' })
+  vim.api.nvim_set_hl(0, '@text.environment.name', { link = 'Type' })
+  vim.api.nvim_set_hl(0, '@text.reference', { link = 'Constant' })
 
-    vim.api.nvim_set_hl(0, '@text.todo', { link = 'Todo' })
-    vim.api.nvim_set_hl(0, '@text.note', { link = 'SpecialComment' })
-    vim.api.nvim_set_hl(0, '@text.warning', { link = 'WarningMsg' })
-    vim.api.nvim_set_hl(0, '@text.danger', { link = 'ErrorMsg' })
-  end
+  vim.api.nvim_set_hl(0, '@text.todo', { link = 'Todo' })
+  vim.api.nvim_set_hl(0, '@text.note', { link = 'SpecialComment' })
+  vim.api.nvim_set_hl(0, '@text.warning', { link = 'WarningMsg' })
+  vim.api.nvim_set_hl(0, '@text.danger', { link = 'ErrorMsg' })
 end
 
 return {
