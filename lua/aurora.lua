@@ -1362,7 +1362,7 @@ return {
       vim.api.nvim_set_hl(
         0,
         'Underlined',
-        { fg = ct.green9, bg = bg, ctermfg = 79, ctermbg = 'NONE' }
+        { fg = ct.green9, bg = bg, ctermfg = 79, ctermbg = 'NONE', underline = true }
       )
       vim.api.nvim_set_hl(0, 'Ignore', { fg = ct.gray4, bg = bg, ctermfg = 239, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'Error', {
