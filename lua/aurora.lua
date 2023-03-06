@@ -178,6 +178,7 @@ local link_ts_v7 = function(bg)
     ctermfg = 161,
     ctermbg = 'NONE',
     bold = (vim.g.aurora_bold == 1),
+    sp = ct.red1,
     undercurl = true,
   })
   vim.api.nvim_set_hl(0, 'TSPunctDelimiter', {
@@ -327,14 +328,6 @@ local link_ts_v8 = function(bg)
   vim.api.nvim_set_hl(0, '@annotation', { fg = ct.blue, ctermfg = 111 })
   vim.api.nvim_set_hl(0, '@attribute', { fg = ct.green2, ctermfg = 116 })
   vim.api.nvim_set_hl(0, '@comment', { link = 'Comment' })
-  vim.api.nvim_set_hl(0, '@error', {
-    fg = ct.crimson,
-    bg = bg,
-    ctermfg = 161,
-    ctermbg = 'NONE',
-    bold = (vim.g.aurora_bold == 1),
-    undercurl = true,
-  })
   vim.api.nvim_set_hl(0, '@punctuation.delimiter', {
     fg = ct.white,
     bg = bg,
@@ -591,7 +584,8 @@ return {
         fg = ct.crimson,
         bg = bg,
         ctermfg = 161,
-        ctermbg = 'NONE',
+        undercurl = true,
+        sp = ct.red,
         bold = (vim.g.aurora_bold == 1),
       })
       vim.api.nvim_set_hl(0, 'VertSplit', { fg = ct.gray7, ctermfg = 243 })
@@ -1220,7 +1214,7 @@ return {
         'DiagnosticVirtualTextHint',
         { fg = ct.green0, bg = bg, ctermfg = 34, ctermbg = 'NONE' }
       )
-      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { link = 'Error' })
+      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { link = 'ErrorMsg' })
       vim.api.nvim_set_hl(
         0,
         'DiagnosticUnderlineWarn',
@@ -1365,15 +1359,6 @@ return {
         { fg = ct.green9, bg = bg, ctermfg = 79, ctermbg = 'NONE', underline = true }
       )
       vim.api.nvim_set_hl(0, 'Ignore', { fg = ct.gray4, bg = bg, ctermfg = 239, ctermbg = 'NONE' })
-      vim.api.nvim_set_hl(0, 'Error', {
-        fg = ct.crimson,
-        bg = bg,
-        ctermfg = 161,
-        ctermbg = 'NONE',
-        sp = ct.yellow5,
-        bold = (vim.g.aurora_bold == 1),
-        undercurl = true,
-      })
       vim.api.nvim_set_hl(0, 'Todo', {
         fg = ct.red4,
         bg = ct.pink4,
