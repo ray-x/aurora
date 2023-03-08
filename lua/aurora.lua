@@ -416,6 +416,12 @@ local link_ts_v8 = function(bg)
   )
   vim.api.nvim_set_hl(
     0,
+    '@keyword.coroutine',
+    { fg = ct.pink2, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
+  )
+
+  vim.api.nvim_set_hl(
+    0,
     '@parameter.reference',
     { fg = ct.cyan, bg = bg, ctermfg = 158, bold = true }
   )
@@ -463,7 +469,6 @@ local link_ts_v8 = function(bg)
     '@identifier',
     { fg = ct.text, ctermfg = 187, bold = (vim.g.aurora_bold == 1) }
   )
-  vim.api.nvim_set_hl(0, '@namespace', { link = 'Function' })
 
   vim.api.nvim_set_hl(0, '@character', { fg = ct.orange2, ctermfg = 221 })
   vim.api.nvim_set_hl(0, '@character.special', { link = 'SpecialChar' })
@@ -486,6 +491,17 @@ local link_ts_v8 = function(bg)
   vim.api.nvim_set_hl(0, '@text.note', { link = 'SpecialComment' })
   vim.api.nvim_set_hl(0, '@text.warning', { link = 'WarningMsg' })
   vim.api.nvim_set_hl(0, '@text.danger', { link = 'ErrorMsg' })
+end
+
+local lsp_v9 = function(bg)
+  vim.api.nvim_set_hl(0, '@lsp.type.enum', { link = '@type' })
+  vim.api.nvim_set_hl(0, '@lsp.type.keyword', { link = '@keyword' })
+  vim.api.nvim_set_hl(0, '@lsp.type.interface', { link = 'Identifier' })
+  vim.api.nvim_set_hl(0, '@lsp.type.namespace', { link = '@namespace' })
+  vim.api.nvim_set_hl(0, '@lsp.type.parameter', { link = '@parameter' })
+  vim.api.nvim_set_hl(0, '@lsp.type.property', { link = '@property' })
+  vim.api.nvim_set_hl(0, '@lsp.type.variable', { link = '@variable' })
+  vim.api.nvim_set_hl(0, '@lsp.typemod.function.defaultLibrary', { link = 'Special' })
 end
 
 return {
@@ -659,6 +675,9 @@ return {
           underlineline = true,
           italic = true,
         })
+      end
+      if vim.fn.has('nvim-0.9') then
+        lsp_v9(bg)
       end
       vim.api.nvim_set_hl(0, 'CurSearch', { link = 'Search' })
       vim.api.nvim_set_hl(
