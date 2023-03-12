@@ -500,6 +500,12 @@ local lsp_v9 = function(bg)
   vim.api.nvim_set_hl(0, '@lsp.type.namespace', { link = '@namespace' })
   vim.api.nvim_set_hl(0, '@lsp.type.parameter', { link = '@parameter' })
   vim.api.nvim_set_hl(0, '@lsp.type.property', { link = '@property' })
+  vim.api.nvim_set_hl(0, '@lsp.type.string', { link = '@string' })
+  vim.api.nvim_set_hl(0, '@lsp.type.modifier', { link = 'Special' })
+  vim.api.nvim_set_hl(0, '@lsp.type.property', { link = '@field' })
+  vim.api.nvim_set_hl(0, '@lsp.typemod.function.defaultLibrary', { link = 'Include' })
+  vim.api.nvim_set_hl(0, '@lsp.typemod.variable.readonly', { link = '@constant' })
+
   vim.api.nvim_set_hl(0, '@lsp.type.variable', { link = '@variable' })
   vim.api.nvim_set_hl(0, '@lsp.typemod.function.defaultLibrary', { link = 'Special' })
 end
@@ -688,6 +694,16 @@ return {
       vim.api.nvim_set_hl(0, 'MoreMsg', { fg = ct.graya, bg = bg, ctermfg = 146, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'NonText', { fg = ct.gray4, ctermfg = 239 })
       vim.api.nvim_set_hl(0, 'PMenu', { fg = ct.fg2, bg = bg3, ctermfg = 103, ctermbg = 234 })
+      vim.api.nvim_set_hl(
+        0,
+        'PMenuKind',
+        { fg = ct.green6, bg = bg3, ctermfg = 103, ctermbg = 232 }
+      )
+      vim.api.nvim_set_hl(
+        0,
+        'PMenuExtra',
+        { fg = ct.blueb, bg = bg3, ctermfg = 103, ctermbg = 232 }
+      )
       vim.api.nvim_set_hl(0, 'PMenuSel', {
         fg = ct.white,
         bg = ct.neardark5,

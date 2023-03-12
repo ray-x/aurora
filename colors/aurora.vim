@@ -419,6 +419,8 @@ else
   hi NonText guifg=#4f425e ctermfg=239 gui=NONE cterm=NONE
   hi PMenu guifg=#888ca9 ctermfg=103 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
   hi PMenuSel guifg=#e7d3fb ctermfg=189 guibg=#443a54 ctermbg=238 gui=Bold,Italic cterm=Bold,Italic
+  hi PMenuKind guifg=#1ABC9C ctermfg=189 guibg=#443a54 ctermbg=238 gui=Bold,Italic cterm=Bold,Italic
+  hi PMenuExtra guifg=#10aef8 ctermfg=189 guibg=#443a54 ctermbg=238 gui=Bold,Italic cterm=Bold,Italic
   hi PmenuSbar guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=NONE cterm=NONE
   hi PmenuThumb guifg=NONE ctermfg=NONE guibg=#aab7cf ctermbg=146 gui=NONE cterm=NONE
   hi MsgArea guifg=#ffbbd6 ctermfg=218 guibg=bg ctermbg=234 gui=NONE cterm=NONE
