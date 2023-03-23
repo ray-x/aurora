@@ -1254,6 +1254,16 @@ return {
         'DiagnosticUnderlineWarn',
         { link = 'DiagnosticWarn', undercurl = true, sp = ct.yellow8 }
       )
+      vim.api.nvim_set_hl(
+        0,
+        'DiagnosticUnderlineInfo',
+        { link = 'DiagnosticInfo', underdashed = true, sp = ct.blue7 }
+      )
+      vim.api.nvim_set_hl(
+        0,
+        'DiagnosticUnderlineHint',
+        { link = 'DiagnosticHint', underdotted = true, sp = ct.gray4 }
+      )
       vim.api.nvim_set_hl(0, 'DiagnosticFloatingError', { link = 'DiagnosticError' })
       vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarning', { link = 'DiagnosticWarning' })
       vim.api.nvim_set_hl(0, 'DiagnosticFloatingInfo', { link = 'DiagnosticInfo' })
