@@ -1514,6 +1514,8 @@ return {
       vim.api.nvim_set_hl(0, 'xmlNamespace', { link = 'jsonNumber' })
       vim.api.nvim_set_hl(0, 'xmlAttribPunct', { link = 'cssImportant' })
       vim.api.nvim_set_hl(0, 'xmlProcessingDelim', { link = 'cssImportant' })
+
+      vim.api.nvim_set_hl(0, 'NotifyBackground', { link = 'Normal' })
     end))
     load_basic()
     async:send()
