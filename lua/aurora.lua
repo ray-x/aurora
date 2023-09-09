@@ -1141,6 +1141,10 @@ return {
       vim.api.nvim_set_hl(0, 'LeapLabelPrimary', { link = 'HopNextKey1' })
       vim.api.nvim_set_hl(0, 'LeapLabelSecondary', { link = 'HopNextKey2' })
       vim.api.nvim_set_hl(0, 'LeapBackDrop', { link = 'HopUnmatched' })
+
+      vim.api.nvim_set_hl(0, 'FlashBackdrop', { link = 'HopUnmatched' })
+      vim.api.nvim_set_hl(0, 'FlashLabel', { link = 'HopNextKey' })
+
       vim.api.nvim_set_hl(
         0,
         'IndentBlanklineChar',
