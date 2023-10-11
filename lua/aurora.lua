@@ -77,6 +77,7 @@ local ct = {
   redf = '#f83e03',
   redg = '#ff7273',
 
+  blue = '#4c77e4',
   blue1 = '#4cc7e4',
   blue2 = '#5ca7e4',
   blue3 = '#6690c4',
@@ -999,18 +1000,13 @@ return {
 
       vim.api.nvim_set_hl(
         0,
-        'IndentBlanklineChar',
-        { fg = ct.gray7, bg = bg, ctermfg = 243, ctermbg = 'NONE' }
+        'IblIndent',
+        { fg = ct.blue, ctermfg = 183, bold = (vim.g.aurora_bold == 1) }
       )
       vim.api.nvim_set_hl(
         0,
-        'IndentBlanklineContextChar',
-        { fg = ct.purple0, ctermfg = 183, bold = (vim.g.aurora_bold == 1) }
-      )
-      vim.api.nvim_set_hl(
-        0,
-        'IndentBlanklineContextStart',
-        { ctermfg = 183, bold = (vim.g.aurora_bold == 1), underline = true, sp = ct.purple0 }
+        'IblScope',
+        { fg = ct.purple, ctermfg = 183, bold = (vim.g.aurora_bold == 1) }
       )
       vim.api.nvim_set_hl(
         0,
