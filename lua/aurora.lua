@@ -167,150 +167,6 @@ local ct = {
   pink8 = '#CCA1D6',
   pink9 = '#e55285',
 }
-local link_ts_v7 = function(bg)
-  vim.api.nvim_set_hl(0, 'TSAnnotation', { fg = ct.blue, ctermfg = 111 })
-  vim.api.nvim_set_hl(0, 'TSAttribute', { fg = ct.green2, ctermfg = 116 })
-  vim.api.nvim_set_hl(0, 'TSCharacter', { fg = ct.orange2, ctermfg = 221 })
-  vim.api.nvim_set_hl(0, 'TSComment', { link = 'Comment' })
-  vim.api.nvim_set_hl(0, 'TSError', {
-    fg = ct.crimson,
-    bg = bg,
-    ctermfg = 161,
-    ctermbg = 'NONE',
-    bold = (vim.g.aurora_bold == 1),
-    sp = ct.red1,
-    undercurl = true,
-  })
-  vim.api.nvim_set_hl(0, 'TSPunctDelimiter', {
-    fg = ct.white,
-    bg = bg,
-    ctermfg = 189,
-    ctermbg = 'NONE',
-    bold = (vim.g.aurora_bold == 1),
-  })
-  vim.api.nvim_set_hl(
-    0,
-    'TSPunctBracket',
-    { fg = ct.br_blue, ctermfg = 110, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSPunctSpectial',
-    { fg = ct.br_yellow, bg = bg, ctermfg = 185, ctermbg = 'NONE' }
-  )
-  vim.api.nvim_set_hl(0, 'TSConstant', { link = 'Constant' })
-  vim.api.nvim_set_hl(
-    0,
-    'TSConstBuiltin',
-    { fg = ct.red4, ctermfg = 167, italic = (vim.g.aurora_italic == 1) }
-  )
-  vim.api.nvim_set_hl(0, 'TSConstMacro', { fg = ct.red3, ctermfg = 197 })
-  vim.api.nvim_set_hl(0, 'TSString', { link = 'String' })
-  vim.api.nvim_set_hl(0, 'TSStringRegex', { fg = ct.green2, ctermfg = 116 })
-  vim.api.nvim_set_hl(0, 'TSStringEscape', { fg = ct.cyan, ctermfg = 158 })
-  vim.api.nvim_set_hl(0, 'TSNumber', { link = 'Number' })
-  vim.api.nvim_set_hl(0, 'TSBoolean', { link = 'Boolean' })
-  vim.api.nvim_set_hl(0, 'TSFloat', { link = 'Float' })
-  vim.api.nvim_set_hl(0, 'TSField', { fg = ct.purple2, ctermfg = 134 })
-  vim.api.nvim_set_hl(0, 'TSType', { link = 'Type' })
-  vim.api.nvim_set_hl(
-    0,
-    'TSTypeBuiltin',
-    { fg = ct.orange2, ctermfg = 221, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(0, 'TSProperty', { link = 'TSField' })
-  vim.api.nvim_set_hl(0, 'TSParameter', { fg = ct.yellow2, ctermfg = 229 })
-  vim.api.nvim_set_hl(
-    0,
-    'TSConstructor',
-    { fg = ct.blue3, ctermfg = 68, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSFunction',
-    { fg = ct.aqua, ctermfg = 81, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSKeywordFunction',
-    { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSFunctionBuiltin',
-    { fg = ct.green3, ctermfg = 148, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSFuncBuiltin',
-    { fg = ct.darkaqua, ctermfg = 38, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSFuncMacro',
-    { fg = ct.purple, ctermfg = 141, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSParameterReference',
-    { fg = ct.cyan, bg = bg, ctermfg = 158, ctermbg = 'NONE', bold = true }
-  )
-  vim.api.nvim_set_hl(0, 'TSMethod', { link = 'Function' })
-  vim.api.nvim_set_hl(
-    0,
-    'TSConditional',
-    { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(0, 'TSRepeat', { link = 'Repeat' })
-  vim.api.nvim_set_hl(
-    0,
-    'TSException',
-    { fg = ct.red, ctermfg = 204, italic = (vim.g.aurora_italic == 1) }
-  )
-  vim.api.nvim_set_hl(0, 'TSLabel', { link = 'Label' })
-  vim.api.nvim_set_hl(0, 'TSOperator', { link = 'Operator' })
-  vim.api.nvim_set_hl(0, 'TSKeyword', { link = 'Keyword' })
-  vim.api.nvim_set_hl(0, 'TSStructure', { link = 'Structure' })
-  vim.api.nvim_set_hl(0, 'TSInclude', { link = 'Include' })
-  vim.api.nvim_set_hl(0, 'TSTag', { link = 'Tag' })
-  vim.api.nvim_set_hl(0, 'TSTagDelimiter', { link = 'Delimiter' })
-  vim.api.nvim_set_hl(0, 'TSTagAttribute', { link = 'Structure' })
-  vim.api.nvim_set_hl(0, 'TSVariable', { link = 'Identifier' })
-  vim.api.nvim_set_hl(0, 'TSVariableBuiltin', { fg = ct.orange, ctermfg = 208 })
-  vim.api.nvim_set_hl(0, 'TSDefinitionUsage', { fg = ct.yellow6, ctermfg = 186 })
-  vim.api.nvim_set_hl(0, 'TSDefinition', { link = 'Define' })
-  vim.api.nvim_set_hl(
-    0,
-    'TSStrong',
-    { fg = ct.yellow7, ctermfg = 180, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(0, 'TSEmphasis', {
-    fg = ct.yellow3,
-    ctermfg = 228,
-    bold = (vim.g.aurora_bold == 1),
-    undercurl = true,
-    italic = true,
-  })
-  vim.api.nvim_set_hl(0, 'TSUnderline', { fg = ct.yellow, ctermfg = 222, undercurl = true })
-  vim.api.nvim_set_hl(0, 'TSTitle', { link = 'SpecialKey' })
-  vim.api.nvim_set_hl(0, 'TSLiteral', { fg = ct.text, ctermfg = 187 })
-  vim.api.nvim_set_hl(
-    0,
-    'TSURI',
-    { fg = ct.green3, ctermfg = 148, italic = (vim.g.aurora_italic == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSCurrentScope',
-    { bg = bg, ctermbg = 234, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(
-    0,
-    'TSIdentifier',
-    { fg = ct.text, ctermfg = 187, bold = (vim.g.aurora_bold == 1) }
-  )
-  vim.api.nvim_set_hl(0, 'TSNameSpace', { link = 'Function' })
-end
 local link_ts_v8 = function(bg)
   vim.api.nvim_set_hl(
     0,
@@ -877,13 +733,9 @@ return {
         { fg = ct.red3, bg = bg, ctermfg = 197, ctermbg = 'NONE' }
       )
       vim.api.nvim_set_hl(0, 'Tag', { fg = ct.green, bg = bg, ctermfg = 149, ctermbg = 'NONE' })
-      if vim.fn.has('nvim-0.8') == 1 then
-        link_ts_v8(bg)
-      else
-        link_ts_v7(bg)
-      end
+      link_ts_v8(bg)
     end
-    async = vim.loop.new_async(vim.schedule_wrap(function()
+    async = vim.uv.new_async(vim.schedule_wrap(function()
       vim.api.nvim_set_hl(0, 'SignifySignAdd', { link = 'GitGutterAdd' })
       vim.api.nvim_set_hl(0, 'SignifySignDelete', { link = 'GitGutterDelete' })
       vim.api.nvim_set_hl(0, 'SignifySignDeleteFirstLine', { link = 'SignifySignDelete' })
@@ -1297,6 +1149,7 @@ return {
         'DiagnosticHintFloating',
         { fg = ct.green5, bg = bg, ctermfg = 37, ctermbg = 'NONE' }
       )
+      vim.api.nvim_set_hl(0, 'LspInlayHint', { fg = ct.gray7, bg = bg })
       vim.api.nvim_set_hl(0, 'LspReferenceText', {
         bg = ct.neardark4,
         ctermbg = 239,
