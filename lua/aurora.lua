@@ -736,7 +736,8 @@ return {
       vim.api.nvim_set_hl(0, 'Tag', { fg = ct.green, bg = bg, ctermfg = 149, ctermbg = 'NONE' })
       link_ts_v8(bg)
     end
-    async = vim.uv.new_async(vim.schedule_wrap(function()
+    local uv = vim.uv or vim.loop
+    async = uv.new_async(vim.schedule_wrap(function()
       vim.api.nvim_set_hl(0, 'SignifySignAdd', { link = 'GitGutterAdd' })
       vim.api.nvim_set_hl(0, 'SignifySignDelete', { link = 'GitGutterDelete' })
       vim.api.nvim_set_hl(0, 'SignifySignDeleteFirstLine', { link = 'SignifySignDelete' })
