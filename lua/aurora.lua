@@ -977,7 +977,7 @@ return {
       vim.api.nvim_set_hl(
         0,
         'HopNextKey',
-        { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1), underline = true }
+        { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) }
       )
       vim.api.nvim_set_hl(
         0,
@@ -997,6 +997,8 @@ return {
       vim.api.nvim_set_hl(0, 'LeapBackDrop', { link = 'HopUnmatched' })
 
       vim.api.nvim_set_hl(0, 'FlashBackdrop', { link = 'HopUnmatched' })
+      vim.api.nvim_set_hl(0, 'FlashMatch', { fg = ct.white, bg = ct.neardark6, bold = (vim.g.aurora_bold == 1) })
+      vim.api.nvim_set_hl(0, 'FlashCurrent', { link = 'IncSearch' })
       vim.api.nvim_set_hl(0, 'FlashLabel', { link = 'HopNextKey' })
 
       vim.api.nvim_set_hl(
