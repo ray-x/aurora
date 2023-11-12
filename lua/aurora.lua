@@ -304,13 +304,7 @@ return {
       vim.api.nvim_set_hl(0, 'NormalNC', { fg = ct.fg, bg = bg2, ctermfg = 146, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'FloatBorder', { fg = ct.blue1, bg = bg2, ctermfg = 80, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'LineNr', { fg = ct.gray6, bg = bg, ctermfg = 239, ctermbg = 234 })
-      vim.api.nvim_set_hl(0, 'CursorLine', {
-        fg = 'NONE',
-        bg = bgfl,
-        ctermfg = 'NONE',
-        ctermbg = 236,
-        bold = (vim.g.aurora_bold == 1),
-      })
+      vim.api.nvim_set_hl(0, 'CursorLine', { fg = 'NONE', bg = bgfl, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'CursorLineNr', {
         fg = ct.green0,
         bg = bg3,
@@ -325,37 +319,11 @@ return {
       vim.api.nvim_set_hl(0, 'CursorIM', { fg = ct.bright, bg = ct.hoki, ctermfg = 189, ctermbg = 66 })
       vim.api.nvim_set_hl(0, 'CursorColumn', { bg = ct.neardark4, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'Directory', { fg = ct.blue, ctermfg = 111 })
-      vim.api.nvim_set_hl(0, 'DiffAdd', {
-        fg = 'NONE',
-        bg = ct.neardark2,
-        ctermfg = 'NONE',
-        ctermbg = 239,
-        bold = (vim.g.aurora_bold == 1),
-      })
+      vim.api.nvim_set_hl(0, 'DiffAdd', { fg = 'NONE', bg = ct.neardark2, ctermfg = 'NONE', ctermbg = 239, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'DiffChange', { fg = 'NONE', bg = bg2, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
-      vim.api.nvim_set_hl(0, 'DiffDelete', {
-        fg = ct.baack,
-        bg = ct.gray1,
-        ctermfg = 'NONE',
-        ctermbg = 239,
-      })
-      vim.api.nvim_set_hl(0, 'DiffText', {
-        fg = 'NONE',
-        bg = ct.darkred,
-        ctermfg = 'NONE',
-        ctermbg = 89,
-        bold = (vim.g.aurora_bold == 1),
-        italic = true,
-        underline = true,
-      })
-      vim.api.nvim_set_hl(0, 'ErrorMsg', {
-        fg = ct.crimson,
-        bg = bg,
-        ctermfg = 161,
-        undercurl = true,
-        sp = ct.red,
-        bold = (vim.g.aurora_bold == 1),
-      })
+      vim.api.nvim_set_hl(0, 'DiffDelete', { fg = ct.baack, bg = ct.gray1, ctermfg = 'NONE', ctermbg = 239 })
+      vim.api.nvim_set_hl(0, 'DiffText', { fg = 'NONE', bg = ct.darkred, ctermfg = 'NONE', ctermbg = 89, bold = (vim.g.aurora_bold == 1), italic = true, underline = true })
+      vim.api.nvim_set_hl(0, 'ErrorMsg', { fg = ct.crimson, bg = bg, ctermfg = 161, undercurl = true, sp = ct.red, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'VertSplit', { fg = ct.gray7, ctermfg = 243 })
       vim.api.nvim_set_hl(0, 'Folded', { fg = ct.gray7, bg = bg4, ctermfg = 243, ctermbg = 233 })
       vim.api.nvim_set_hl(0, 'FoldColumn', { fg = ct.blue9, bg = bg, ctermfg = 236, ctermbg = 233 })
