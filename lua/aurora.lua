@@ -106,16 +106,9 @@ local ct = {
   graya = '#aab7cf',
   grayb = '#bbb0cf',
   graye = '#E5DFEF',
-  warmgrey = '#a8916E',
+  warmgray = '#a8916E',
   darkgray = '#645775',
   grayaf = '#AFBAD4',
-
-  grey1 = '#111111',
-  grey2 = '#222222',
-  grey3 = '#333333',
-  grey4 = '#444444',
-  grey5 = '#555555',
-  grey7 = '#777777',
 
   purple = '#be9af7',
   purple0 = '#c4a2ff',
@@ -319,10 +312,10 @@ return {
       vim.api.nvim_set_hl(0, 'CursorIM', { fg = ct.bright, bg = ct.hoki, ctermfg = 189, ctermbg = 66 })
       vim.api.nvim_set_hl(0, 'CursorColumn', { bg = ct.neardark4, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'Directory', { fg = ct.blue, ctermfg = 111 })
-      vim.api.nvim_set_hl(0, 'DiffAdd', { fg = 'NONE', bg = ct.neardark2, ctermfg = 'NONE', ctermbg = 239, bold = (vim.g.aurora_bold == 1) })
-      vim.api.nvim_set_hl(0, 'DiffChange', { fg = 'NONE', bg = bg2, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
-      vim.api.nvim_set_hl(0, 'DiffDelete', { fg = ct.baack, bg = ct.gray1, ctermfg = 'NONE', ctermbg = 239 })
-      vim.api.nvim_set_hl(0, 'DiffText', { fg = 'NONE', bg = ct.darkred, ctermfg = 'NONE', ctermbg = 89, bold = (vim.g.aurora_bold == 1), italic = true, underline = true })
+      vim.api.nvim_set_hl(0, 'DiffAdd', { fg = ct.green4, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 239, bold = (vim.g.aurora_bold == 1) })
+      vim.api.nvim_set_hl(0, 'DiffChange', { fg = ct.yellow1, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
+      vim.api.nvim_set_hl(0, 'DiffDelete', { fg = ct.gray, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 239 })
+      vim.api.nvim_set_hl(0, 'DiffText', { fg = ct.gray7, bg = ct.newardark3, ctermfg = 'NONE', ctermbg = 89, bold = (vim.g.aurora_bold == 1), italic = true, underline = true })
       vim.api.nvim_set_hl(0, 'ErrorMsg', { fg = ct.crimson, bg = bg, ctermfg = 161, undercurl = true, sp = ct.red, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'VertSplit', { fg = ct.gray7, ctermfg = 243 })
       vim.api.nvim_set_hl(0, 'Folded', { fg = ct.gray7, bg = bg4, ctermfg = 243, ctermbg = 233 })
@@ -436,7 +429,7 @@ return {
       vim.api.nvim_set_hl(0, 'TelescopeResultsBorder', { fg = ct.purple6, bg = bg, ctermfg = 74, ctermbg = 234 })
       vim.api.nvim_set_hl(0, 'TelescopePreviewBorder', { fg = ct.purple2, bg = bg, ctermfg = 134, ctermbg = 234 })
       vim.api.nvim_set_hl(0, 'TelescopeSelectionCaret', { fg = ct.aqua, bg = bg, ctermfg = 81, ctermbg = 234 })
-      vim.api.nvim_set_hl(0, 'TelescopeSelection', { fg = ct.cyan, bg = ct.grey3, ctermfg = 158, ctermbg = 236 })
+      vim.api.nvim_set_hl(0, 'TelescopeSelection', { fg = ct.cyan, bg = ct.gray3, ctermfg = 158, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'TelescopeMatching', { fg = ct.violet, ctermfg = 213 }) vim.api.nvim_set_hl(0, 'sqlStatement', { fg = ct.br_cyan, bg = bg, ctermfg = 80, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'sqlKeyword', { fg = ct.orange1, ctermfg = 214, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'sqlSpecial', { fg = ct.crimson, bg = bg, ctermfg = 161, ctermbg = 'NONE' })
@@ -613,7 +606,7 @@ return {
       vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { fg = ct.darkaqua, ctermfg = 38 })
       vim.api.nvim_set_hl(0, 'helpHyperTextEntry', { link = 'cssClassName' })
       vim.api.nvim_set_hl(0, 'helpHeadline', { link = 'SpellCap' })
-      vim.api.nvim_set_hl(0, 'helpSectionDelim', { fg = ct.grey2, bg = bg, ctermfg = 235, ctermbg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'helpSectionDelim', { fg = ct.gray2, bg = bg, ctermfg = 235, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'helpNote', { link = 'cssImportant' })
       vim.api.nvim_set_hl(0, 'xmlNamespace', { link = 'jsonNumber' })
       vim.api.nvim_set_hl(0, 'xmlAttribPunct', { link = 'cssImportant' })
