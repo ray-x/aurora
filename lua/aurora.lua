@@ -520,10 +520,10 @@ return {
       vim.api.nvim_set_hl(0, 'ClapDisplay', { fg = ct.graya, bg = bg, ctermfg = 146, ctermbg = 234, sp = ct.red1, bold = (vim.g.aurora_bold == 1), undercurl = true})
 
       vim.api.nvim_set_hl(0, 'Hlargs', { link = 'TSParameter' })
-      -- vim.api.nvim_set_hl(0, 'HopNextKey', { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) })
-      -- vim.api.nvim_set_hl(0, 'HopNextKey1', { fg = ct.yellow, ctermfg = 222, bold = (vim.g.aurora_bold == 1), underline = true })
-      -- vim.api.nvim_set_hl(0, 'HopNextKey2', { fg = ct.blue, ctermfg = 111, bold = (vim.g.aurora_bold == 1), underline = true })
-      -- vim.api.nvim_set_hl(0, 'HopUnmatched', { fg = ct.gray7 })
+      vim.api.nvim_set_hl(0, 'HopNextKey', { fg = ct.violet, ctermfg = 213, bold = (vim.g.aurora_bold == 1) })
+      vim.api.nvim_set_hl(0, 'HopNextKey1', { fg = ct.yellow, ctermfg = 222, bold = (vim.g.aurora_bold == 1), underline = true })
+      vim.api.nvim_set_hl(0, 'HopNextKey2', { fg = ct.blue, ctermfg = 111, bold = (vim.g.aurora_bold == 1), underline = true })
+      vim.api.nvim_set_hl(0, 'HopUnmatched', { fg = ct.gray7 })
 
       vim.api.nvim_set_hl(0, 'LeapMatch', { link = 'HopNextKey' })
       vim.api.nvim_set_hl(0, 'LeapLabelPrimary', { link = 'HopNextKey1' })
