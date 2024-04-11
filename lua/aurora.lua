@@ -25,8 +25,8 @@ local ct = {
   neardarkb = '#30234f',
   neardark2 = '#211c2f',
   neardark3 = '#282E39',
-  neardark4 = '#343047',
-  neardark5 = '#443a54',
+  neardark4 = '#303047',
+  neardark5 = '#3a3754',
   neardark6 = '#3f4060',
   neardark7 = '#4f4764',
 
@@ -373,9 +373,10 @@ return {
       vim.api.nvim_set_hl(0, 'Folded', { fg = ct.gray7, bg = bg4, ctermfg = 243, ctermbg = 233 })
       vim.api.nvim_set_hl(0, 'FoldColumn', { fg = ct.blue9, bg = bg, ctermfg = 236, ctermbg = 233 })
       vim.api.nvim_set_hl(0, 'SignColumn', { fg = 'NONE', bg = bg3, ctermfg = 'NONE', ctermbg = 233 })
-      vim.api.nvim_set_hl(0, 'Search', { fg = 'NONE', bg = ct.darkpurple, ctermfg = 'NONE', ctermbg = 54, sp = ct.yellow, bold = (vim.g.aurora_bold == 1), underdouble = true, italic = (vim.g.aurora_italic == 1)})
+      vim.api.nvim_set_hl(0, 'IncSearch', { fg = 'NONE', bg = ct.darkpurple, ctermfg = 'NONE', ctermbg = 54, sp = ct.white, bold = (vim.g.aurora_bold == 1), underdashed = true, italic = (vim.g.aurora_italic == 1)})
+      vim.api.nvim_set_hl(0, 'Substitute', { link = 'Search' } )
       vim.api.nvim_set_hl(0, 'MatchParen', { fg = ct.violet, ctermfg = 213, ctermbg = 'NONE', sp = ct.br_yellow, bold = (vim.g.aurora_bold == 1), underdouble = true})
-      vim.api.nvim_set_hl(0, 'IncSearch', { fg = 'NONE', bg = ct.neardark6, ctermfg = 'NONE', sp = ct.violet, bold = (vim.g.aurora_bold == 1), underdouble = true, italic = (vim.g.aurora_italic == 1)})
+      vim.api.nvim_set_hl(0, 'Search', { fg = 'NONE', bg = ct.neardark4, ctermfg = 'NONE', sp = ct.violet, bold = (vim.g.aurora_bold == 1), underdotted = true, italic = (vim.g.aurora_italic == 1)})
       if vim.fn.has('nvim-0.9') then
         lsp_v9(bg)
       end
