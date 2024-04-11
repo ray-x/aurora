@@ -367,21 +367,15 @@ return {
       vim.api.nvim_set_hl(0, 'DiffAdd', { fg = ct.green4, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 239, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'DiffChange', { fg = ct.yellow1, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'DiffDelete', { fg = ct.gray, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 239 })
-      vim.api.nvim_set_hl(0, 'DiffText', { fg = ct.gray7, bg = ct.newardark3, ctermfg = 'NONE', ctermbg = 89, bold = (vim.g.aurora_bold == 1), italic = (vim.g.aurora_italic == 1), underline = true })
+      vim.api.nvim_set_hl(0, 'DiffText', { link = 'WarningMsg' })
       vim.api.nvim_set_hl(0, 'ErrorMsg', { fg = ct.crimson, bg = bg, ctermfg = 161, undercurl = true, sp = ct.red, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'VertSplit', { fg = ct.gray7, ctermfg = 243 })
       vim.api.nvim_set_hl(0, 'Folded', { fg = ct.gray7, bg = bg4, ctermfg = 243, ctermbg = 233 })
       vim.api.nvim_set_hl(0, 'FoldColumn', { fg = ct.blue9, bg = bg, ctermfg = 236, ctermbg = 233 })
       vim.api.nvim_set_hl(0, 'SignColumn', { fg = 'NONE', bg = bg3, ctermfg = 'NONE', ctermbg = 233 })
-      if vim.fn.has('nvim-0.8') == 1 then
-        vim.api.nvim_set_hl(0, 'IncSearch', { fg = 'NONE', bg = ct.darkpurple, ctermfg = 'NONE', ctermbg = 54, sp = ct.yellow, bold = (vim.g.aurora_bold == 1), underdouble = true, italic = (vim.g.aurora_italic == 1)})
-        vim.api.nvim_set_hl(0, 'MatchParen', { fg = ct.violet, ctermfg = 213, ctermbg = 'NONE', sp = ct.br_yellow, bold = (vim.g.aurora_bold == 1), underdouble = true})
-        vim.api.nvim_set_hl(0, 'Search', { fg = 'NONE', bg = ct.neardark6, ctermfg = 'NONE', ctermbg = 239, sp = ct.violet, bold = (vim.g.aurora_bold == 1), underdouble = true, italic = (vim.g.aurora_italic == 1)})
-      else
-        vim.api.nvim_set_hl(0, 'IncSearch', { fg = 'NONE', bg = ct.darkpurple, ctermfg = 'NONE', ctermbg = 54, sp = ct.yellow, bold = (vim.g.aurora_bold == 1), underlineline = true, italic = (vim.g.aurora_italic == 1)})
-        vim.api.nvim_set_hl(0, 'MatchParen', { fg = ct.violet, bg = bg, ctermfg = 213, ctermbg = 'NONE', sp = ct.br_yellow, bold = (vim.g.aurora_bold == 1), underlineline = true})
-        vim.api.nvim_set_hl(0, 'Search', { fg = 'NONE', bg = ct.neardark6, ctermfg = 'NONE', ctermbg = 239, sp = ct.violet, bold = (vim.g.aurora_bold == 1), underlineline = true, italic = (vim.g.aurora_italic == 1)})
-      end
+      vim.api.nvim_set_hl(0, 'Search', { fg = 'NONE', bg = ct.darkpurple, ctermfg = 'NONE', ctermbg = 54, sp = ct.yellow, bold = (vim.g.aurora_bold == 1), underdouble = true, italic = (vim.g.aurora_italic == 1)})
+      vim.api.nvim_set_hl(0, 'MatchParen', { fg = ct.violet, ctermfg = 213, ctermbg = 'NONE', sp = ct.br_yellow, bold = (vim.g.aurora_bold == 1), underdouble = true})
+      vim.api.nvim_set_hl(0, 'IncSearch', { fg = 'NONE', bg = ct.neardark6, ctermfg = 'NONE', sp = ct.violet, bold = (vim.g.aurora_bold == 1), underdouble = true, italic = (vim.g.aurora_italic == 1)})
       if vim.fn.has('nvim-0.9') then
         lsp_v9(bg)
       end
