@@ -557,7 +557,7 @@ return {
       vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarning', { fg = ct.yellow7, bg = bg, ctermfg = 180, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', { fg = ct.green4, bg = bg, ctermfg = 114, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', { fg = ct.green0, bg = bg, ctermfg = 34, ctermbg = 'NONE' })
-      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { undercurl = true, sp = ct.darkred })
+      vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { undercurl = true, sp = ct.pink})
       vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { underline = true, sp = ct.yellow8 })
       vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { underdashed = true, sp = ct.blue7 })
       vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { underdotted = true, sp = ct.gray4 })
