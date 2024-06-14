@@ -349,6 +349,8 @@ return {
       vim.api.nvim_set_hl(0, 'NormalNC', { fg = ct.fg, bg = bg2, ctermfg = 146, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'FloatBorder', { fg = ct.blue1, bg = bg2, ctermfg = 80, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'LineNr', { fg = ct.gray6, bg = bg, ctermfg = 239, ctermbg = 234 })
+      vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = ct.gray5, bg = bg, ctermfg = 239, ctermbg = 234 })
+      vim.api.nvim_set_hl(0, 'LineNrBelow', { link = 'LineNrAbove' })
       vim.api.nvim_set_hl(0, 'CursorLine', { fg = 'NONE', bg = bgfl, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'CursorLineNr', {
         fg = ct.green0,
