@@ -59,6 +59,7 @@ local ct = {
   green8 = '#9eeb61',
   green9 = '#67d5b5',
   greena = '#77d507',
+  dimgreen = '#123314',
 
   red = '#ff5874',
   red1 = '#f05874',
@@ -366,7 +367,7 @@ return {
       vim.api.nvim_set_hl(0, 'CursorIM', { fg = ct.bright, bg = ct.hoki, ctermfg = 189, ctermbg = 66 })
       vim.api.nvim_set_hl(0, 'CursorColumn', { bg = ct.neardark4, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'Directory', { fg = ct.blue, ctermfg = 111 })
-      vim.api.nvim_set_hl(0, 'DiffAdd', { fg = ct.green4, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 239, bold = (vim.g.aurora_bold == 1) })
+      vim.api.nvim_set_hl(0, 'DiffAdd', { fg = ct.green4, bg = ct.dimgreen, ctermfg = 'NONE', ctermbg = 239, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'DiffChange', { fg = ct.yellow1, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'DiffDelete', { fg = ct.gray, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 239 })
       vim.api.nvim_set_hl(0, 'DiffText', { link = 'WarningMsg' })
