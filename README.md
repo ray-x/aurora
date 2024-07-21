@@ -73,32 +73,21 @@ A lua version is provided, if the neovim version is higher than 0.6.x, lua scrip
 version will be much faster as it using native API `vim.api.nvim_set_hl()` My tests shows loading the theme 5000 times took 3s, which means 0.6ms loading time. The vim version normally 15ms startup time.
 
 ```lua
-
-#### Howto update the theme:
-
-This project is based on [Estilo](http://estilo.jacoborus.codes/).
-Estilo allow you to define color palettes and syntax highlight and then generate .vim file for you.
-
-To update the color, edit the yml file, and run:
-
-```bash
-npm install -g estilo
-yarn render
-copy colors/aurora.vim ~/.vim/plugged/aurora/colors/aurora.vim
-
+  -- lazy
+   {
+    'ray-x/aurora',
+    init = function()
+      vim.g.aurora_italic = 1
+      vim.g.aurora_transparent = 1
+      vim.g.aurora_bold = 1
+    end,
+    config = function()
+        vim.cmd.colorscheme "aurora"
+        -- override defaults
+        vim.api.nvim_set_hl(0, '@number', {fg='#e933e3'})
+    end
+    }
 ```
-
-Generate lua script:
-
-```bash
-cat ../colors/aurora.vim  | awk -f aurora.awk > aurora.lua
-```
-
-And manually update the aurora.vim to call aurora.lua (estilo will not do it for you).
-
-color palettes file is in
-`aurora/estilo/palettes/` folder
-and syntax file in `aurora/estilo/syntax/` folder.
 
 #### fast startup time
 On my intel 11 i7 xps, loading time is 2ms on average.
