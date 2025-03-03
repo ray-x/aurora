@@ -7,34 +7,40 @@ if exists('g:colors_name')
         syntax reset
     endif
 endif
-let g:colors_name="aurora"
+let g:colors_name='aurora'
 
-let Italic = ""
+let Italic = ''
 if exists('g:aurora_italic')
   let Italic = "italic"
 endif
 
+let bg =  '#211c2f'
+let bg2 = '#282e39'
+let bg3 = '#1a1926'
+let bg4 = "#141425"
 if exists('g:aurora_transparent')
-  let bg = "NONE"
-  let bg2 = "NONE"
-  let bg3 = "NONE"
-  let bg4 = "NONE"
+  let bg = 'NONE'
+  let bg2 = 'NONE'
+  let bg3 = 'NONE'
+  let bg4 = 'NONE'
 else
   if exists('g:aurora_darker')
     let bg =  "#141020"
-    let bg2 = "#1a1926"
-    let bg3 = "#101020"
+    let bg3 = '#101020'
     let bg4 = "#040410"
-  else
-    let bg =  "#211c2f"
-    let bg2 = "#282e39"
-    let bg3 = "#1a1926"
-    let bg4 = "#141425"
   end
 end
 let g:aurora_italic = get(g:, 'aurora_italic', 0)
+function! AUHL(group, guifg, ctermfg, guibg, ctermbg, gui, cterm)
+  execute 'hi ' . a:group . ' guifg=' . a:guifg .
+        \ ' ctermfg=' . a:ctermfg .
+        \ ' guibg=' . a:guibg .
+        \ ' ctermbg=' . a:ctermbg .
+        \ ' gui=' . a:gui .
+        \ ' cterm=' . a:cterm
+endfunction
 
-let Bold = ""
+let Bold = ''
 if exists('g:aurora_bold')
   let Bold = "bold"
 endif
@@ -71,10 +77,10 @@ else
   hi GitSignsAddInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,underline cterm=Bold,undercurl guisp=#addb67
   hi GitSignsDeleteInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,strikethrough guisp=#E7C547
   hi GitSignsChangeInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,underline guisp=#B376B3
-  hi GitGutterAdd guifg=#9dd067 ctermfg=149 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
-  hi GitGutterChange guifg=#4cc7e4 ctermfg=80 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
-  hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
-  hi GitGutterChangeDelete guifg=#7d2c9d ctermfg=91 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi link jsParensIfElse cssProp
   hi link jsObjectKey cssProp
   hi link jsRepeat cssClassName
@@ -95,9 +101,9 @@ else
   hi jsExportDefault guifg=#9eeb61 ctermfg=149 gui=NONE cterm=NONE
   hi link jsExportDefaultGroup SpellCap
   hi link jsFrom jsReturn
-  hi ALEErrorSign guifg=#ff5874 ctermfg=204 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
-  hi ALEWarningSign guifg=#FD9720 ctermfg=208 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
-  hi ALEInfoSign guifg=#addb67 ctermfg=149 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  call AUHL('ALEErrorSign', '#ff5874', 204, bg3, 234, 'NONE', 'NONE')
+  call AUHL('ALEWarningSign', '#FD9720', 208, bg3, 234, 'NONE', 'NONE')
+  call AUHL('ALEInfoSign', '#addb67', 149, bg3, 234, 'NONE', 'NONE')
   hi link plug2 cssClassName
   hi plugH2 guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi link plugBracket cssProp
@@ -110,11 +116,11 @@ else
   hi link plugEdge cssClassName
   hi plugSha guifg=#fbfcbf ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi plugNotLoaded guifg=#F92772 ctermfg=197 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi TelescopeNormal guifg=#989cbf ctermfg=247 guibg=bg ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopePromptBorder guifg=#4cc7e4 ctermfg=80 guibg=bg ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopeResultsBorder guifg=#5ca7e4 ctermfg=74 guibg=bg ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopePreviewBorder guifg=#9e71cf ctermfg=134 guibg=bg ctermbg=234 gui=NONE cterm=NONE
-  hi TelescopeSelectionCaret guifg=#66d9ef ctermfg=81 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   hi TelescopeSelection guifg=#A1EFE4 ctermfg=158 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
   hi TelescopeMatching guifg=#EE82EE ctermfg=213 gui=NONE cterm=NONE
   hi sqlStatement guifg=#54CED6 ctermfg=80 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -167,9 +173,9 @@ else
   hi markdownCode guifg=#fbfcbf ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link markdownEscape SpellCap
   hi link markdownError cssImportant
-  hi ClapPreview guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi ClapMatches guifg=#C33C4A ctermfg=131 guibg=#443a54 ctermbg=238 gui=Bold,undercurl,reverse cterm=Bold,undercurl,reverse guisp=#f05874
-  hi ClapDisplay guifg=#aab7cf ctermfg=146 guibg=bg ctermbg=234 gui=Bold,undercurl cterm=Bold,undercurl guisp=#f05874
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   hi TSAnnotation guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
   hi TSAttribute guifg=#7fdbca ctermfg=116 gui=NONE cterm=NONE
   hi TSCharacter guifg=#ffce51 ctermfg=221 gui=NONE cterm=NONE
@@ -220,7 +226,7 @@ else
   hi link TSTitle SpecialKey
   hi TSLiteral guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
   hi TSURI guifg=#A6E22D ctermfg=148 gui=Italic cterm=Italic
-  hi TSCurrentScope guibg=bg ctermbg=234 gui=Bold cterm=Bold
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   hi TSIdentifier guifg=#dacfb4 ctermfg=187 gui=Bold cterm=Bold
   hi link TSNameSpace Function
   hi link pythonStatement Repeat
@@ -299,10 +305,10 @@ else
   hi link jsonQuote cssAttr
   hi link jsonNoise cssImportant
   hi DiagnosticError guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticSignError guifg=#D93234 ctermfg=167 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi link DiagnosticErrorFloating DiagnosticError
   hi DiagnosticWarning guifg=#bBa03A ctermfg=143 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticSignWarn guifg=#e7dc8c ctermfg=186 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi DiagnosticWarningFloating guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticVirtualTextError guifg=#D93234 ctermfg=167 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticVirtualTextWarning guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -313,10 +319,10 @@ else
   hi link DiagnosticFloatingWarning DiagnosticWarning
   hi link DiagnosticFloatingInfo DiagnosticInfo
   hi link DiagnosticFloatingHint DiagnosticHint
-  hi DiagnosticSignInfo guifg=#7AA6DA ctermfg=110 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi DiagnosticInfo guifg=#7AA6DA ctermfg=110 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi DiagnosticHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticSignHint guifg=#ffce51 ctermfg=221 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi DiagnosticHintFloating guifg=#1ABC9C ctermfg=37 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi LspReferenceText guibg=#343047 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
   hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
@@ -391,39 +397,39 @@ else
   hi link FugitiveblameUncommitted cssImportant
   hi link FugitiveblameTime cssClassName
   hi link FugitiveblameNotCommittedYet jsonNumber
-  hi Normal guifg=#ddd0f4 ctermfg=189 guibg=bg ctermbg=234 gui=NONE cterm=NONE
-  hi NormalFloat guifg=#dacfb4 ctermfg=187 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
-  hi NormalNC guifg=#a9b1d6 ctermfg=146 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
-  hi FloatBorder guifg=#4cc7e4 ctermfg=80 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
-  hi LineNr guifg=#5f496e ctermfg=239 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   hi CursorLine guifg=NONE ctermfg=NONE guibg=#343047 ctermbg=236 gui=Bold cterm=Bold
-  hi CursorLineNr guifg=#1aad16 ctermfg=34 guibg=bg3 ctermbg=234 gui=Bold cterm=Bold
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi ColorColumn guifg=NONE ctermfg=NONE guibg=#22202a ctermbg=235 gui=NONE cterm=NONE
   hi Cursor guibg=#ddd0f4 ctermbg=189 gui=NONE cterm=NONE
   hi CursorIM guifg=#ddd0f4 ctermfg=189 guibg=#5f7e97 ctermbg=66 gui=NONE cterm=NONE
   hi CursorColumn guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
   hi Directory guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
   hi DiffAdd guifg=NONE ctermfg=NONE guibg=#2f223e ctermbg=239 gui=Bold cterm=Bold
-  hi DiffChange guifg=NONE ctermfg=NONE guibg=bg2 ctermbg=236 gui=Bold cterm=Bold
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi DiffDelete guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239
   hi DiffText guifg=NONE ctermfg=NONE guibg=#420010 ctermbg=89 gui=Bold,Italic,underline cterm=Bold,Italic,underline
   hi ErrorMsg guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi VertSplit guifg=#777087 ctermfg=243 gui=NONE cterm=NONE
-  hi Folded guifg=#777087 ctermfg=243 guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
-  hi FoldColumn guifg=#333042 ctermfg=236 guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
-  hi SignColumn guifg=NONE ctermfg=NONE guibg=bg4 ctermbg=233 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg4 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg4 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg4 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi IncSearch guifg=NONE ctermfg=NONE guibg=#57109a ctermbg=54 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
   hi MatchParen guifg=#EE82EE ctermfg=213 guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl guisp=#E7C547
   hi ModeMsg guifg=#77d507 ctermfg=112 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi MoreMsg guifg=#aab7cf ctermfg=146 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi NonText guifg=#4f425e ctermfg=239 gui=NONE cterm=NONE
-  hi PMenu guifg=#888ca9 ctermfg=103 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi PMenuSel guifg=#e7d3fb ctermfg=189 guibg=#443a54 ctermbg=238 gui=Bold,Italic cterm=Bold,Italic
   hi PMenuKind guifg=#1ABC9C ctermfg=189 guibg=#443a54 ctermbg=238 gui=Bold,Italic cterm=Bold,Italic
   hi PMenuExtra guifg=#10aef8 ctermfg=189 guibg=#443a54 ctermbg=238 gui=Bold,Italic cterm=Bold,Italic
   hi PmenuSbar guifg=NONE ctermfg=NONE guibg=#4f425e ctermbg=239 gui=NONE cterm=NONE
   hi PmenuThumb guifg=NONE ctermfg=NONE guibg=#aab7cf ctermbg=146 gui=NONE cterm=NONE
-  hi MsgArea guifg=#ffbbd6 ctermfg=218 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   hi Question guifg=#6690c4 ctermfg=68 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi Search guifg=NONE ctermfg=NONE guibg=#3f4060 ctermbg=239 gui=Bold,underline,Italic cterm=Bold,underline,Italic guisp=#EE82EE
   hi SpecialKey guifg=#ecc48d ctermfg=222 gui=NONE cterm=NONE
@@ -432,15 +438,15 @@ else
   hi SpellRare guifg=#99c794 ctermfg=114 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#addb67
   hi StatusLine guifg=#ddd0f4 ctermfg=189 guibg=#443a54 ctermbg=238 gui=NONE cterm=NONE
   hi StatusLineNC guifg=#777087 ctermfg=243 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
-  hi TabLine guifg=#7BA1D0 ctermfg=110 guibg=bg ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   hi TabLineFill guifg=#333042 ctermfg=236 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi TabLineSel guifg=#10aef8 ctermfg=39 guibg=NONE ctermbg=NONE gui=underline cterm=underline
   hi Title guifg=#82aaf0 ctermfg=111 gui=Bold cterm=Bold
   hi Visual guibg=#3f4060 ctermbg=239 gui=NONE cterm=NONE
   hi VisualNOS guifg=#637077 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi WarningMsg guifg=#ec5f67 ctermfg=203 gui=undercurl cterm=undercurl guisp=#821040
-  hi WildMenu guifg=#777087 ctermfg=243 guibg=bg ctermbg=234 gui=NONE cterm=NONE
-  hi EndOfBuffer guifg=#4f425e ctermfg=239 guibg=bg3 ctermbg=234 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi Comment guifg=#989cbf ctermfg=247 gui=Italic cterm=Italic
   hi Constant guifg=#fbfcbf ctermfg=229 gui=NONE cterm=NONE
   hi String guifg=#1ABC9C ctermfg=35 gui=NONE cterm=NONE
@@ -508,9 +514,9 @@ else
   hi link typescriptUnaryOp cssImportant
   hi link typescriptBranch Statement
   hi link pugJavascriptOutputChar jsonNumber
-  hi fzf1 guifg=#ecc48d ctermfg=222 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
-  hi fzf2 guifg=#FD9720 ctermfg=208 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
-  hi fzf3 guifg=#DC143C ctermfg=161 guibg=bg2 ctermbg=236 gui=NONE cterm=NONE
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
+  execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi link NERDTreeHelp cssAttr
   hi link NERDTreeHelpKey cssClassName
   hi link NERDTreeHelpCommand jsonNumber
