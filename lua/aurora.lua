@@ -370,7 +370,7 @@ return {
       vim.api.nvim_set_hl(0, 'DiffAdd', { bg = ct.dimgreen, ctermfg = 'NONE', ctermbg = 239, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'DiffChange', { fg = ct.yellow1, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 236, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'DiffDelete', { fg = ct.gray, bg = ct.neardark3, ctermfg = 'NONE', ctermbg = 239, strikethrough = true })
-      vim.api.nvim_set_hl(0, 'DiffText', fg = ct.purple, bold = true, reverse = true)
+      vim.api.nvim_set_hl(0, 'DiffText', {fg = ct.purple, bold = true, reverse = true})
       vim.api.nvim_set_hl(0, 'ErrorMsg', { fg = ct.crimson, bg = bg, ctermfg = 161, undercurl = true, sp = ct.red, bold = (vim.g.aurora_bold == 1) })
       vim.api.nvim_set_hl(0, 'VertSplit', { fg = ct.gray7, ctermfg = 243 })
       vim.api.nvim_set_hl(0, 'WinSeparator', { link = 'VertSplit' })
