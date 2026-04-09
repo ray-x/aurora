@@ -9,10 +9,8 @@ if exists('g:colors_name')
 endif
 let g:colors_name='aurora'
 
-let Italic = ''
-if exists('g:aurora_italic')
-  let Italic = "italic"
-endif
+let g:aurora_italic = get(g:, 'aurora_italic', 0)
+let g:aurora_bold = get(g:, 'aurora_bold', 0)
 
 let bg =  '#211c2f'
 let bg2 = '#282e39'
@@ -30,7 +28,7 @@ else
     let bg4 = "#040410"
   end
 end
-let g:aurora_italic = get(g:, 'aurora_italic', 0)
+
 function! AUHL(group, guifg, ctermfg, guibg, ctermbg, gui, cterm)
   execute 'hi ' . a:group . ' guifg=' . a:guifg .
         \ ' ctermfg=' . a:ctermfg .
@@ -40,19 +38,12 @@ function! AUHL(group, guifg, ctermfg, guibg, ctermbg, gui, cterm)
         \ ' cterm=' . a:cterm
 endfunction
 
-let Bold = ''
-if exists('g:aurora_bold')
-  let Bold = "bold"
-endif
-
 if &background != 'dark'
   set background=dark
 endif
 
-let g:aurora_bold = get(g:, 'aurora_bold', 0)
-if has('nvim-0.8') == 1
+if has('nvim')
   lua package.loaded['aurora'] = nil
-  " packadd aurora
   lua require('aurora').colorscheme()
 else
   hi link SignifySignAdd GitGutterAdd
@@ -74,9 +65,6 @@ else
   hi link gitcommitUntrackedFile jsonNumber
   hi gitcommitDiscardedFile guifg=#f05874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link gitcommitSelectedFile cssClassName
-  hi GitSignsAddInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,underline cterm=Bold,undercurl guisp=#addb67
-  hi GitSignsDeleteInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,strikethrough guisp=#E7C547
-  hi GitSignsChangeInline guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,underline guisp=#B376B3
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
@@ -97,7 +85,7 @@ else
   hi link jsGlobalObjects SpellCap
   hi jsGlobalNodeObjects guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi jsImport guifg=#7202da ctermfg=56 gui=Italic cterm=Italic
-  hi link jsExport TSAttribute
+  hi link jsExport cssTagName
   hi jsExportDefault guifg=#9eeb61 ctermfg=149 gui=NONE cterm=NONE
   hi link jsExportDefaultGroup SpellCap
   hi link jsFrom jsReturn
@@ -121,15 +109,13 @@ else
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
-  hi TelescopeSelection guifg=#A1EFE4 ctermfg=158 guibg=#333333 ctermbg=236 gui=NONE cterm=NONE
-  hi TelescopeMatching guifg=#EE82EE ctermfg=213 gui=NONE cterm=NONE
   hi sqlStatement guifg=#54CED6 ctermfg=80 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi sqlKeyword guifg=#ffbe00 ctermfg=214 gui=Bold cterm=Bold
   hi sqlSpecial guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link sqlType Question
   hi sqlFunction guifg=#ec5f67 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi mysqlKeyword guifg=#C33C4A ctermfg=131 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi link mysqlOperator DiagnosticHint
+  hi link mysqlOperator Label
   hi mysqlFunction guifg=#50c878 ctermfg=78 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi mysqlStatement guifg=#A1EFE4 ctermfg=158 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi mysqlType guifg=#0fb9e0 ctermfg=38 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -176,59 +162,7 @@ else
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg2 . ' ctermbg=234 gui=NONE cterm=NONE'
   hi ClapMatches guifg=#C33C4A ctermfg=131 guibg=#443a54 ctermbg=238 gui=Bold,undercurl,reverse cterm=Bold,undercurl,reverse guisp=#f05874
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
-  hi TSAnnotation guifg=#82aaf0 ctermfg=111 gui=NONE cterm=NONE
-  hi TSAttribute guifg=#7fdbca ctermfg=116 gui=NONE cterm=NONE
-  hi TSCharacter guifg=#ffce51 ctermfg=221 gui=NONE cterm=NONE
-  hi link TSComment Comment
-  hi TSError guifg=#DC143C ctermfg=161 guibg=NONE ctermbg=NONE gui=Bold,undercurl cterm=Bold,undercurl
-  hi TSPunctDelimiter guifg=#e7d3fb ctermfg=189 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
-  hi TSPunctBracket guifg=#7AA6DA ctermfg=110 gui=Bold cterm=Bold
-  hi TSPunctSpectial guifg=#E7C547 ctermfg=185 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi link TSConstant Constant
-  hi TSConstBuiltin guifg=#e73c50 ctermfg=167 gui=Italic cterm=Italic
-  hi TSConstMacro guifg=#F92772 ctermfg=197 gui=NONE cterm=NONE
-  hi link TSString String
-  hi TSStringRegex guifg=#7fdbca ctermfg=116 gui=NONE cterm=NONE
-  hi TSStringEscape guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
-  hi link TSNumber Number
-  hi link TSBoolean Boolean
-  hi link TSFloat Float
-  hi TSField guifg=#9e71cf ctermfg=134 gui=Bold cterm=Bold
-  hi link TSType Type
-  hi TSTypeBuiltin guifg=#ffce51 ctermfg=221 gui=Bold cterm=Bold
-  hi TSProperty guifg=#01d5f1 ctermfg=45 gui=NONE cterm=NONE
-  hi TSParameter guifg=#fbec9f ctermfg=229 gui=NONE cterm=NONE
-  hi TSConstructor guifg=#6690c4 ctermfg=68 gui=Bold cterm=Bold
-  hi TSFunction guifg=#66d9ef ctermfg=81 gui=Bold cterm=Bold
-  hi TSKeywordFunction guifg=#0fb9e0 ctermfg=38 gui=Bold cterm=Bold
-  hi TSFunctionBuiltin guifg=#A6E22D ctermfg=148 gui=Bold cterm=Bold
-  hi TSFuncBuiltin guifg=#0fb9e0 ctermfg=38 gui=Bold cterm=Bold
-  hi TSFuncMacro guifg=#be9af7 ctermfg=141 gui=Bold cterm=Bold
-  hi TSParameterReference guifg=#A1EFE4 ctermfg=158 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi link TSMethod Function
-  hi TSConditional guifg=#EE82EE ctermfg=213 gui=Bold cterm=Bold
-  hi link TSRepeat Repeat
-  hi TSException guifg=#ff5874 ctermfg=204 gui=Italic cterm=Italic
-  hi link TSLabel Label
-  hi link TSOperator Operator
-  hi link TSKeyword Keyword
-  hi link TSStructure Structure
-  hi link TSInclude  Include
-  hi link TSTag Tag
-  hi link TSTagDelimiter Delimiter
-  hi link TSVariable Identifier
-  hi TSVariableBuiltin guifg=#FD9720 ctermfg=208 gui=NONE cterm=NONE
-  hi TSDefinitionUsage guifg=#E6DB74 ctermfg=186 gui=NONE cterm=NONE
-  hi link TSDefinition Definition
-  hi TSStrong guifg=#DBC08A ctermfg=180 gui=Bold cterm=Bold
-  hi TSEmphasis guifg=#fbed7d ctermfg=228 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic
-  hi TSUnderline guifg=#ecc48d ctermfg=222 gui=undercurl cterm=undercurl
-  hi link TSTitle SpecialKey
-  hi TSLiteral guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
-  hi TSURI guifg=#A6E22D ctermfg=148 gui=Italic cterm=Italic
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg . ' ctermbg=234 gui=NONE cterm=NONE'
-  hi TSIdentifier guifg=#dacfb4 ctermfg=187 gui=Bold cterm=Bold
-  hi link TSNameSpace Function
   hi link pythonStatement Repeat
   hi link pythonRepeat Repeat
   hi pythonFunction guifg=#54CED6 ctermfg=80 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -241,8 +175,8 @@ else
   hi jsString guifg=#1aad16 ctermfg=34 gui=Italic cterm=Italic
   hi jsComment guifg=#637077 ctermfg=243 gui=Italic cterm=Italic
   hi jsFuncCall guifg=#54CED6 ctermfg=80 gui=NONE cterm=NONE
-  hi link jsNumber TSParameter
-  hi link jsObjectProp DiagnosticHint
+  hi link jsNumber jsonNumber
+  hi link jsObjectProp Label
   hi jsOperatorKeyword guifg=#1aad16 ctermfg=34 gui=NONE cterm=NONE
   hi jsBooleanFalse guifg=#ff5874 ctermfg=204 gui=NONE cterm=NONE
   hi jsBooleanTrue guifg=#ff5874 ctermfg=204 gui=NONE cterm=NONE
@@ -263,39 +197,13 @@ else
   hi javaScriptBoolean guifg=#ff5874 ctermfg=204 gui=NONE cterm=NONE
   hi javaScriptBraces guifg=#e7d3fb ctermfg=189 gui=NONE cterm=NONE
   hi javaScriptLineComment guifg=#637077 ctermfg=243 gui=Italic cterm=Italic
-  hi link javaScriptSpecial TSParameter
+  hi link javaScriptSpecial jsonNumber
   hi javaScriptFunction guifg=#50B4DC ctermfg=74 gui=NONE cterm=NONE
   hi link javaScriptStatement jsReturn
   hi javaScriptException guifg=#D93234 ctermfg=167 gui=NONE cterm=NONE
   hi vimCommentString guifg=#fbed7d ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link vimCommentTitle Question
   hi vimError guifg=#dacfb4 ctermfg=187 guibg=#f05874 ctermbg=204 gui=NONE cterm=NONE
-  hi LightspeedLabel guifg=#e7d3fb ctermfg=189 guibg=#57109a ctermbg=54 gui=Bold,undercurl,Italic cterm=Bold,undercurl,Italic guisp=#ecc48d
-  hi LightspeedOverlapped guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
-  hi LightspeedLabelDistant guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
-  hi LightspeedLabelDistantOverlapped guifg=NONE ctermfg=NONE guibg=#DC143C ctermbg=161 gui=NONE cterm=NONE
-  hi LightspeedShortcut guifg=#EE82EE ctermfg=213 gui=Bold,undercurl cterm=Bold,undercurl
-  hi LightspeedShortcutOverlapped guifg=#EE82EE ctermfg=213 gui=Bold,undercurl cterm=Bold,undercurl
-  hi LightspeedMaskedChar guifg=#ff5874 ctermfg=204 gui=Bold,undercurl cterm=Bold,undercurl
-  hi LightspeedGreyWash guifg=#989cbf ctermfg=247 gui=Italic cterm=Italic
-  hi LightspeedUnlabeledMatch guifg=#F92772 ctermfg=197 gui=Bold,Italic cterm=Bold,Italic
-  hi LightspeedOneCharMatch guifg=#f19bb6 ctermfg=211 gui=Bold,Italic cterm=Bold,Italic
-  hi LightspeedUniqueChar guifg=#d7ffaf ctermfg=193 gui=Bold cterm=Bold
-  hi LightspeedPendingOpArea guifg=#66d9ef ctermfg=81 gui=Bold,undercurl cterm=Bold,undercurl
-  hi LightspeedPendingChangeOpArea guifg=#d7ffaf ctermfg=193 gui=Bold cterm=Bold
-  hi LightspeedCursor guifg=#ffbbd6 ctermfg=218 guibg=#22202a ctermbg=235 gui=NONE cterm=NONE
-  hi HopNextKey guifg=#EE82EE ctermfg=213 gui=Bold,underline cterm=Bold,underline
-  hi HopNextKey1 guifg=#ecc48d ctermfg=222 gui=Bold,underline cterm=Bold,underline
-  hi HopNextKey2 guifg=#82aaf0 ctermfg=111 gui=Bold,underline cterm=Bold,underline
-  hi IndentBlanklineChar guifg=#777087 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi IndentBlanklineContextChar guifg=#c4a2ff ctermfg=183 gui=Bold cterm=Bold
-  hi IndentBlanklineContextStart guifg=#c4a2ff ctermfg=183 gui=Bold,underline cterm=Bold,underline guisp=#c4a2ff
-  hi IndentBlanklineIndent1 guifg=#be9af7 ctermfg=141 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi IndentBlanklineIndent2 guifg=#82aaf0 ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi IndentBlanklineIndent3 guifg=#addb67 ctermfg=149 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi IndentBlanklineIndent4 guifg=#ecc48d ctermfg=222 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi IndentBlanklineIndent5 guifg=#FD9720 ctermfg=208 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi IndentBlanklineIndent6 guifg=#ff5874 ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi jsonEscape guifg=#5ca7e4 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi jsonNumber guifg=#fbec9f ctermfg=229 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link jsonBraces cssAttr
@@ -304,31 +212,10 @@ else
   hi link jsonKeywordMatch cssImportant
   hi link jsonQuote cssAttr
   hi link jsonNoise cssImportant
-  hi DiagnosticError guifg=#ac3f27 ctermfg=130 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
-  hi link DiagnosticErrorFloating DiagnosticError
-  hi DiagnosticWarning guifg=#bBa03A ctermfg=143 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
-  hi DiagnosticWarningFloating guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticVirtualTextError guifg=#D93234 ctermfg=167 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticVirtualTextWarning guifg=#DBC08A ctermfg=180 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticVirtualTextInfo guifg=#99c794 ctermfg=114 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticVirtualTextHint guifg=#1aad16 ctermfg=34 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi link DiagnosticUnderlineError DiagnosticError
-  hi link DiagnosticFloatingError DiagnosticError
-  hi link DiagnosticFloatingWarning DiagnosticWarning
-  hi link DiagnosticFloatingInfo DiagnosticInfo
-  hi link DiagnosticFloatingHint DiagnosticHint
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
-  hi DiagnosticInfo guifg=#7AA6DA ctermfg=110 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi DiagnosticHint guifg=#2ba245 ctermfg=35 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   execute 'hi GitGutterDelete guifg=#f05874 ctermfg=204 guibg=' . bg3 . ' ctermbg=234 gui=NONE cterm=NONE'
-  hi DiagnosticHintFloating guifg=#1ABC9C ctermfg=37 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi LspReferenceText guibg=#343047 ctermbg=239 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
-  hi LspReferenceRead guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
-  hi LspReferenceWrite guifg=#1aad16 ctermfg=34 gui=Bold,undercurl cterm=Bold,undercurl guisp=#FD9720
-  hi LspFloatWinNormal guifg=#dacfb4 ctermfg=187 guibg=#30234f ctermbg=236 gui=NONE cterm=NONE
-  hi LspSignatureActiveParameter guifg=NONE ctermfg=NONE guibg=#4d0c5d ctermbg=53 gui=Bold,underline,Italic cterm=Bold,underline,Italic guisp=#fbec9f
   hi link cssVendor cssTagName
   hi cssTagName guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link cssAttrComma cssAttr
@@ -369,7 +256,7 @@ else
   hi goStruct guifg=#ff7f50 ctermfg=209 gui=Bold cterm=Bold
   hi goStructDef guifg=#87ceeb ctermfg=116 gui=Bold cterm=Bold
   hi link goUnsignedInts Character
-  hi link goParamName TSParameter
+  hi link goParamName jsonNumber
   hi goParamType guifg=#E7C547 ctermfg=185 gui=NONE cterm=NONE
   hi goParen guifg=#fbed7d ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi goDeclaration guifg=#D57CD5 ctermfg=176 gui=Bold cterm=Bold
@@ -389,7 +276,7 @@ else
   hi CocErrorSign guifg=#f05874 ctermfg=204 gui=NONE cterm=NONE
   hi CocWarningSign guifg=#fbfcbf ctermfg=229 gui=NONE cterm=NONE
   hi CocHintSign guifg=#5ca7e4 ctermfg=74 gui=NONE cterm=NONE
-  hi link CocInfoSign TSParameter
+  hi link CocInfoSign jsonNumber
   hi CocLine gui=undercurl cterm=undercurl guisp=#FD9720
   hi CocUnderline gui=undercurl cterm=undercurl guisp=#FD9720
   hi CocErrorline gui=undercurl cterm=undercurl guisp=#DC143C
@@ -490,7 +377,7 @@ else
   hi typescriptParens guifg=#10aef8 ctermfg=39 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link typescriptLogicSymbols cssImportant
   hi typescriptReserved guifg=#3649dc ctermfg=62 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi link typescriptLabel DiagnosticHintFloating
+  hi link typescriptLabel String
   hi typescriptFuncName guifg=#1aad16 ctermfg=34 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   hi link typescriptCall jsonNumber
   hi link typescriptVariable typescriptReserved
@@ -541,28 +428,6 @@ else
   hi diffLine guifg=#fbed7d ctermfg=228 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi diffSubname guifg=#7fdbca ctermfg=116 guibg=NONE ctermbg=NONE gui=Bold cterm=Bold
   hi diffComment guifg=#5f7e97 ctermfg=66 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-  hi BufferLineIndicatorSelected guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BufferLineBufferSelected guifg=#addb67 ctermfg=149 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
-  hi link BufferLineBuffer Comment
-  hi link BufferLineBufferVisible Comment
-  hi BufferLineFill guifg=#282E39 ctermfg=236 guibg=#343047 ctermbg=236 gui=NONE cterm=NONE
-  hi BuffetCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BuffetActiveBuffer guifg=#282E39 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BuffetBuffer guibg=#b4b0e0 ctermbg=146 gui=NONE cterm=NONE
-  hi BuffetModCurrentBuffer guifg=#443a54 ctermfg=238 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BuffetModActiveBuffer guifg=#343047 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BuffetModBuffer guifg=#343047 ctermfg=236 guibg=#3649dc ctermbg=62 gui=NONE cterm=NONE
-  hi BuffetTrunc guibg=#82aaf0 ctermbg=111 gui=NONE cterm=NONE
-  hi BuffetTab guibg=#addb67 ctermbg=149 gui=NONE cterm=NONE
-  hi CmpItemAbbrDeprecated guifg=#888ca9 ctermfg=103 gui=NONE cterm=NONE
-  hi link CmpItemAbbrMatch CocHintSign
-  hi CmpItemAbbrMatchFuzzy guifg=#50B4DC ctermfg=74 gui=NONE cterm=NONE
-  hi CmpItemKindVariable guifg=#A1EFE4 ctermfg=158 gui=NONE cterm=NONE
-  hi CmpItemKindInterface guifg=#9e71cf ctermfg=134 gui=NONE cterm=NONE
-  hi CmpItemKindText guifg=#dacfb4 ctermfg=187 gui=NONE cterm=NONE
-  hi CmpItemKindFunction guifg=#0fb9e0 ctermfg=38 gui=NONE cterm=NONE
-  hi CmpItemKindMethod guifg=#10aef8 ctermfg=39 gui=NONE cterm=NONE
-  hi CmpItemKindKeyword guifg=#0fb9e0 ctermfg=38 gui=NONE cterm=NONE
   hi link elmDelimiter cssAttr
   hi link elmOperator cssImportant
   hi link helpHyperTextEntry cssClassName
