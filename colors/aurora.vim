@@ -46,6 +46,7 @@ if has('nvim')
   lua package.loaded['aurora'] = nil
   lua require('aurora').colorscheme()
 else
+  execute 'hi Normal guifg=#dacfb4 ctermfg=187 guibg=' . bg . ' ctermbg=235 gui=NONE cterm=NONE'
   hi link SignifySignAdd GitGutterAdd
   hi link SignifySignDelete GitGutterDelete
   hi link SignifySignDeleteFirstLine SignifySignDelete
