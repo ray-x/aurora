@@ -21,14 +21,13 @@ local ct = {
 
   black = '#070510',
   dark = '#141020',
-  neardark = '#1a1926',
-  neardarkb = '#30234f',
-  neardark2 = '#211c2f',
-  neardark3 = '#282E39',
-  neardark4 = '#303047',
-  neardark5 = '#3a3754',
-  neardark6 = '#3f4060',
-  neardark7 = '#4f4764',
+  neardark = '#181030',
+  neardark1 = '#10101f',
+  neardark2 = '#21142f',
+  neardark3 = '#28143f',
+  neardark4 = '#302047',
+  neardark5 = '#3a2754',
+  neardark6 = '#3f3060',
 
   menu = '#3f2562',
   green = '#addb67',
@@ -312,8 +311,8 @@ end
 
 return {
   colorscheme = function()
-    local bg = ct.neardark2
-    local bg2 = ct.neardark3
+    local bg = ct.neardark
+    local bg2 = ct.neardark2
     local bgfl = ct.neardark
     local bg3 = ct.neardark
     local bg4 = ct.dark
@@ -390,8 +389,8 @@ return {
       vim.api.nvim_set_hl(0, 'SpellCap', { fg = ct.blue2, bg = bg, ctermfg = 74, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'SpellRare', { fg = ct.green4, bg = bg, ctermfg = 114, ctermbg = 'NONE', sp = ct.green, undercurl = true})
       vim.api.nvim_set_hl(0, 'Rare', { link = 'SpellRare' })
-      vim.api.nvim_set_hl(0, 'StatusLine', { fg = ct.bright, bg = ct.neardark5, ctermfg = 189, ctermbg = 238 })
-      vim.api.nvim_set_hl(0, 'StatusLineNC', { fg = ct.gray7, bg = ct.neardark4, ctermfg = 243, ctermbg = 236 })
+      vim.api.nvim_set_hl(0, 'StatusLine', { fg = ct.bright, bg = ct.neardark2, ctermfg = 189, ctermbg = 238 })
+      vim.api.nvim_set_hl(0, 'StatusLineNC', { fg = ct.gray7, bg = ct.neardark2, ctermfg = 243, ctermbg = 236 })
       vim.api.nvim_set_hl(0, 'TabLine', { fg = ct.blue8, bg = bg, ctermfg = 110, ctermbg = 234 })
       vim.api.nvim_set_hl(0, 'TabLineFill', { fg = ct.gray3, bg = bg, ctermfg = 236, ctermbg = 'NONE' })
       vim.api.nvim_set_hl(0, 'TabLineSel', { fg = ct.bluea, bg = bg, ctermfg = 39, ctermbg = 'NONE', underline = true })
